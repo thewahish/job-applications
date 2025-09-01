@@ -1,0 +1,6 @@
+# Python requirements for HTML to PDF conversion
+playwright>=1.40.0
+
+# Installation instructions:
+# pip install playwright
+# playwright install chromium

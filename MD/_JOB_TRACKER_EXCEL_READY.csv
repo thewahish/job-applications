@@ -1,0 +1,17 @@
+Company,Job Title,Compatibility Score,Analysis Date,Status,Applied Date,Response Date,Interview Date,Final Outcome,Days Since Applied,Response Time (Days),Notes,Folder Location,LinkedIn URL,Job URL,Recruiter Name,Recruiter LinkedIn
+Meta,Sound Designer,85%,2025-08-31,Applied,2025-09-01,,,Pending,1,,Comprehensive application package created - strong creative portfolio match,Jobs/2_Applied/Meta_Sound_Designer/,,,
+ObserveAI,Senior Implementation Manager,92%,2025-08-31,Applied,2025-09-01,,,Pending,1,,High compatibility - excellent technical and experience match,Jobs/2_Applied/ObserveAI_Senior_Implementation_Manager/,,,
+
+=== FORMULAS FOR EXCEL IMPORT ===
+Column J (Days Since Applied): =TODAY()-F2
+Column K (Response Time Days): =IF(G2="","",G2-F2)
+
+=== STATUS CATEGORIES ===
+Analysis_Stage,Applied,Accepted,Rejected,Not_Applied
+
+=== COMPATIBILITY SCORE RANGES ===
+90-100%: Perfect Match - Apply Immediately
+80-89%: Excellent Match - Minor Tweaks
+70-79%: Good Match - Moderate Customization  
+60-69%: Fair Match - Significant Adjustment
+Below 60%: Poor Match - Skip or Major Restructuring

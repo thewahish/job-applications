@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application Tracker - Obai Sukar</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 20px;
+            background-color: #f5f5f5;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .stats-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+        
+        .stat-card {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 2em;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .analysis-stage { color: #ffa500; }
+        .applied { color: #2196f3; }
+        .accepted { color: #4caf50; }
+        .rejected { color: #f44336; }
+        .not-applied { color: #9e9e9e; }
+        
+        .tracker-table {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        th {
+            background: #667eea;
+            color: white;
+            padding: 15px 10px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        td {
+            padding: 12px 10px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        tr:hover {
+            background-color: #f8f9ff;
+        }
+        
+        .status-badge {
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 0.85em;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        
+        .badge-applied {
+            background: #e3f2fd;
+            color: #1976d2;
+        }
+        
+        .compatibility-high { color: #4caf50; font-weight: bold; }
+        .compatibility-medium { color: #ff9800; font-weight: bold; }
+        .compatibility-low { color: #f44336; font-weight: bold; }
+        
+        .folder-link {
+            color: #667eea;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+        
+        .folder-link:hover {
+            text-decoration: underline;
+        }
+        
+        .notes {
+            max-width: 200px;
+            font-size: 0.9em;
+            line-height: 1.4;
+        }
+        
+        .last-updated {
+            text-align: center;
+            color: #666;
+            font-style: italic;
+            margin-top: 20px;
+        }
+        
+        .export-buttons {
+            text-align: center;
+            margin: 20px 0;
+        }
+        
+        .export-btn {
+            background: #667eea;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            margin: 0 10px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .export-btn:hover {
+            background: #5a67d8;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🎯 Job Application Tracker</h1>
+        <p>Obai Sukar - Resume Application Management System</p>
+    </div>
+    
+    <div class="stats-container">
+        <div class="stat-card">
+            <div class="stat-number analysis-stage">0</div>
+            <div>Analysis Stage</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-number applied">2</div>
+            <div>Applied</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-number accepted">0</div>
+            <div>Accepted</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-number rejected">0</div>
+            <div>Rejected</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-number not-applied">0</div>
+            <div>Not Applied</div>
+        </div>
+    </div>
+    
+    <div class="export-buttons">
+        <a href="_JOB_TRACKER_EXCEL_READY.csv" class="export-btn" download>📊 Download CSV</a>
+        <button class="export-btn" onclick="printTable()">🖨️ Print Report</button>
+    </div>
+    
+    <div class="tracker-table">
+        <table id="jobTable">
+            <thead>
+                <tr>
+                    <th>Company</th>
+                    <th>Job Title</th>
+                    <th>Compatibility</th>
+                    <th>Status</th>
+                    <th>Applied Date</th>
+                    <th>Days Since Applied</th>
+                    <th>Response Time</th>
+                    <th>Notes</th>
+                    <th>Folder Location</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Meta</strong></td>
+                    <td>Sound Designer</td>
+                    <td><span class="compatibility-medium">85%</span></td>
+                    <td><span class="status-badge badge-applied">Applied</span></td>
+                    <td>2025-09-01</td>
+                    <td>1 day</td>
+                    <td>-</td>
+                    <td class="notes">Comprehensive application package created - strong creative portfolio match</td>
+                    <td><a href="../Jobs/2_Applied/Meta_Sound_Designer/" class="folder-link">Jobs/2_Applied/Meta_Sound_Designer/</a></td>
+                </tr>
+                <tr>
+                    <td><strong>ObserveAI</strong></td>
+                    <td>Senior Implementation Manager</td>
+                    <td><span class="compatibility-high">92%</span></td>
+                    <td><span class="status-badge badge-applied">Applied</span></td>
+                    <td>2025-09-01</td>
+                    <td>1 day</td>
+                    <td>-</td>
+                    <td class="notes">High compatibility - excellent technical and experience match</td>
+                    <td><a href="../Jobs/2_Applied/ObserveAI_Senior_Implementation_Manager/" class="folder-link">Jobs/2_Applied/ObserveAI_Senior_Implementation_Manager/</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    <div class="last-updated">
+        Last Updated: September 1, 2025 - Auto-updates with each application status change
+    </div>
+    
+    <script>
+        function printTable() {
+            window.print();
+        }
+        
+        // Auto-update days since applied
+        function updateDaysSince() {
+            const rows = document.querySelectorAll('#jobTable tbody tr');
+            rows.forEach(row => {
+                const appliedDate = new Date(row.cells[4].textContent);
+                const today = new Date();
+                const daysDiff = Math.floor((today - appliedDate) / (1000 * 60 * 60 * 24));
+                row.cells[5].textContent = daysDiff + ' day' + (daysDiff !== 1 ? 's' : '');
+            });
+        }
+        
+        // Update on page load
+        updateDaysSince();
+        
+        // Update every hour
+        setInterval(updateDaysSince, 3600000);
+    </script>
+</body>
+</html>

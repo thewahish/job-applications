@@ -1,0 +1,24 @@
+{
+  "name": "portable-html-pdf-converter",
+  "version": "1.0.0",
+  "description": "Portable HTML to PDF converter for resume applications",
+  "main": "batch_html_to_pdf.js",
+  "scripts": {
+    "convert": "node batch_html_to_pdf.js",
+    "install-deps": "npm install",
+    "help": "node batch_html_to_pdf.js --help"
+  },
+  "dependencies": {
+    "puppeteer": "^24.17.1",
+    "glob": "^10.3.0"
+  },
+  "keywords": [
+    "html",
+    "pdf",
+    "converter",
+    "resume",
+    "portable"
+  ],
+  "author": "Resume Helper System",
+  "license": "MIT"
+}

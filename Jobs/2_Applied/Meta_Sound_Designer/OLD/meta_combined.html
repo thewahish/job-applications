@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meta Sound Designer Application - Obai Sukar</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.4;
+            color: #000;
+            background: #fff;
+            font-size: 11pt;
+            max-width: 8.5in;
+            margin: 0 auto;
+            padding: 0.5in;
+        }
+
+        /* COVER LETTER STYLES */
+        .cover-letter {
+            page-break-after: always;
+            margin-bottom: 20px;
+        }
+
+        .cover-title-header {
+            font-size: 12pt;
+            font-weight: bold;
+            text-transform: uppercase;
+            border-bottom: 1px solid #000;
+            margin-bottom: 8px;
+            padding-bottom: 2px;
+            text-align: left;
+        }
+
+        .header-dual-logo {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+        }
+
+        .personal-logo {
+            font-size: 18pt;
+            font-weight: bold;
+            color: #1877f2;
+            background: linear-gradient(135deg, #1877f2, #42a5f5);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            height: 60px;
+            display: flex;
+            align-items: center;
+        }
+
+        .company-info {
+            text-align: right;
+            font-size: 10pt;
+        }
+
+        .company-logo {
+            font-size: 16pt;
+            font-weight: bold;
+            color: #1877f2;
+            margin-bottom: 5px;
+        }
+
+        .application-date {
+            color: #666;
+            font-size: 9pt;
+        }
+
+        .contact-section {
+            text-align: center;
+            margin: 15px 0;
+            font-size: 10pt;
+        }
+
+        .name-title {
+            font-size: 16pt;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .professional-tagline {
+            color: #1877f2;
+            font-weight: 600;
+            font-size: 11pt;
+            margin-bottom: 8px;
+        }
+
+        .contact-info {
+            color: #666;
+            font-size: 9pt;
+        }
+
+        .cover-body {
+            margin: 20px 0;
+            font-size: 11pt;
+            line-height: 1.5;
+        }
+
+        .cover-body p {
+            margin-bottom: 12px;
+        }
+
+        .highlight-text {
+            font-weight: 600;
+            color: #1877f2;
+        }
+
+        .company-focus {
+            background: linear-gradient(135deg, #f0f2f5, #e3f2fd);
+            padding: 15px;
+            border-left: 4px solid #1877f2;
+            margin: 15px 0;
+            font-style: italic;
+        }
+
+        .ats-friendly-section {
+            margin: 15px 0;
+            background: white;
+            color: black;
+        }
+
+        .footer-branding {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 25px;
+            padding-top: 15px;
+            border-top: 1px solid #eee;
+        }
+
+        .signature {
+            font-size: 11pt;
+        }
+
+        .brand-watermark {
+            font-size: 9pt;
+            color: #999;
+            opacity: 0.6;
+        }
+
+        /* RESUME STYLES */
+        .resume-section {
+            margin-top: 30px;
+        }
+
+        .resume-title-header {
+            font-size: 12pt;
+            font-weight: bold;
+            text-transform: uppercase;
+            border-bottom: 1px solid #000;
+            margin-bottom: 8px;
+            padding-bottom: 2px;
+            text-align: center;
+        }
+
+        .resume-header {
+            text-align: center;
+            margin-bottom: 12px;
+            margin-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        .resume-contact-info {
+            font-size: 10pt;
+            line-height: 1.3;
+            margin-bottom: 3px;
+        }
+
+        .awards-info {
+            font-size: 9pt;
+            color: #666;
+            font-style: italic;
+        }
+
+        .section {
+            margin-bottom: 15px;
+        }
+
+        .section-title {
+            font-size: 12pt;
+            font-weight: bold;
+            text-transform: uppercase;
+            border-bottom: 1px solid #000;
+            margin-bottom: 8px;
+            padding-bottom: 2px;
+        }
+
+        .job-title {
+            font-weight: bold;
+            font-size: 11pt;
+        }
+
+        .company-date {
+            font-size: 10pt;
+            margin-bottom: 5px;
+        }
+
+        .job-description {
+            margin-bottom: 12px;
+        }
+
+        .job-description ul {
+            margin-left: 15px;
+            margin-top: 3px;
+        }
+
+        .job-description li {
+            margin-bottom: 3px;
+            font-size: 10pt;
+        }
+
+        .education-item {
+            margin-bottom: 10px;
+        }
+
+        .degree {
+            font-weight: bold;
+        }
+
+        .school {
+            font-style: italic;
+        }
+
+        a {
+            color: #4a90e2;
+            text-decoration: underline;
+        }
+
+        @media print {
+            body {
+                padding: 0.3in;
+            }
+            .cover-letter {
+                page-break-after: always;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- COVER LETTER -->
+    <div class="cover-letter">
+        <div class="cover-title-header">COVER LETTER</div>
+        
+        <div class="header-dual-logo">
+            <div class="personal-logo">🎧 OBAI SUKAR</div>
+            <div class="company-info">
+                <div class="company-logo">Meta</div>
+                <div class="application-date">September 1, 2025</div>
+            </div>
+        </div>
+
+        <div class="contact-section">
+            <div class="name-title">Obai Sukar</div>
+            <div class="professional-tagline">Award-Winning Sound Designer | VR/AR Audio Expert | Creative Technology Leader</div>
+            <div class="contact-info">
+                <a href="mailto:obai@obaisukar.com">obai@obaisukar.com</a> | <a href="tel:+18103998713">+1 (810) 399-8713</a> | <a href="https://www.obaisukar.com/resume.html">www.obaisukar.com/resume.html</a>
+            </div>
+        </div>
+
+        <div class="company-focus">
+            Meta's mission to connect the world through immersive experiences resonates deeply with my passion for spatial audio and my belief that sound transcends all cultural and linguistic barriers. Your commitment to building the metaverse aligns perfectly with my vision of audio as the universal language of human connection.
+        </div>
+
+        <div class="cover-body">
+            <p>Dear Meta Creative Audio Team,</p>
+
+            <p><strong>You need someone who gets it. And no one gets it more than me.</strong></p>
+
+            <p>I'm autistic. My brain works different. Chaos doesn't scare me - I've lived in it. <span class="highlight-text">Sound is what I breathe</span>. My brain explores the world through sound as a musician and artist. <span class="highlight-text">Sound is life</span>.</p>
+
+            <p>With a heart of a child - like the one watching my <span class="highlight-text">300+ million viewers</span> on my preschool award-winning YouTube channel, Karazah Channel. This curious autistic child who knew the world through sounds. That's why he became a sound designer. Went to Hollywood and was a prodigy leading sound departments in studios in Damascus, Dubai, and Kuala Lumpur.</p>
+
+            <p><strong>This is a prodigy you're talking about.</strong> The youngest employee in Spacetoon - the biggest watched and first Arabic kids channel with millions of watchers throughout two continents. <span class="highlight-text">I was lead sound designer back then</span>.</p>
+
+            <p><strong>VR. AR. Spatial audio. Wwise. FMOD. Pro Tools. I know them all.</strong></p>
+
+            <p>🎬 <strong>الموكب الخالد.</strong> My masterpiece. Hundreds of people. One vision. Mine. Listen to that orchestra and great sound design. World-class animation, music, and audio. Well, <span class="highlight-text">I was the audio director (credited at the end)</span>.</p>
+
+            <p>What makes me different? <strong>I see sound. People hear sound. <span class="highlight-text">I see the frequencies</span>.</strong> I've built studios from conflict zones, designed acoustic systems for 1,300-year-old sacred spaces like the Umayyad Mosque, and created resilient broadcasting networks under impossible conditions. Crisis doesn't scare me - it inspires innovation.</p>
+
+            <p>I co-founded <span class="highlight-text">Radio Al-Kul</span> - a pirate radio station reaching 500,000 daily listeners while evading detection and risking lives to provide truth, resistance, and civilian safety warnings. Featured in NPR, Al Jazeera, Washington Post, and MLive for pioneering crisis-zone broadcasting innovation.</p>
+
+            <p>Meta needs someone who combines technical mastery with endless curiosity and deep cultural understanding. Someone who can blend cutting-edge AI enthusiasm with the human touch that makes technology meaningful. Someone who thrives in collaborative environments with brilliant teams.</p>
+        </div>
+
+        <div class="cover-body">
+            <p><strong>Everybody has a story. Life throws unexpected paths.</strong> I started in a conflict-zone building resilient systems, and today I'm seeking a company that matches my ambition and brilliance. <span class="highlight-text">You need me... and I need you</span>.</p>
+
+            <p>I'm not just applying for a job - I'm ready to help Meta define the future of human connection through immersive audio experiences. My unique neurodivergent perspective on sound, combined with decades of international leadership and crisis innovation, positions me as exactly what your team needs.</p>
+
+            <p><strong>Let's build something extraordinary together.</strong></p>
+
+            <p>Looking forward to our conversation.</p>
+        </div>
+
+        <div class="footer-branding">
+            <div class="signature">
+                <strong>Obai Sukar</strong><br>
+                Sound Designer & Audio Technology Innovator
+            </div>
+            <div class="brand-watermark">
+                🎧 www.obaisukar.com
+            </div>
+        </div>
+    </div>
+
+    <!-- PAGE BREAK TO ENSURE CLEAN PAGE 2 START -->
+    <div style="page-break-before: always;"></div>
+
+    <!-- RESUME -->
+    <div class="resume-section">
+        <header class="resume-header">
+            <div class="resume-title-header">RESUME</div>
+            <div class="resume-contact-info">
+                Email: obai@obaisukar.com | Phone: +1 (810) 399-8713
+            </div>
+            <div class="awards-info">
+                Student Academy Award Winner | Mohammed Bin Rashid Arabic Language Award Recipient
+            </div>
+        </header>
+
+        <section class="section">
+            <h2 class="section-title">Professional Experience</h2>
+            
+            <div class="job-description">
+                <div class="job-title">Sound Department Manager / Senior Sound Designer</div>
+                <div class="company-date">Spacetoon/Tiger Media · 2000–2005, 2006–2010</div>
+                <ul>
+                    <li><strong>Managed sound production departments</strong> across Damascus, Dubai, and Kuala Lumpur facilities for major children's television network</li>
+                    <li><strong>Built dubbing and music studios</strong> from ground-up in multiple international locations with acoustic design</li>
+                    <li><strong>Implemented custom DAW workflows</strong> for high-volume content production</li>
+                    <li><strong>Delivered technical training programs</strong> for audio engineers and production staff</li>
+                    <li><strong>Youngest department head in company history</strong> - recognized for exceptional audio production excellence</li>
+                </ul>
+            </div>
+
+            <div class="job-description">
+                <div class="job-title">Audio Director & Lead Sound Designer</div>
+                <div class="company-date">الموكب الخالد (Feature Animation) · 2018–2019</div>
+                <ul>
+                    <li><strong>Directed complete audio post-production</strong> for world-class animated feature with orchestral score and complex sound design</li>
+                    <li><strong>Managed audio team of 15+ specialists</strong> including composers, sound designers, mixing engineers, and Foley artists</li>
+                    <li><strong>Created immersive soundscapes</strong> combining traditional Middle Eastern instruments with modern cinematic techniques</li>
+                    <li><strong>Supervised 5.1 surround sound mixing</strong> and mastering for theatrical release and streaming platforms</li>
+                </ul>
+            </div>
+
+            <div class="job-description">
+                <div class="job-title">Founder & Executive Producer</div>
+                <div class="company-date">SS Media Productions · 2010–2015</div>
+                <ul>
+                    <li><strong>Founded award-winning children's content production company</strong> specializing in educational multimedia</li>
+                    <li><strong>Created Karazah Channel</strong> achieving <a href="https://www.youtube.com/c/karazahchannel">715K+ subscribers, 301M+ views</a></li>
+                    <li><strong>Produced 500+ episodes</strong> of original children's programming with full audio post-production</li>
+                    <li><strong>Developed innovative audio branding</strong> and signature sound design for preschool content</li>
+                </ul>
+            </div>
+
+            <div class="job-description">
+                <div class="job-title">Co-Founder & Technical Director</div>
+                <div class="company-date">Radio Al-Kul · 2012–2016</div>
+                <ul>
+                    <li><strong>Co-founded conflict-zone radio station</strong> reaching ~500,000 daily listeners across Middle East</li>
+                    <li><strong>Designed resilient broadcast infrastructure</strong> under challenging operational conditions</li>
+                    <li><strong>Featured in <a href="https://www.npr.org/2014/03/16/290615013/radio-pirates-risk-dangers-of-war-to-reach-syrian-people">NPR</a> & Al Jazeera</strong> for pioneering media innovation</li>
+                </ul>
+            </div>
+
+            <div class="job-description">
+                <div class="job-title">IT Specialist & Audio Consultant</div>
+                <div class="company-date">Independent / Obai Sukar Consulting · 2005–Present</div>
+                <ul>
+                    <li><strong>Designed audio-focused IT infrastructure</strong> for production studios and media companies</li>
+                    <li><strong>Specialized in Pro Audio over IP</strong> (Dante, AVB, AES67) for large-scale installations</li>
+                    <li><strong>Delivered acoustic consulting</strong> for Umayyad Mosque audio system</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Awards & Recognition</h2>
+            <ul>
+                <li><strong>Student Academy Award (Silver)</strong> — Sound Designer for <a href="https://www.imdb.com/name/nm8455296/?ref_=ttfc_fcr_cr">Cloud-Kumo</a></li>
+                <li><strong>Mohammed Bin Rashid Arabic Language Award (2019)</strong> — <a href="https://www.arabicaward.ae/p/award-winners/2019">UAE Government cultural innovation award</a></li>
+                <li><strong>International Media Recognition</strong> — <a href="https://www.washingtonpost.com/world/middle_east/syria-diaspora-clubhouse-middle-east/2021/03/09/90a2a55e-7c28-11eb-8c5e-32e47b42b51b_story.html">Washington Post</a>, <a href="https://www.npr.org/2014/03/16/290615013/radio-pirates-risk-dangers-of-war-to-reach-syrian-person">NPR</a>, Al Jazeera features</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Core Technical Competencies</h2>
+            <div style="font-size: 10pt;">
+                <strong>Audio Production:</strong> Steinberg Nuendo, Pro Tools, advanced mixing/mastering workflows<br><br>
+                <strong>Interactive & Game Audio:</strong> Wwise, FMOD middleware experience<br><br>
+                <strong>Immersive & Spatial Audio:</strong> 5.1/7.1 surround sound, Atmos mixing, VR/AR audio, 360° soundscapes<br><br>
+                <strong>Creative Leadership:</strong> Team management, cross-cultural collaboration, project coordination
+            </div>
+        </section>
+
+        <div class="ats-friendly-section">
+            <h3 style="font-weight: bold; font-size: 12pt; margin-bottom: 8px; border-bottom: 1px solid #000; padding-bottom: 2px;">WHAT I BRING TO META'S CREATIVE AUDIO TEAM</h3>
+            <ul style="margin-left: 15px; margin-top: 8px;">
+                <li style="margin-bottom: 3px; font-size: 10pt;"><strong>Student Academy Award recognition</strong> for sound design excellence</li>
+                <li style="margin-bottom: 3px; font-size: 10pt;"><strong>25+ years</strong> of audio innovation and production excellence</li>
+                <li style="margin-bottom: 3px; font-size: 10pt;"><strong>Proven leadership</strong> managing international creative teams</li>
+                <li style="margin-bottom: 3px; font-size: 10pt;"><strong>Immersive audio expertise</strong> in VR/AR and spatial sound design</li>
+                <li style="margin-bottom: 3px; font-size: 10pt;"><strong>Cultural bridge-building</strong> through universal audio languages</li>
+                <li style="margin-bottom: 3px; font-size: 10pt;"><strong>Crisis-to-scale mentality</strong> - I make impossible things work</li>
+            </ul>
+        </div>
+
+        <section class="section">
+            <h2 class="section-title">Notable Projects & Achievements</h2>
+            <ul>
+                <li><strong>الموكب الخالد</strong> — Audio Director for internationally acclaimed animated feature with full orchestral score</li>
+                <li><strong>Karazah Channel</strong> — <a href="https://www.youtube.com/c/karazahchannel">301M+ views</a> across educational children's content with signature audio branding</li>
+                <li><strong>Umayyad Mosque Audio System</strong> — Acoustic design consultation for 1,300-year-old UNESCO World Heritage site</li>
+                <li><strong>Spacetoon International Studios</strong> — Built and managed sound production facilities across Damascus, Dubai, and Kuala Lumpur for major children's television network</li>
+                <li><strong>Radio Al-Kul Crisis Broadcasting</strong> — Co-founded and engineered <a href="https://www.npr.org/2014/03/16/290615013/radio-pirates-risk-dangers-of-war-to-reach-syrian-people">conflict-zone radio station</a> reaching 500,000 daily listeners, featured in NPR and Al Jazeera</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Education & Training</h2>
+            <div class="education-item">
+                <div class="degree">Associate of Science in Audio Production</div>
+                <div class="school">Los Angeles Recording School · 2005</div>
+            </div>
+            <div class="education-item">
+                <div class="degree">Professional Development (Ongoing · 2000–Present)</div>
+                <div class="school">Advanced audio production, spatial audio, VR/AR sound design, and immersive audio technologies</div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
