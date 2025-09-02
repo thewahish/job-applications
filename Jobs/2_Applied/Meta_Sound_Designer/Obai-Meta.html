@@ -62,6 +62,7 @@
             flex: 1;
             max-width: 320px;
             margin: 0 16px;
+            position: relative;
         }
 
         .facebook-search input {
@@ -72,6 +73,174 @@
             padding: 8px 16px;
             font-size: 15px;
             outline: none;
+        }
+
+        .search-results {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+            max-height: 300px;
+            overflow-y: auto;
+            z-index: 1000;
+            display: none;
+        }
+
+        .search-result-item {
+            padding: 12px 16px;
+            border-bottom: 1px solid #e4e6ea;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .search-result-item:hover {
+            background: #f0f2f5;
+        }
+
+        .search-result-item:last-child {
+            border-bottom: none;
+        }
+
+        .search-result-icon {
+            width: 40px;
+            height: 40px;
+            background: #1877f2;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 18px;
+            flex-shrink: 0;
+        }
+
+        .search-result-content {
+            flex: 1;
+        }
+
+        .search-result-title {
+            font-weight: 600;
+            font-size: 14px;
+            color: #1c1e21;
+            margin-bottom: 2px;
+        }
+
+        .search-result-description {
+            font-size: 12px;
+            color: #65676b;
+        }
+
+        /* Facebook-style popup modal */
+        .facebook-popup-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 9999;
+            display: none;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .facebook-popup {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            width: 90%;
+            max-width: 500px;
+            max-height: 80vh;
+            overflow: hidden;
+            animation: popupSlideIn 0.3s ease-out;
+        }
+
+        @keyframes popupSlideIn {
+            from {
+                transform: scale(0.8) translateY(-20px);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1) translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .facebook-popup-header {
+            padding: 16px 20px;
+            border-bottom: 1px solid #dadde1;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: #f7f8fa;
+        }
+
+        .facebook-popup-title {
+            font-size: 20px;
+            font-weight: 600;
+            color: #1c1e21;
+        }
+
+        .facebook-popup-close {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: #e4e6ea;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            color: #65676b;
+        }
+
+        .facebook-popup-close:hover {
+            background: #dadde1;
+        }
+
+        .facebook-popup-content {
+            padding: 24px 20px;
+            text-align: center;
+        }
+
+        .facebook-popup-emoji {
+            font-size: 64px;
+            margin-bottom: 16px;
+        }
+
+        .facebook-popup-message {
+            font-size: 24px;
+            font-weight: 600;
+            color: #1c1e21;
+            margin-bottom: 8px;
+        }
+
+        .facebook-popup-submessage {
+            font-size: 16px;
+            color: #65676b;
+            margin-bottom: 24px;
+        }
+
+        .facebook-popup-button {
+            background: #1877f2;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            padding: 12px 24px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s ease;
+        }
+
+        .facebook-popup-button:hover {
+            background: #166fe5;
         }
 
         .facebook-nav {
@@ -632,6 +801,10 @@
                 display: none !important; /* Hide search on mobile like real FB */
             }
             
+            .search-results {
+                display: none !important; /* Hide search results on mobile */
+            }
+            
             .facebook-nav {
                 gap: 2px !important; /* Tighter spacing like real FB */
             }
@@ -832,7 +1005,8 @@
         <div class="facebook-header">
             <a href="https://www.facebook.com" class="facebook-logo">facebook</a>
             <div class="facebook-search">
-                <input type="text" placeholder="Search Facebook">
+                <input type="text" placeholder="Search Facebook" id="searchInput">
+                <div id="searchResults" class="search-results"></div>
             </div>
             <div class="facebook-nav">
                 <a href="https://www.facebook.com/obai.sukar" class="nav-item" title="My Profile - Obai Sukar">🏠</a>
@@ -1006,5 +1180,308 @@
             </div>
         </div>
     </div>
+
+    <!-- Facebook-style Popup Modal -->
+    <div class="facebook-popup-overlay" id="facebookPopup">
+        <div class="facebook-popup">
+            <div class="facebook-popup-header">
+                <div class="facebook-popup-title">Search Complete!</div>
+                <button class="facebook-popup-close" onclick="closeFacebookPopup()">×</button>
+            </div>
+            <div class="facebook-popup-content">
+                <div class="facebook-popup-emoji">🎧</div>
+                <div class="facebook-popup-message">Obai is awesome!</div>
+                <div class="facebook-popup-submessage">You've just experienced next-level application interactivity. <br>Ready to hire this sound design wizard?</div>
+                <button class="facebook-popup-button" onclick="closeFacebookPopup()">Absolutely! 🚀</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Facebook-like search functionality
+        const searchInput = document.getElementById('searchInput');
+        const searchResults = document.getElementById('searchResults');
+
+        // Searchable content database
+        const searchData = [
+            {
+                icon: '🎧',
+                title: 'Sound Designer Application',
+                description: 'Meta Sound Designer position - Award-winning audio expert',
+                keywords: ['sound', 'designer', 'meta', 'audio', 'vr', 'ar', 'spatial', 'job', 'application']
+            },
+            {
+                icon: '🏆',
+                title: 'Awards & Recognition',
+                description: 'Student Academy Award, Mohammed Bin Rashid Award, NPR featured',
+                keywords: ['awards', 'academy', 'oscar', 'dubai', 'governor', 'npr', 'aljazeera', 'recognition']
+            },
+            {
+                icon: '🎬',
+                title: 'Eternal Parade',
+                description: 'Audio Director for internationally acclaimed animated feature',
+                keywords: ['eternal', 'parade', 'animation', 'director', 'orchestral', 'feature', 'film']
+            },
+            {
+                icon: '📻',
+                title: 'Radio Al-Kul',
+                description: 'Co-founded crisis-zone radio station reaching 500K daily listeners',
+                keywords: ['radio', 'alkul', 'broadcasting', 'syria', 'crisis', 'pirate', 'npr', 'featured']
+            },
+            {
+                icon: '🎮',
+                title: 'Gaming Experience',
+                description: 'Wwise, FMOD, interactive audio, VR/AR sound design',
+                keywords: ['gaming', 'wwise', 'fmod', 'interactive', 'vr', 'ar', 'virtual', 'reality']
+            },
+            {
+                icon: '🏢',
+                title: 'Spacetoon Media',
+                description: 'Sound Department Manager across Damascus, Dubai, Kuala Lumpur',
+                keywords: ['spacetoon', 'media', 'manager', 'damascus', 'dubai', 'kuala', 'lumpur', 'studios']
+            },
+            {
+                icon: '📺',
+                title: 'Karazah Channel',
+                description: '715K+ subscribers, 301M+ views, award-winning children\'s content',
+                keywords: ['karazah', 'youtube', 'channel', 'children', 'content', 'subscribers', 'views']
+            },
+            {
+                icon: '🎼',
+                title: 'Technical Skills',
+                description: 'Pro Tools, Steinberg Nuendo, spatial audio, surround sound mixing',
+                keywords: ['protools', 'nuendo', 'mixing', 'mastering', 'spatial', 'surround', 'technical']
+            }
+        ];
+
+        // Create comprehensive search index from all page content
+        function buildSearchIndex() {
+            const allTextElements = document.querySelectorAll('p, h1, h2, h3, h4, h5, h6, span, div, li, a, .hero-title, .hero-subtitle, .experience-title, .experience-company, .experience-description, .skill-name, .post-content, .comment-text, .username');
+            const contentMap = new Map();
+            
+            allTextElements.forEach(element => {
+                const text = element.textContent.trim();
+                if (text && text.length > 3) {
+                    const words = text.toLowerCase().split(/\s+/);
+                    words.forEach(word => {
+                        // Clean word of punctuation
+                        const cleanWord = word.replace(/[^\w]/g, '');
+                        if (cleanWord.length >= 3) {
+                            if (!contentMap.has(cleanWord)) {
+                                contentMap.set(cleanWord, []);
+                            }
+                            contentMap.get(cleanWord).push({
+                                text: text,
+                                element: element,
+                                context: element.closest('.experience-item, .skill-item, .post, .comment, .hero-section')
+                            });
+                        }
+                    });
+                }
+            });
+            
+            return contentMap;
+        }
+
+        const contentIndex = buildSearchIndex();
+
+        searchInput.addEventListener('input', function(e) {
+            const query = e.target.value.toLowerCase().trim();
+            
+            if (query.length < 2) {
+                searchResults.style.display = 'none';
+                return;
+            }
+
+            // First search predefined categories
+            const categoryResults = searchData.filter(item => 
+                item.keywords.some(keyword => keyword.includes(query)) ||
+                item.title.toLowerCase().includes(query) ||
+                item.description.toLowerCase().includes(query)
+            );
+
+            // Then search all page content
+            const contentResults = [];
+            const addedTexts = new Set();
+
+            // Exact word match
+            if (contentIndex.has(query)) {
+                contentIndex.get(query).forEach(match => {
+                    if (!addedTexts.has(match.text)) {
+                        contentResults.push({
+                            icon: '🔍',
+                            title: truncateText(match.text, 40),
+                            description: `Found: "${query}" in content`,
+                            element: match.element,
+                            isContent: true
+                        });
+                        addedTexts.add(match.text);
+                    }
+                });
+            }
+
+            // Partial word matches
+            if (contentResults.length < 5) {
+                contentIndex.forEach((matches, word) => {
+                    if (word.includes(query) && word !== query && contentResults.length < 8) {
+                        matches.slice(0, 2).forEach(match => {
+                            if (!addedTexts.has(match.text)) {
+                                contentResults.push({
+                                    icon: '💬',
+                                    title: truncateText(match.text, 40),
+                                    description: `Contains: "${query}" in "${word}"`,
+                                    element: match.element,
+                                    isContent: true
+                                });
+                                addedTexts.add(match.text);
+                            }
+                        });
+                    }
+                });
+            }
+
+            const allResults = [...categoryResults, ...contentResults.slice(0, 5)];
+
+            if (allResults.length > 0) {
+                displayResults(allResults);
+                searchResults.style.display = 'block';
+            } else {
+                // Create a clickable "no results" item
+                const noResultsItem = {
+                    icon: '🎯',
+                    title: `Can't find "${query}"? No problem!`,
+                    description: 'Obai is awesome anyway! Click to see why Meta should hire him.',
+                    isNoResults: true
+                };
+                displayResults([noResultsItem]);
+                searchResults.style.display = 'block';
+            }
+        });
+
+        function truncateText(text, maxLength) {
+            return text.length > maxLength ? text.substring(0, maxLength) + '...' : text;
+        }
+
+        function displayResults(results) {
+            searchResults.innerHTML = results.map((item, index) => `
+                <div class="search-result-item" data-index="${index}">
+                    <div class="search-result-icon">${item.icon}</div>
+                    <div class="search-result-content">
+                        <div class="search-result-title">${item.title}</div>
+                        <div class="search-result-description">${item.description}</div>
+                    </div>
+                </div>
+            `).join('');
+            
+            // Add click handlers
+            const resultItems = searchResults.querySelectorAll('.search-result-item');
+            resultItems.forEach((item, index) => {
+                item.addEventListener('click', () => {
+                    handleResultClick(results[index]);
+                });
+            });
+        }
+
+        function handleResultClick(resultItem) {
+            searchInput.value = resultItem.title;
+            searchResults.style.display = 'none';
+            
+            // Show the Facebook popup first
+            showFacebookPopup();
+            
+            // If it's a "no results" click, just show the popup and scroll to top
+            if (resultItem.isNoResults) {
+                setTimeout(() => {
+                    document.querySelector('.hero-title').scrollIntoView({ behavior: 'smooth' });
+                }, 500);
+                return;
+            }
+            
+            // Then scroll after a short delay
+            setTimeout(() => {
+                // If it's a content search result, scroll to the actual element
+                if (resultItem.isContent && resultItem.element) {
+                    resultItem.element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    // Add highlight effect
+                    resultItem.element.style.background = '#1877f2';
+                    resultItem.element.style.color = 'white';
+                    resultItem.element.style.borderRadius = '4px';
+                    resultItem.element.style.padding = '2px 4px';
+                    resultItem.element.style.transition = 'all 0.3s ease';
+                    
+                    setTimeout(() => {
+                        resultItem.element.style.background = '';
+                        resultItem.element.style.color = '';
+                        resultItem.element.style.borderRadius = '';
+                        resultItem.element.style.padding = '';
+                    }, 2000);
+                    return;
+                }
+                
+                // Fallback to predefined sections
+                const scrollTargets = {
+                    'Sound Designer Application': '.hero-title',
+                    'Awards & Recognition': '.experience-item:first-child',
+                    'Eternal Parade': '.experience-item:nth-child(2)',
+                    'Radio Al-Kul': '.experience-item:nth-child(3)',
+                    'Gaming Experience': '.skills-grid',
+                    'Spacetoon Media': '.experience-item:nth-child(4)',
+                    'Karazah Channel': '.experience-item:nth-child(5)',
+                    'Technical Skills': '.skills-grid'
+                };
+                
+                const target = document.querySelector(scrollTargets[resultItem.title]);
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            }, 500);
+        }
+
+        // Hide search results when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!searchInput.contains(e.target) && !searchResults.contains(e.target)) {
+                searchResults.style.display = 'none';
+            }
+        });
+
+        // Clear search when escape is pressed
+        searchInput.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                searchInput.value = '';
+                searchResults.style.display = 'none';
+            } else if (e.key === 'Enter') {
+                // Show popup on Enter key press
+                if (searchInput.value.trim().length > 0) {
+                    searchResults.style.display = 'none';
+                    showFacebookPopup();
+                }
+            }
+        });
+
+        // Facebook popup functions
+        function showFacebookPopup() {
+            document.getElementById('facebookPopup').style.display = 'flex';
+            document.body.style.overflow = 'hidden'; // Prevent scrolling
+        }
+
+        function closeFacebookPopup() {
+            document.getElementById('facebookPopup').style.display = 'none';
+            document.body.style.overflow = ''; // Restore scrolling
+        }
+
+        // Close popup when clicking outside
+        document.getElementById('facebookPopup').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeFacebookPopup();
+            }
+        });
+
+        // Close popup with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && document.getElementById('facebookPopup').style.display === 'flex') {
+                closeFacebookPopup();
+            }
+        });
+    </script>
 </body>
 </html>
