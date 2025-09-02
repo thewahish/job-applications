@@ -19,6 +19,7 @@
 
 **Project/Media Links:**
 - YouTube Channel (Karazah): https://www.youtube.com/c/karazahchannel
+- Eternal Parade (Feature Animation): https://www.youtube.com/watch?v=7o7TOSM9R-k
 - AYA Animations: https://ayaanimations.com/
 - Ghiras Al-Nahda: https://ghirasalnahda.com/
 
