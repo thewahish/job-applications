@@ -394,6 +394,20 @@ Technology Leader | Media Innovator | Crisis Management Expert
 - Implemented content management systems and distribution workflows
 - **Strategic URL**: Link to www.youtube.com/c/karazahchannel for metrics proof
 
+**IT Specialist**  
+*Comprehensive Lab Services, LLC · 2014–2019*
+- Implemented HIPAA-aligned digital workflows and electronic records management systems
+- Coordinated quality control processes and compliance documentation procedures
+- Managed digital asset organization and secure data handling protocols
+- Supported laboratory operations with technology solutions and process optimization
+
+**AR/AP Coordinator & Operations Specialist**  
+*Catalyst Diagnostic · 2020–2022*
+- Managed accounts receivable/payable operations and vendor coordination processes
+- Implemented budgeting systems and financial tracking for medical billing operations
+- Coordinated with medical billing systems and insurance processing workflows
+- Optimized operational efficiency through technology integration and process improvement
+
 **Co-Founder**  
 *Radio Al-Kul · 2012–2016*
 - Co-founded conflict-zone radio station reaching ~500,000 daily listeners
@@ -401,6 +415,20 @@ Technology Leader | Media Innovator | Crisis Management Expert
 - Recognized as Syrian celebrity in Washington Post coverage  
 - Managed technical infrastructure under challenging operational conditions
 - **Strategic URL**: Link to NPR article for credibility
+
+**Audio Visual Technician**  
+*Swank Audio Visuals · 2005–2006*
+- Provided professional AV setup and technical support at Four Seasons Beverly Hills
+- Managed sound system installation, configuration, and live event technical support
+- Coordinated equipment logistics and venue-specific audio visual requirements
+- Delivered high-quality technical services for luxury hospitality and corporate events
+
+**Live Sound Engineer**  
+*Mohamed Tarek Productions · 2018–2020*
+- Served as Front-of-House (FOH) mixing engineer for live concert performances
+- Managed RF coordination, backline setup, and technical show advancing
+- Coordinated with venue technical staff and artist technical requirements
+- Delivered professional live sound mixing for audiences ranging from intimate venues to large concert halls
 
 ---
 
