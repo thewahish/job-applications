@@ -49,6 +49,8 @@
 - Combined materials into single application file for easy submission
 - Updated award references: "Governor of Dubai Award" for US audience recognition
 - Applied authentic Obai voice guidelines to avoid AI-generated patterns
+- Added personal IT passion story: "Technology is my DNA" with 8th grade computer assembly
+- Enhanced emotional connection with childhood programming and MS-DOS memories
 
 ---
 

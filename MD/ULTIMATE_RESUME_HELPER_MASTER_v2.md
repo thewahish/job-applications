@@ -79,7 +79,7 @@
 **For IT Positions - "Technology is my DNA":**
 - "I assembled my first computer in 8th grade"
 - "I was the kid running BASIC programming on MS-DOS with floppy disks"
-- "Technology isn't just my career - it's been my passion and ultimate joy since childhood"
+- "Technology has been my passion and ultimate joy since childhood"
 - "I've never stopped progressing with IT as my greatest source of fun and discovery"
 
 **For Gaming Companies - "Gaming is in my blood":**
@@ -96,6 +96,9 @@
 
 ### ❌ AVOID AI PATTERNS:
 - "It is not just X, it is Y" constructions
+- "X isn't just Y, it's Z" structures
+- "But in reality, XYZ" / "The reality is that..." transitions
+- "In truth, ..." / "The truth is..." connectors
 - Overly structured corporate transitions
 - Buzzword stacking without story
 - Formulaic openings and closings
