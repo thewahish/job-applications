@@ -74,6 +74,26 @@
 - **Cultural bridges**: Personal background as differentiator
 - **Results with heart**: Numbers tied to human stories
 
+### PERSONAL CONNECTION STATEMENTS (Role-Specific)
+
+**For IT Positions - "Technology is my DNA":**
+- "I assembled my first computer in 8th grade"
+- "I was the kid running BASIC programming on MS-DOS with floppy disks"
+- "Technology isn't just my career - it's been my passion and ultimate joy since childhood"
+- "I've never stopped progressing with IT as my greatest source of fun and discovery"
+
+**For Gaming Companies - "Gaming is in my blood":**
+- "I've been a gamer since I was a kid and I understand game logic from the player's soul"
+- "I've played games since childhood, program games for fun now, and even did game testing"
+- "I create sound design for games and I'm obsessed with game lore and worldbuilding"
+- **Company-Specific Examples:**
+  - Blizzard: "World of Warcraft has been part of my life since launch"
+  - Valve: "Half-Life changed how I think about interactive storytelling"
+  - Epic Games: "Unreal Engine is where creativity meets technical mastery"
+
+**For Sound Design - "Sound is what I breathe":**
+- Original authentic statement - keep as established
+
 ### ❌ AVOID AI PATTERNS:
 - "It is not just X, it is Y" constructions
 - Overly structured corporate transitions
