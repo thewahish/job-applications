@@ -11,28 +11,96 @@
 - **Knowledge Base First**: All resume/project data comes from verified master file
 - **Ask When Uncertain**: If data isn't in knowledge base, ask user directly
 - **Consistency**: Use established naming, URLs, and formatting from master file
+- **Timeline Accuracy**: CRITICAL - Maintain chronological accuracy to preserve credibility
+
+## TIMELINE ACCURACY REQUIREMENTS
+**NEVER use phrases that distort career chronology:**
+- ❌ "I started in a conflict-zone" - Falsely implies career began there (2012 was mid-career)
+- ❌ Any phrasing suggesting conflict zone work was career beginning
+
+**ALWAYS use timeline-accurate phrasing:**
+- ✅ "After building my IT and media career, I found myself in a conflict-zone..." 
+- ✅ Shows Radio Al-Kul (2012) as mid-career challenge, not career start (2000)
+- ✅ Preserves credibility by maintaining accurate chronological sequence
+
+## MANDATORY BRANDING REQUIREMENTS
+**CRITICAL: Every job application MUST use company's official branding**
+
+### TESTIMONIAL FORMATTING RULE (PERMANENT)
+**For Premium Cover Letters:**
+- **Bold the testimonial quote** and add asterisk (*): `<strong>"quote content"*</strong>`
+- **Reference at bottom**: `*Additional verified testimonials can be viewed directly on my LinkedIn profile: linkedin.com/in/obaisukar`
+- **Example**: "I'm recognized by [Name] as <strong>"by far one of the best professionals I had the pleasure to partner with."*</strong>"
+- **ALWAYS use this format in premium cover letters**
+
+### PDF OPTIMIZATION RULE (PERMANENT)
+**For ATS-Friendly HTML Files (Combined & Resume-Only):**
+- **Container padding**: 0.3in-0.4in top/bottom, 0.5in-0.6in left/right
+- **Print media queries**: Reduce all margins/padding by 30-50% for PDF conversion
+- **Font sizes**: 10-11pt body, smaller headers (16-20pt names, 12-14pt section titles)
+- **Spacing**: Minimal margins between elements (3-8px typical)
+- **Target**: 1-2 pages maximum for combined cover+resume
+- **NEVER apply to Premium Cover Letters** - only ATS-friendly files
+
+### Logo Implementation Protocol:
+1. **Personal Logo**: ALWAYS copy `D:\Applications\Jobs\obai_sukar_logo.png` to each job folder and use local copy
+2. **Company Logo**: Look for company logo in job application folder first
+3. **Check for PNG files**: `company_logo.png`, `logo.png`, or similar in folder  
+4. **If no logo found**: ASK user to provide logo - "Please provide company logo as PNG file"
+5. **Dual Logo Layout**: Personal logo prominent left (larger), company logo respectful right (smaller)
+6. **Auto-detect and implement**: If logo file exists, automatically integrate into HTML
+
+### COVER LETTER DESIGN STANDARD (ObserveAI Formula)
+**MANDATORY: Use sophisticated design for cover-only files, ATS-friendly for combined**
+
+**✅ Cover-Only Files (Visual Design):**
+- **Dual logo header** - Personal branding + company respect
+- **Gradient name treatment** - Professional visual impact
+- **Company focus section** - Dedicated research/alignment box
+- **Sectioned achievements** - Visual bullet points with strategic spacing
+- **Dark value proposition section** - Branded highlight section
+- **Brand footer** - Subtle personal logo + website reference
+- **Typography**: IBM Plex fonts (Google Fonts) for professional elevation
+- **Color scheme**: Extract and apply company colors throughout design
+
+**✅ ATS-Friendly Files (Text Only - CRITICAL RULE):**
+- **NO LOGOS** - Text only for ATS parsing
+- **NO IMAGES** - Will break ATS scanning
+- **NO GRAPHICS** - Pure text formatting
+- **Standard fonts** - System fonts only (Arial, Times New Roman, etc.)
+- **Simple styling** - Basic CSS, no complex layouts
+- **Text-based headers** - Company name in text, not logo
+
+### Color Matching Requirements:
+1. **Extract company colors** from logo or company website
+2. **Replace default blue (#2c5aa0)** with company's primary color
+3. **Apply consistently** across all borders, highlights, and accent elements
+4. **Maintain readability**: Ensure text contrast meets accessibility standards
+
+### Implementation Process:
+- **Step 1**: Check folder for logo files using Glob tool
+- **Step 2**: If found, integrate into HTML with proper styling
+- **Step 3**: If not found, ask user: "I need the company logo as a PNG file to match their branding"
+- **Step 4**: Extract colors and apply throughout application materials
+
+**NEVER skip branding** - Professional applications must reflect company visual identity
 
 ## WRITING STYLE - AUTHENTIC OBAI VOICE
 **CRITICAL: Cover letters must sound like Obai, not AI-generated content**
 
-### ✅ Obai's Authentic Style:
+### ✅ Authentic Obai Voice (Master Prompt v3.3):
 - **Story-driven and emotional** - Real experiences with human impact
-- **Direct, confident statements** - "You need someone who gets it"  
-- **Personal vulnerability as strength** - Authentic background sharing
-- **Bold declarations** - "This is a prodigy you're talking about"
-- **Conversational flow** - Natural rhythm, not corporate structure
-- **Cultural bridges** - Personal background as differentiator
-- **Results with heart** - Numbers tied to human stories
+- **Direct confidence** - "Sound is what I breathe", "Technology is my DNA"  
+- **Personal vulnerability as strength** - "I see frequencies where others hear noise"
+- **Bold but humble** - Let metrics & achievements prove success
+- **Collaborative endings** - "We're a win for each other"
 
-### ❌ Avoid AI Patterns:
-- "It is not just X, it is Y" constructions
-- "X isn't just Y, it's Z" structures
-- "But in reality, XYZ" / "The reality is that..." transitions
-- "In truth, ..." / "The truth is..." connectors
-- Overly structured corporate transitions  
-- Buzzword stacking without story
-- Formulaic "Dear [Company]" + bullet points + "Sincerely"
+### ❌ Prohibited AI Patterns (v3.3):
+- "It is not just X, it is Y" structures
+- "What truly sets me apart is..." phrasing
 - Generic "I am excited to apply" openings
+- Buzzword stacking without story
+- Formulaic openings/closings
 
 ### 📜 Award References:
 - **US Audience:** "Governor of Dubai Award" (more recognizable)
@@ -58,27 +126,57 @@
 **For Sound Design - "Sound is what I breathe":**
 - Original authentic statement - keep as established
 
+### 💡 CONTENT STRATEGY BY ROLE (Master Prompt v3.3)
+
+**IT/Director Roles - "Technology is my DNA":**
+- Independent IT consulting since 2000 (US, Syria, UAE, Malaysia)
+- Synergy Senior Management (18+ facilities, 99.8% uptime, zero security incidents)
+- HIPAA compliance, VLANs, Microsoft 365, automation
+
+**Creative/Media/Sound - "Sound is what I breathe":** 
+- LARS graduate (2005) - mandatory mention
+- Spacetoon theme songs (Detective Conan, Beyblade, Samurai Jack, Gundam Wing, Samurai 7)
+- Eternal Parade / الموكب الخالد (Audio Director)
+- Karazah Channel (715K subs, 301M+ views)
+
+**Gaming/Interactive - "Gaming is in my blood":**
+- Wwise, FMOD, game audio pipelines
+- Player-to-creator narrative
+
 ## JOB APPLICATION WORKFLOW
-**CRITICAL: Follow this exact process for job applications:**
+**UPDATED: Claude handles analysis + basic materials, User handles branding + final materials**
 
-### Stage 1: PREPARATION (Jobs/1_Analysis_Stage/[Company]/)
+### OLD FOLDER USAGE (CLARIFICATION)
+**CORRECT Usage:**
+- Main job folder: Final application files + supporting documents (NEVER empty)
+- OLD folder: Previous versions, amended files, development artifacts only
+- **NEVER move final application files to OLD and leave main folder empty**
+
+### Stage 1: ANALYSIS (Jobs/1_Analysis_Stage/[Company]/)
+**Claude Role:**
 1. Analyze job posting and create compatibility analysis
-2. Research company for brand colors and visual identity
+2. Create analysis.md with compatibility score and recommendations
+3. Generate ATS-ready resume (black/white, no branding)
+4. Create README.md tracking file
+5. **STOP HERE** - Move to Preparation Stage
 
-### Stage 2: MATERIAL CREATION (Jobs/1_Preparation_Stage/[Company]/)
-3. Create company-specific materials:
-   - Targeted resume with role-specific focus
-   - Custom cover letter with company research
-   - Combined HTML file (cover letter + resume)
-   - Company-branded styling (colors, visual identity)
-   - PDF versions ready for submission
-4. **WAIT FOR USER APPROVAL** - Do NOT move to applied until user confirms
+### Stage 2: PREPARATION (Jobs/2_Preparation_Stage/[Company]/)
+**Claude Role:**
+- Move completed analysis materials here
+- Mark as ready for user branding work
+- **HAND OFF TO USER**
 
-### Stage 3: APPLICATION (Jobs/2_Applied/[Company]/)
-5. **ONLY after user explicitly says "applied"** - move materials to applied folder
-6. User must confirm they submitted the application before folder transition
+### Stage 3: APPLIED (Jobs/3_Applied/[Company]/)
+**User Role:**
+- User submits application
+- **User notifies Claude to move to Applied folder**
 
-**NEVER assume application status - always ask for explicit confirmation**
+### Stage 4: ARCHIVE (Jobs/4_Archive/[Company]/)
+**System Role:**
+- Completed applications moved here for historical reference
+- Long-term storage of application materials
+
+**KEY CHANGE:** Claude stops at basic materials, User handles visual/branding work
 
 ## README TRACKING SYSTEM
 **CRITICAL: Every job application folder MUST have a README.md file at the root level**
@@ -93,19 +191,88 @@
 
 ### Location Rule:
 - README.md goes in **ROOT** of job folder (NOT in OLD subfolder)
-- Example: `Jobs/1_Preparation_Stage/[Company]/README.md`
-- Example: `Jobs/2_Applied/[Company]/README.md`
+- Example: `Jobs/2_Preparation_Stage/[Company]/README.md`
+- Example: `Jobs/3_Applied/[Company]/README.md`
 
 ### Update Requirements:
 - Update README with every change made to application materials
 - Log date, time, and specific modifications
 - Track application status progression through workflow stages
 
-## VERIFIED DATA SOURCES
-- Contact Info: From master knowledge base only
-- Project URLs: Use verified links (Eternal Parade: https://www.youtube.com/watch?v=7o7TOSM9R-k)
-- Professional Recognition: NPR, Al Jazeera, MLive, Washington Post (with verified URLs)
-- Technical Skills: Follow established lists in master file
+## MASTER PROMPT INTEGRATION (v3.3, LOCKED)
+**CRITICAL: All job application materials must derive from Master Prompt v3.3**
+
+### Core Identity (Always Include):
+- Name: Obai Sukar
+- Email: obai@obaisukar.com  
+- Phone: +1 (810) 399-8713
+- Website: www.obaisukar.com/resume.html
+- Location: Michigan, USA
+
+### PRIMARY IDENTITY (MANDATORY - ALWAYS FIRST)
+**Fixed Professional Experience Order:**
+1. **IT Specialist & Consultant** (Independent / Obai Sukar Consulting · 2005–Present) - PRIMARY IDENTITY
+2. **IT Director & Systems Architect** (Synergy Senior Management · 2022–Present) - PRIMARY IDENTITY
+
+**CRITICAL: These two roles establish primary IT identity and ALWAYS appear first in every resume**
+
+### TESTIMONIAL REQUIREMENTS
+**Default for IT/Corporate/Technical (CONDITIONAL ALWAYS):**
+- **Sinan Hatahet, PhD — Co-Founder, Workiom CRM**: "By far one of the best professionals I had the pleasure to partner with"
+- **ALWAYS for**: IT, Technical, SaaS, Enterprise, Management, Corporate roles
+- **Use for Media ONLY if**: Role requires corporate structure, prestige, or business leadership
+- **Resume**: Selected Testimonial section near end
+- **Cover Letter**: Penultimate paragraph for leadership credibility
+- **LinkedIn Reference**: "Additional verified testimonials can be viewed directly on my LinkedIn profile: linkedin.com/in/obaisukar"
+
+**Role-Appropriate Selection Guide:**
+- **IT/Enterprise/SaaS**: Kerem Tekin (Toyota), Husam Azma (Oracle) + Sinan (CRM)
+- **Healthcare/Medical**: Mohamad Alkhouli (Mayo Clinic), Ammar Shukairy (Burton Urgent Care) + Sinan (CRM)
+- **Media/Production (Creative)**: Kamel Weiss (Spacetoon), Michael Shagoury (SVP), Fawaz Gheibeh (Sound Engineer)
+- **Media/Production (Corporate)**: Use Sinan (CRM) for VP/Director/Manager levels or business-focused roles
+- **Leadership/Management**: Khalid Saleh (CEO Invesp), Ghiath Osman (CEO) + Sinan (CRM)
+- **Technical/Engineering**: Hutheyfa Tabbah (Dana Inc.), Lamis Beirkdar (Statista) + Sinan (CRM)
+
+### Verified Awards & Recognition:
+- 🎬 Sound Designer for Cloud Kumo, winner of the 2016 Student Academy Award (Silver) — Film won prestigious Oscar alternative category award
+- 🏅 Recipient of a prestigious award by the Governor of Dubai — the Mohammed Bin Rashid Arabic Language Award (2019) — Cultural innovation recognition
+- 🌍 Featured in NPR, Al Jazeera, AFP, Medium for Radio Al-Kul
+- 📰 Recognized by Washington Post as a Syrian celebrity (https://www.washingtonpost.com/world/middle_east/syria-diaspora-clubhouse-middle-east/2021/03/09/90a2a55e-7c28-11eb-8c5e-32e47b42b51b_story.html)
+- 📰 MLive coverage of SS Media Productions expansion
+
+### Education:
+- 🎓 Los Angeles Recording School Graduate (2005) — Audio Production & Sound Design
+- 📚 Associate Diploma in Printing & Publishing, Damascus, Syria (1999)
+
+### 🔒 SAFETY LOCKS (Master Prompt v3.3)
+- 🚫 No fabrication of awards, dates, roles, or URLs
+- 🚫 Never label "autistic" or "prodigy" 
+- ✅ Always pair Eternal Parade / الموكب الخالد in English & Arabic
+- ✅ Washington Post → brief celebrity mention in diaspora article, not main subject
+- ✅ LARS diploma → mandatory in all creative/sound/media roles
+- ✅ Only one website mention in resume footer, never in header
+
+## JOB ROLE EXCLUSION LIST
+**NEVER apply to or analyze these types of positions:**
+
+### Gambling/Casino/Betting Roles:
+- Slot machine audio/sound design
+- Casino gaming equipment development
+- Lottery system development
+- Sports betting platform roles
+- Casino/gambling software development
+- Any position involving gambling mechanics, casino operations, or betting systems
+
+### Key Indicators to Watch For:
+- Job descriptions mentioning: slots, casino, gambling, betting, lottery, gaming machines
+- Company divisions focused on casino/gambling (even if parent company does other work)
+- Roles specifically for gambling platforms or casino operations
+
+### Reasoning:
+Personal values conflict with gambling industry participation.
+
+### Note: 
+Regular video game development (non-gambling) is acceptable, even at companies that have gambling divisions.
 
 ## SESSION CONFIRMATION REQUIRED
 Confirm you've read the master knowledge base before starting any resume/job application work.
