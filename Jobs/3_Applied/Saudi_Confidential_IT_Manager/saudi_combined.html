@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obai Sukar - Application - Senior IT Manager Saudi Arabia</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.4;
+            color: #333;
+            background: white;
+            max-width: 8.5in;
+            margin: 0 auto;
+            padding: 0.4in;
+        }
+        
+        /* COVER LETTER SECTION */
+        .cover-header {
+            text-align: center;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #006C35;
+            padding-bottom: 15px;
+        }
+        
+        .cover-name {
+            font-size: 24pt;
+            font-weight: bold;
+            color: #006C35;
+            margin-bottom: 6px;
+        }
+        
+        .cover-title {
+            font-size: 14pt;
+            color: #666;
+            margin-bottom: 8px;
+        }
+        
+        .cover-contact {
+            font-size: 10pt;
+            margin-bottom: 4px;
+        }
+        
+        .cover-letter-label {
+            font-size: 12pt;
+            font-weight: bold;
+            color: #006C35;
+            margin: 20px 0 10px 0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .recipient-info-box {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-left: 4px solid #006C35;
+            padding: 15px;
+            margin-bottom: 20px;
+            font-size: 11pt;
+        }
+        
+        .cover-content {
+            font-size: 11pt;
+            line-height: 1.5;
+            text-align: justify;
+        }
+        
+        .cover-content p {
+            margin-bottom: 12px;
+        }
+        
+        .highlight-box {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-left: 4px solid #006C35;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        
+        .highlight-box h4 {
+            color: #006C35;
+            font-size: 11pt;
+            margin-bottom: 8px;
+        }
+        
+        .achievements-list {
+            font-size: 10pt;
+            line-height: 1.3;
+        }
+        
+        .achievements-list li {
+            margin-bottom: 4px;
+        }
+        
+        /* RESUME SECTION */
+        .resume-section {
+            page-break-before: always;
+            margin-top: 30px;
+            border-top: 3px solid #006C35;
+            padding-top: 20px;
+        }
+        
+        .resume-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .resume-title {
+            font-size: 16pt;
+            font-weight: bold;
+            color: #006C35;
+            margin-bottom: 10px;
+        }
+        
+        .resume-name {
+            font-size: 20pt;
+            font-weight: bold;
+            color: #006C35;
+            margin-bottom: 6px;
+        }
+        
+        .resume-tagline {
+            font-size: 12pt;
+            color: #666;
+            margin-bottom: 8px;
+        }
+        
+        .resume-contact {
+            font-size: 10pt;
+            margin-bottom: 4px;
+        }
+        
+        .section {
+            margin-bottom: 16px;
+        }
+        
+        .section-title {
+            font-size: 12pt;
+            font-weight: bold;
+            color: #006C35;
+            border-bottom: 1px solid #006C35;
+            padding-bottom: 2px;
+            margin-bottom: 8px;
+        }
+        
+        .job-title {
+            font-weight: bold;
+            font-size: 11pt;
+            margin-bottom: 2px;
+        }
+        
+        .company-duration {
+            font-style: italic;
+            color: #666;
+            font-size: 10pt;
+            margin-bottom: 6px;
+        }
+        
+        .job-description {
+            margin-bottom: 10px;
+        }
+        
+        .job-description ul {
+            margin-left: 15px;
+            margin-top: 3px;
+        }
+        
+        .job-description li {
+            margin-bottom: 3px;
+            font-size: 10pt;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+        
+        .skills-category h4 {
+            font-size: 10pt;
+            font-weight: bold;
+            color: #006C35;
+            margin-bottom: 4px;
+        }
+        
+        .skills-list {
+            font-size: 9pt;
+            line-height: 1.3;
+        }
+        
+        @media print {
+            body {
+                padding: 0.3in;
+            }
+            
+            .section {
+                margin-bottom: 10px;
+            }
+            
+            .cover-content {
+                font-size: 10pt;
+            }
+            
+            .achievements-list li, .job-description li {
+                margin-bottom: 2px;
+            }
+            
+            .skills-grid {
+                grid-template-columns: 1fr;
+                gap: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- COVER LETTER SECTION -->
+    <div class="cover-header">
+        <div class="cover-name">Obai (O.B.) Sukar</div>
+        <div class="cover-title">IT Director & Systems Architect | Infrastructure | Digital Transformation | Vision 2030 Alignment</div>
+        <div class="cover-contact">obai@obaisukar.com | +1 (810) 399-8713 | www.obaisukar.com/resume.html</div>
+        <div class="cover-contact">Michigan, USA | Available for Riyadh, Saudi Arabia</div>
+    </div>
+    
+    <div class="cover-letter-label">COVER LETTER</div>
+    
+    <div class="recipient-info-box">
+        <strong>To:</strong> Hiring Committee<br>
+        <strong>Position:</strong> Senior Information Technology Manager<br>
+        <strong>Organization:</strong> Confidential Semi-Government Entity<br>
+        <strong>Location:</strong> Riyadh, Saudi Arabia
+    </div>
+    
+    <div class="cover-content">
+        <p>Dear Hiring Committee,</p>
+        
+        <p>I am writing to express my strong interest in the Senior Information Technology Manager position with your confidential semi-government organization in Riyadh. With over 20 years of IT leadership experience spanning enterprise infrastructure, digital transformation, and crisis management across the Middle East, Asia, and North America, I am uniquely positioned to drive your organization's IT strategy and support Saudi Arabia's Vision 2030 digital transformation objectives.</p>
+        
+        <p>My experience leading IT operations for 18+ facilities at Synergy Senior Management, achieving 99.8% uptime with zero security incidents, demonstrates my ability to deliver reliable, secure systems that support critical organizational missions. This operational excellence, combined with my extensive experience working in the Middle East—including technology management roles in Syria and UAE—provides me with both the technical expertise and cultural understanding essential for advancing Saudi Arabia's Vision 2030 technology modernization goals.</p>
+        
+        <div class="highlight-box">
+            <h4>Key Qualifications Aligned with Your Requirements:</h4>
+            <div class="achievements-list">
+                <ul>
+                    <li><strong>IT Strategy & Governance:</strong> Led enterprise IT strategy across multiple countries, ensuring alignment with organizational goals and regulatory compliance</li>
+                    <li><strong>Infrastructure & Operations:</strong> Managed complex multi-site operations with proven track record of 99.8% uptime and operational resilience</li>
+                    <li><strong>Cybersecurity Leadership:</strong> Implemented comprehensive security frameworks with zero security incidents, including incident response and risk management</li>
+                    <li><strong>Vendor & Stakeholder Management:</strong> Extensive experience with RFPs, contract negotiations, and managing relationships with government and enterprise vendors</li>
+                    <li><strong>Vision 2030 Digital Transformation:</strong> Successfully led modernization initiatives across healthcare, media, and enterprise organizations, directly supporting Saudi Arabia's digital economy objectives</li>
+                    <li><strong>Operations & Financial Systems:</strong> Extensive experience with accounts payable systems, ERP integration, and operations management platforms</li>
+                </ul>
+            </div>
+        </div>
+        
+        <p>What distinguishes my candidacy is my unique combination of technical excellence and regional expertise perfectly aligned with Vision 2030 initiatives. My fluency in Arabic, deep understanding of Middle Eastern business culture, and proven track record of managing international teams position me to effectively bridge technical requirements with cultural considerations essential in Saudi Arabia's government sector.</p>
+        
+        <p>I am particularly excited about contributing directly to Saudi Arabia's Vision 2030 digital transformation initiatives. My experience implementing enterprise-wide digital solutions—from healthcare systems to educational media platforms serving over 715K subscribers—combined with my understanding of government operational requirements and regulatory compliance, aligns perfectly with the Kingdom's ambitious modernization goals.</p>
+        
+        <p>I would welcome the opportunity to discuss how my proven track record of IT leadership, combined with my regional experience and cultural understanding, can contribute to your organization's continued success. I am prepared to relocate to Riyadh and am committed to delivering the strategic IT leadership your organization requires.</p>
+        
+        <p><strong>Sincerely,</strong><br>
+        <strong>Obai (O.B.) Sukar</strong><br>
+        <em>Additional verified testimonials: linkedin.com/in/obaisukar</em></p>
+    </div>
+
+    <!-- RESUME SECTION -->
+    <div class="resume-section">
+        <div class="resume-header">
+            <div class="resume-title">RESUME</div>
+            <div class="resume-name">Obai (O.B.) Sukar</div>
+            <div class="resume-tagline">IT Director & Systems Architect | Infrastructure | Digital Transformation | Cybersecurity | Media Technology Leadership</div>
+            <div class="resume-contact">obai@obaisukar.com | +1 (810) 399-8713 | www.obaisukar.com/resume.html</div>
+            <div class="resume-contact">Michigan, USA | Available for Riyadh, Saudi Arabia</div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">PROFESSIONAL SUMMARY</div>
+            <p>Senior IT leader with 20+ years of experience in IT strategy, infrastructure, cybersecurity, enterprise systems, and digital transformation. Expertise in multi-site operations, vendor management, KPI alignment, and compliance with international standards. Unique background bridging enterprise IT and award-winning media technology projects, delivering resilient, scalable systems in both corporate and high-pressure environments. Extensive experience supporting Saudi Arabia's Vision 2030 digital transformation goals through innovative technology solutions.</p>
+        </div>
+
+        <div class="section">
+            <div class="section-title">CORE COMPETENCIES</div>
+            <p style="text-align: center; line-height: 1.6;">IT Strategy & Governance • Infrastructure & Helpdesk Management • Applications & Database Integration<br>
+Cybersecurity & Incident Response • Vendor & Stakeholder Management • Cloud Services & Virtualization<br>
+Business Continuity & Disaster Recovery • Digital Transformation & Process Optimization • Cross-Cultural Team Leadership<br>
+Media Technology & Educational Platforms • Accounts Payable Systems • Operations Management</p>
+        </div>
+
+        <div class="section">
+            <div class="section-title">PROFESSIONAL EXPERIENCE</div>
+            
+            <div class="job-title">IT Director & Systems Architect</div>
+            <div class="company-duration">Synergy Senior Management | 2022 – Present</div>
+            <div class="job-description">
+                <ul>
+                    <li>Lead IT strategy and governance across 18+ facilities, achieving 99.8% uptime and zero security incidents</li>
+                    <li>Supervise technical staff for Exchange, ERP, VoIP, and clinical systems with focus on KPI alignment</li>
+                    <li>Develop and implement disaster recovery and incident response plans for critical operations</li>
+                    <li>Manage vendor relationships, RFPs, and contract negotiations for enterprise-level procurements</li>
+                </ul>
+            </div>
+            
+            <div class="job-title">IT Specialist & Strategic Consultant</div>
+            <div class="company-duration">Independent / Obai Sukar Consulting | 2005 – Present</div>
+            <div class="job-description">
+                <ul>
+                    <li>Design and deploy enterprise IT infrastructure across US, Middle East, and Asia for government, healthcare, and media sectors</li>
+                    <li>Implement WAN/LAN, VLAN segmentation, and secure cloud infrastructures for multi-national organizations</li>
+                    <li>Coordinate international technical teams for schools, laboratories, and enterprises</li>
+                </ul>
+            </div>
+
+            <div class="job-title">Technology Department Manager</div>
+            <div class="company-duration">Spacetoon / Tiger Media | 2000 – 2010</div>
+            <div class="job-description">
+                <ul>
+                    <li>Managed technology teams across Damascus, Dubai, and Kuala Lumpur operations</li>
+                    <li>Directed broadcast/media IT systems for television and distance learning platforms</li>
+                    <li>Implemented digital transformation initiatives for media production and distribution</li>
+                </ul>
+            </div>
+
+            <div class="job-title">Additional Leadership Roles</div>
+            <div class="company-duration">Various Organizations | 2010 – 2016</div>
+            <div class="job-description">
+                <ul>
+                    <li><strong>Technical Director, Radio Al-Kul:</strong> Built resilient broadcast IT systems in conflict zones, reaching 500K daily listeners. Featured in NPR, Washington Post, and international media coverage</li>
+                    <li><strong>Founder, Karazah Channel:</strong> Developed Arabic educational media platform (715K+ subscribers, 301M+ views), integrating IT-enabled content delivery and infrastructure management. Winner, Mohammed Bin Rashid Arabic Language Award</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">KEY ACHIEVEMENTS & RECOGNITION</div>
+            <ul style="margin-left: 15px;">
+                <li><strong>Mohammed Bin Rashid Arabic Language Award (2019)</strong> - Educational excellence for Karazah Channel, aligning with regional Vision 2030 educational technology goals</li>
+                <li><strong>Student Academy Award, Silver (2016)</strong> - Sound Design for Cloud Kumo (Oscar-verified)</li>
+                <li><strong>Vision 2030 Alignment:</strong> Delivered digital transformation projects supporting modernization initiatives across healthcare, media, and education sectors</li>
+                <li><strong>International Recognition:</strong> Featured in NPR, Al Jazeera, and AFP for technical innovation</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <div class="section-title">TECHNICAL EXPERTISE</div>
+            <div class="skills-grid">
+                <div class="skills-category">
+                    <h4>IT Strategy & Governance</h4>
+                    <div class="skills-list">
+                        Strategic IT Planning • KPI Development • Budget Management • Risk Assessment • Compliance Frameworks • Policy Development • Vision 2030 Alignment
+                    </div>
+                </div>
+                <div class="skills-category">
+                    <h4>Infrastructure & Systems</h4>
+                    <div class="skills-list">
+                        Network Architecture • Server Administration • Cloud Platforms • VoIP Systems • Database Management • Backup & Recovery • Virtualization • Operations Systems
+                    </div>
+                </div>
+                <div class="skills-category">
+                    <h4>Cybersecurity & Compliance</h4>
+                    <div class="skills-list">
+                        Security Frameworks • Incident Response • Vulnerability Management • Access Controls • Data Protection • Regulatory Compliance
+                    </div>
+                </div>
+                <div class="skills-category">
+                    <h4>Leadership & Management</h4>
+                    <div class="skills-list">
+                        Team Leadership • Vendor Management • Project Management • Stakeholder Communication • Change Management • Crisis Leadership • Cross-Cultural Operations
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">LANGUAGES & CULTURAL COMPETENCY</div>
+            <p><strong>Languages:</strong> English (Native), Arabic (Native)<br>
+            <strong>Regional Experience:</strong> Middle East (Syria, UAE), Asia (Malaysia), North America (USA)<br>
+            <strong>Cultural Adaptability:</strong> Proven success managing international teams across diverse environments</p>
+        </div>
+
+        <div class="section">
+            <div class="section-title">SELECTED TESTIMONIALS</div>
+            <p><strong>Sinan Hatahet, PhD — Co-Founder of Workiom CRM:</strong> "By far one of the best professionals I had the pleasure to partner with."</p>
+            <p><strong>Husam Azma — Technical Director at Oracle Consulting:</strong> Praised for dedication and integrity in enterprise IT collaborations.</p>
+            <p style="font-size: 9pt; color: #666; margin-top: 10px; text-align: center;">Additional verified testimonials: linkedin.com/in/obaisukar</p>
+        </div>
+    </div>
+</body>
+</html>

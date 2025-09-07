@@ -44,14 +44,15 @@
 - IMDB Profile: https://www.imdb.com/name/nm8455296/?ref_=ttfc_fcr_cr
 
 ### Awards & Recognition (VERIFIED)
-- **Student Academy Award (Silver)** — Sound Designer for Cloud-Kumo (listed on Oscars site under alternative category)
-- **Governor of Dubai Award (2019)** — Mohammed Bin Rashid Arabic Language Award, prestigious cultural innovation recognition
+- **Sound Designer for Cloud Kumo, winner of the 2016 Student Academy Award (Silver)** — Film won prestigious Oscar alternative category award
+- **Recipient of a prestigious award by the Governor of Dubai — the Mohammed Bin Rashid Arabic Language Award (2019)** — Cultural innovation recognition
 - **Featured in NPR & Al Jazeera** for Radio Al-Kul innovation
 - **Washington Post recognition** as Syrian celebrity
 
 ### Award Reference Guidelines:
-- **For US Audiences:** Use "Governor of Dubai Award" (instantly recognizable)
-- **In Official Links:** Keep full "Mohammed Bin Rashid Arabic Language Award" name
+- **ALWAYS USE FULL CONTEXT:** "Recipient of a prestigious award by the Governor of Dubai — the Mohammed Bin Rashid Arabic Language Award"
+- **NEVER USE:** "Governor of Dubai Award" alone (lacks context and credibility)
+- **STUDENT ACADEMY AWARD:** Always clarify "Sound Designer for Cloud Kumo, winner of the 2016 Student Academy Award (Silver)" - you are NOT the winner, the film is
 - **URL Reference:** https://www.arabicaward.ae/p/award-winners/2019
 
 ### Digital Presence
@@ -256,10 +257,12 @@ Interactive Resume: www.obaisukar.com/resume.html
 - Company color palette integration
 - Professional yet personal tone
 
-### 2. Combined Document
+### 2. Combined Document - ATS-FRIENDLY (CRITICAL RULE)
 - Cover page (page 1) + ATS-friendly resume (page 2)
-- Consistent branding throughout
-- Professional typography hierarchy
+- **NO LOGOS OR IMAGES** - Text only for ATS parsing
+- **NO GRAPHICS** - Will break ATS scanning systems
+- Standard fonts and simple styling only
+- Text-based headers (company name, not logo)
 
 ### 3. Custom Digital Resume (NEW)
 - Company-branded HTML resume
@@ -351,9 +354,9 @@ Technology Leader | Media Innovator | Crisis Management Expert
 
 ---
 
-## 📊 Professional Experience (PERMANENT ORDER)
+## 📊 Professional Experience (FIXED PRIMARY IDENTITY - MANDATORY ORDER)
 
-### First Entry (ALWAYS)
+### First Entry (ALWAYS) - PRIMARY IDENTITY
 **IT Specialist & Consultant**  
 *Independent / Obai Sukar Consulting · 2005–Present*
 
@@ -365,7 +368,7 @@ Technology Leader | Media Innovator | Crisis Management Expert
 - Delivered compliance frameworks (HIPAA, SOC 2) for regulated industries
 - Supported production & dubbing studios (DAWs, recording equipment, streaming infrastructure)
 
-### Second Entry (ALWAYS)
+### Second Entry (ALWAYS) - PRIMARY IDENTITY
 **IT Director & Systems Architect**  
 *Synergy Senior Management · 2022–Present*
 
@@ -374,6 +377,8 @@ Technology Leader | Media Innovator | Crisis Management Expert
 - Drove digital transformation for healthcare operations and staff training programs
 - Managed multi-site connectivity, security segmentation, vendor relations
 - Led implementation teams through complex multi-phase technology rollouts
+
+**CRITICAL: These two entries establish primary IT identity and ALWAYS appear first**
 
 ### Additional Entries (Compress/Expand by Relevance)
 
@@ -425,9 +430,9 @@ Technology Leader | Media Innovator | Crisis Management Expert
 
 **Live Sound Engineer**  
 *Mohamed Tarek Productions · 2018–2020*
-- Served as Front-of-House (FOH) mixing engineer for live concert performances
-- Managed RF coordination, backline setup, and technical show advancing
-- Coordinated with venue technical staff and artist technical requirements
+- Served as Front-of-House (FOH) mixing engineer for live concert performances supporting artist with 2.1M+ followers
+- Managed RF coordination, backline setup, and technical show advancing for high-profile performances
+- Coordinated with venue technical staff and artist technical requirements for major concert events
 - Delivered professional live sound mixing for audiences ranging from intimate venues to large concert halls
 
 ---
@@ -446,6 +451,132 @@ Media production foundations, design, publishing workflows
 Cloud security, network design, Microsoft 365 administration, automation, AI implementation, emerging media technologies. Ongoing expertise development where many bachelor-degree holders seek guidance.
 
 **Note**: Include "bachelor-level coursework" for ATS keyword optimization without misrepresentation.
+
+---
+
+## 🎭 TESTIMONIAL SYSTEM (ROLE-APPROPRIATE SELECTION)
+
+### Default Testimonial (IT/Corporate/Technical Roles)
+**Sinan Hatahet, PhD — Co-Founder, Workiom CRM:**
+"He gave the channel its soul. By far one of the best professionals I had the pleasure to partner with."
+
+**Usage:**
+- **ALWAYS for**: IT, Technical, SaaS, Enterprise, Management, Corporate roles
+- **Use for Media ONLY if**: Role requires corporate structure, prestige, or business leadership
+- **Resume**: Selected Testimonial section near end
+- **Cover Letter**: Penultimate paragraph for leadership credibility
+- **Format**: "Recognized by Sinan Hatahet, PhD — Co-Founder of Workiom (CRM platform) — as 'by far one of the best professionals I had the pleasure to partner with.'"
+
+### Role-Specific Testimonial Selection
+
+**IT/Enterprise/SaaS Roles:**
+- **Kerem Tekin — Digital Transformation, ex-Toyota**: "His quick grasp of the software's capabilities and insightful questions made the implementation process smooth and efficient."
+- **Husam Azma — Technical Director, Oracle Consulting**: "Obai is a very dedicated person with a very high level of integrity. I would always love to work with him."
+
+**Healthcare/Medical Roles:**
+- **Mohamad Alkhouli, MD MBA — Professor & Vice Chair, Mayo Clinic**: "Obai is hard working, authentic, and creative. Would strongly recommend for anyone looking for help in sound engineering."
+- **Ammar Shukairy — Director, Burton Urgent Care**: "Obai is one of the most dedicated and hardworking individuals I've seen. He has a unique ability to multi-task while maintaining quality, and he leads his teams with positivity and great communication."
+
+**Media/Production/Creative Roles:**
+**Primary Options (Creative Excellence):**
+- **Kamel Weiss — GM @ SpacetoonGo, Spacetoon Group**: "Obai was one of the strong sound engineers we had. His creativity and adaptation to new trends were well received."
+- **Fawaz Gheibeh — BEng, PMP, MBA**: "It is rare to find a brilliant sound engineer with great personality, discipline, talent, and honesty. Obai not only meets but exceeds expectations."
+- **Michael Shagoury — SVP of Audience Development**: "When it comes to audio, Obai is a perfectionist and his creativity is unmatched."
+
+**Use Sinan (CRM) for Media ONLY if:**
+- Role involves corporate media structure (VP, Director, Manager levels)
+- Company values business leadership/entrepreneurship
+- Position requires cross-functional collaboration or business development
+
+**Leadership/Management Roles:**
+- **Khalid Saleh — CEO, Invesp**: "He ran the day-to-day operation, grew and managed a radio station team, and established the station as a leader in its space."
+- **Ghiath Osman — CEO & Co-Founder, Osman Properties**: "Focused yet creatively inclined, with clarity of thought and effective teamwork. Adds tremendous value to all projects."
+
+**Technical/Engineering Roles:**
+- **Hutheyfa Tabbah — Embedded Software Engineer, Dana Inc.**: "Obai's work is professional and timely. He will work with you to provide the exact result you were looking for."
+- **Lamis Beirkdar — Software Engineering Manager, Statista**: "Dedicated, enthusiastic, and a master of his craft. Professional attitude and valuable asset to any establishment."
+
+### LinkedIn Credibility Reference (ALWAYS INCLUDE)
+**Standard Footer**: "Additional verified testimonials can be viewed directly on my LinkedIn profile: linkedin.com/in/obaisukar"
+
+### Complete Testimonial Database
+**Bahraa Hijazi — Multimedia Specialist, Journalist, National Press Club DC**
+"Obai brings a rare blend of technical expertise and media innovation. His ability to execute bold ideas with precision, lead teams with integrity, and stay ahead of trends sets him apart."
+
+**Kerem Tekin — Digital Transformation, ex-Toyota**
+"His quick grasp of the software's capabilities and insightful questions made the implementation process smooth and efficient."
+
+**Mohamad Alkhouli, MD MBA — Professor & Vice Chair, Mayo Clinic**
+"Obai is hard working, authentic, and creative. Would strongly recommend for anyone looking for help in sound engineering."
+
+**Adil Mohammed — Real Estate Developer / Principal**
+"Obai is purposeful, works hard to provide comprehensive solutions, and is not afraid to take an unconventional path to solve a problem."
+
+**Ammar Shukairy — Director, Burton Urgent Care**
+"Obai is one of the most dedicated and hardworking individuals I've seen. He has a unique ability to multi-task while maintaining quality, and he leads his teams with positivity and great communication."
+
+**Hutheyfa Tabbah — Embedded Software Engineer, Dana Inc.**
+"Obai's work is professional and timely. He will work with you to provide the exact result you were looking for."
+
+**Nickolas Amaya — Chemist, Cambium Analytica**
+"Obai is kind, courteous, thorough, and dedicated. Truly one of a kind."
+
+**Ammar Jamaleddin — AI, Robotics, IoT Product Designer**
+"Obai was efficient and delivered projects on time with professional quality."
+
+**Marwan Haroun — Composer for Film and TV**
+"He's professional, talented, decent and knows his business very well."
+
+**Khaled Boubes — Director Interventional Nephrology, The Ohio State University**
+"Excellent work with high quality and attention to details. Timely response and keeping up with schedule."
+
+**Ayham Nabeh — TV Presenter, Syria TV**
+"مبدع الانميشن والرسوم المتحركة"
+
+**Kamel Weiss — GM @ SpacetoonGo, Spacetoon Group**
+"Obai was one of the strong sound engineers we had. His creativity and adaptation to new trends were well received."
+
+**Fawaz Gheibeh — BEng, PMP, MBA**
+"It is rare to find a brilliant sound engineer with great personality, discipline, talent, and honesty. Obai not only meets but exceeds expectations."
+
+**Lolia Abou Alnasr — Marketing Specialist**
+"One of the most talented sound engineers I ever worked with. Professionalism and commitment to deliver the best results."
+
+**Ghiath Osman — CEO & Co-Founder, Osman Properties**
+"Focused yet creatively inclined, with clarity of thought and effective teamwork. Adds tremendous value to all projects."
+
+**Khalid Saleh — CEO, Invesp**
+"He ran the day-to-day operation, grew and managed a radio station team, and established the station as a leader in its space."
+
+**Michael Shagoury — SVP of Audience Development**
+"When it comes to audio, Obai is a perfectionist and his creativity is unmatched."
+
+**Sinan Hatahet, PhD — Co-Founder, Workiom CRM**
+"He gave the channel its soul. By far one of the best professionals I had the pleasure to partner with."
+
+**Shamel Haydar — Creative Director, 3D Artist**
+"Obai's technical knowledge is vast, paired with artistic sense and attention to detail. It's an honour to work with him."
+
+**Salma Abdo — Creative Producer & Media Strategist, In-Haus e.V.**
+"Hard working and serious team player. A great manager with my full recommendation."
+
+**Salama Abdo — Senior Executive Producer**
+"Obai is a great Sound Designer and a serious team player. He has my full recommendation."
+
+**Lamis Beirkdar — Software Engineering Manager, Statista**
+"Dedicated, enthusiastic, and a master of his craft. Professional attitude and valuable asset to any establishment."
+
+**Sami AL Zein, PMP — Project Manager, Agile Coach**
+"Remarkable sound designer with the ability to work under pressure. His rich CV gives a bright view of his talent."
+
+**Sara Takieddin — Freelance Sound Designer**
+"Professional, inspiring leader in audio. Through Obai I learned a lot and was inspired to do more."
+
+**Mustafa Alokoud — Humanitarian Leadership | Crisis Management**
+"My best friend who I can trust both personally and professionally."
+
+**Husam Azma — Technical Director, Oracle Consulting**
+"Obai is a very dedicated person with a very high level of integrity. I would always love to work with him."
 
 ---
 
@@ -476,9 +607,24 @@ Audio engineering, sound design, music production, video production, broadcastin
 
 ## 🚫 CRITICAL ACCURACY RULES (NEVER VIOLATE)
 
+### ATS-FRIENDLY FILES - NO VISUAL ELEMENTS (MANDATORY)
+**CRITICAL RULE: ATS systems scan text only - visual elements break parsing**
+- ❌ **NO LOGOS** - Will break ATS scanning systems
+- ❌ **NO IMAGES** - Cannot be parsed by ATS software  
+- ❌ **NO GRAPHICS** - Text-only formatting required
+- ❌ **NO COMPLEX CSS** - Simple styling only
+- ✅ **TEXT-BASED HEADERS** - Company name in text, not logo
+- ✅ **STANDARD FONTS** - System fonts (Arial, Times New Roman, Calibri)
+- ✅ **SIMPLE LAYOUT** - Single column, basic formatting
+
+**Apply to ALL:**
+- Combined documents (cover + resume)
+- ATS resume files  
+- Any file intended for automated parsing
+
 ### Award & Recognition Rules (MANDATORY)
-- **Mohammed Bin Rashid Award (2019)**: "Prestigious Award Recipient from Governor of Dubai" (NOT generic "government")
-- **Student Academy Award**: "Production Team Member" (NOT "Winner" - participated in award-winning project)
+- **Mohammed Bin Rashid Award (2019)**: "Recipient of a prestigious award by the Governor of Dubai — the Mohammed Bin Rashid Arabic Language Award" (ALWAYS include Governor context)
+- **Student Academy Award**: "Sound Designer for Cloud Kumo, winner of the 2016 Student Academy Award (Silver)" (Film won, NOT you personally)
 - **YouTube Metrics**: 715K+ subscribers, 301M+ views (NO fake Play Button claims - Gold requires 1M+)
 - **URLs Required**: Always include verification links for awards and media coverage
 
@@ -527,8 +673,14 @@ Audio engineering, sound design, music production, video production, broadcastin
 
 ## 🎯 Storytelling & Messaging
 
-### Resilience Narrative (MANDATORY)
-"Everybody has a story. Life throws unexpected paths. I started in a conflict-zone building resilient systems, and today I'm seeking a company that matches my ambition and brilliance. This opportunity feels like the next chapter to prove myself and contribute forward."
+### Resilience Narrative (TIMELINE ACCURACY REQUIRED)
+**CRITICAL: Maintain chronological accuracy to preserve credibility**
+
+**CORRECT Timeline-Accurate Narrative:**
+"Everybody has a story. Life throws unexpected paths. After building my IT and media career, I found myself in a conflict-zone building resilient broadcasting systems in 2012, and today I'm seeking a company that matches my ambition and brilliance forged through diverse challenges."
+
+**NEVER USE:** "I started in a conflict-zone" - Falsely implies career began there  
+**ALWAYS USE:** Timeline-accurate phrasing showing conflict zone as mid-career challenge (2012), not career start (2000)
 
 ### Tone Requirements
 - **Professional yet human**
