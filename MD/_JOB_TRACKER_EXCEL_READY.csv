@@ -1,6 +1,10 @@
 Company,Job Title,Compatibility Score,Analysis Date,Status,Applied Date,Response Date,Interview Date,Final Outcome,Days Since Applied,Response Time (Days),Notes,Folder Location,LinkedIn URL,Job URL,Recruiter Name,Recruiter LinkedIn
-Meta,Sound Designer,85%,2025-08-31,Applied,2025-09-01,,,Pending,1,,Comprehensive application package created - strong creative portfolio match,Jobs/2_Applied/Meta_Sound_Designer/,,,
-ObserveAI,Senior Implementation Manager,92%,2025-08-31,Applied,2025-09-01,,,Pending,1,,High compatibility - excellent technical and experience match,Jobs/2_Applied/ObserveAI_Senior_Implementation_Manager/,,,
+Meta,Sound Designer,85%,2025-08-31,Applied,2025-09-01,,,Pending,1,,Comprehensive application package created - strong creative portfolio match,Jobs/3_Applied/Meta_Sound_Designer/,,,
+ObserveAI,Senior Implementation Manager,92%,2025-08-31,Applied,2025-09-01,,,Pending,1,,High compatibility - excellent technical and experience match,Jobs/3_Applied/ObserveAI_Senior_Implementation_Manager/,,,
+Jacuzzi Group,Various Positions,TBD,2025-09-06,Applied,2025-09-06,,,Pending,1,,Multiple position applications submitted,Jobs/3_Applied/Jacuzzi Group/,,,
+Saudi Confidential,IT Manager,TBD,2025-09-06,Applied,2025-09-06,,,Pending,1,,Senior IT management role - confidential posting,Jobs/3_Applied/Saudi_Confidential_IT_Manager/,,,
+Saudi Confidential,Technical Services Lead,TBD,2025-09-06,Applied,2025-09-06,,,Pending,1,,Technical leadership role - confidential posting,Jobs/3_Applied/Saudi_Confidential_Technical Services Lead/,,,
+Venteon Partners,Sr IT Director,TBD,TBD,Applied,TBD,,,Pending,,,Senior IT Director position,Jobs/3_Applied/Venteon_Partners_Sr_IT_Director/,,,
 
 === FORMULAS FOR EXCEL IMPORT ===
 Column J (Days Since Applied): =TODAY()-F2
