@@ -50,18 +50,22 @@
 5. **Dual Logo Layout**: Personal logo prominent left (larger), company logo respectful right (smaller)
 6. **Auto-detect and implement**: If logo file exists, automatically integrate into HTML
 
-### COVER LETTER DESIGN STANDARD (ObserveAI Formula)
-**MANDATORY: Use sophisticated design for cover-only files, ATS-friendly for combined**
+### COVER LETTER DESIGN STANDARD (ObserveAI Formula) - LOCKED TEMPLATE
+**MANDATORY: Use exact ObserveAI template structure for ALL premium cover letters**
 
-**✅ Cover-Only Files (Visual Design):**
-- **Dual logo header** - Personal branding + company respect
-- **Gradient name treatment** - Professional visual impact
-- **Company focus section** - Dedicated research/alignment box
-- **Sectioned achievements** - Visual bullet points with strategic spacing
-- **Dark value proposition section** - Branded highlight section
-- **Brand footer** - Subtle personal logo + website reference
+**✅ Cover-Only Files (Visual Design) - PERMANENTLY LOCKED STANDARD:**
+- **EXACT Template**: Use D:\Applications\Jobs\3_Applied\ObserveAI_Senior_Implementation_Manager\observeai_cover_only.html structure
+- **Header layout** - "COVER LETTER" label (top left where personal logo was) + company logo (right) 
+- **NO personal logo in header** - Replace with "COVER LETTER" text label only
+- **Gradient name treatment** - Professional visual impact using company colors
+- **Company focus section** - Dedicated research/alignment box highlighting company details
+- **Sectioned achievements** - List format with strategic spacing and company-relevant accomplishments
+- **Dark value proposition section** - Company-branded highlight section emphasizing mutual benefit
+- **Brand footer** - Personal logo + website reference at bottom only
 - **Typography**: IBM Plex fonts (Google Fonts) for professional elevation
-- **Color scheme**: Extract and apply company colors throughout design
+- **Color scheme**: Extract and apply company colors throughout design (borders, gradients, accents)
+- **Print optimized**: Minimal spacing, print-ready for PDF conversion
+- **Structure**: Follow observeai_cover_only.html exactly but replace personal logo with "COVER LETTER" label
 
 **✅ ATS-Friendly Files (Text Only - CRITICAL RULE):**
 - **NO LOGOS** - Text only for ATS parsing

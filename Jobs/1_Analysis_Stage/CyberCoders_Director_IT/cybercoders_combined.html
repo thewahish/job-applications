@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obai Sukar - Director of IT Application</title>
+    <style>
+        @media print {
+            body { margin: 0.3in; padding: 0; font-size: 10pt; }
+            .container { padding: 0; margin: 0; }
+            .section { margin-bottom: 8px; }
+            .cover-section { page-break-after: always; margin-bottom: 0; }
+            .resume-section { margin-top: 0; }
+            p { margin-bottom: 6px; }
+            .achievements-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 10px !important; }
+            .achievement-card { padding: 10px !important; }
+            .value-proposition { padding: 15px !important; }
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.4;
+            color: #333;
+            max-width: 8.5in;
+            margin: 0 auto;
+            padding: 0.5in;
+            background: white;
+        }
+        
+        .container {
+            background: white;
+        }
+        
+        /* Cover Letter Styles */
+        .cover-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #00aaff;
+        }
+        
+        .cover-letter-label {
+            font-size: 14pt;
+            font-weight: bold;
+            color: #00aaff;
+        }
+        
+        .date-location {
+            text-align: right;
+            font-size: 9pt;
+            color: #666;
+        }
+        
+        .recipient-info {
+            margin-bottom: 20px;
+        }
+        
+        .recipient-info p {
+            margin: 2px 0;
+            font-size: 9pt;
+        }
+        
+        .subject {
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #00aaff;
+            font-size: 10pt;
+        }
+        
+        .name-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .name {
+            font-size: 24pt;
+            font-weight: bold;
+            color: #00aaff;
+            margin-bottom: 6px;
+        }
+        
+        .title {
+            font-size: 11pt;
+            color: #666;
+            font-weight: 600;
+        }
+        
+        .company-focus {
+            background: #f8f9fa;
+            padding: 15px;
+            border-left: 4px solid #00aaff;
+            margin: 20px 0;
+            border-radius: 0 6px 6px 0;
+        }
+        
+        .company-focus h3 {
+            color: #00aaff;
+            font-size: 12pt;
+            margin: 0 0 8px 0;
+        }
+        
+        .company-focus p {
+            margin-bottom: 6px;
+            font-size: 9pt;
+            line-height: 1.3;
+        }
+        
+        .achievements-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin: 15px 0;
+        }
+        
+        .achievement-card {
+            background: #f8f9fa;
+            padding: 12px;
+            border-radius: 6px;
+            border-left: 3px solid #00aaff;
+        }
+        
+        .achievement-card h4 {
+            color: #00aaff;
+            font-size: 10pt;
+            margin: 0 0 6px 0;
+        }
+        
+        .achievement-card p {
+            font-size: 8pt;
+            margin: 0;
+            line-height: 1.2;
+        }
+        
+        .value-proposition {
+            background: #00aaff;
+            color: white;
+            padding: 20px;
+            border-radius: 6px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        
+        .value-proposition h3 {
+            color: white;
+            font-size: 13pt;
+            margin: 0 0 10px 0;
+        }
+        
+        .value-proposition p {
+            font-size: 9pt;
+            margin: 0;
+            line-height: 1.3;
+        }
+        
+        .cover-content p {
+            font-size: 9pt;
+            margin-bottom: 10px;
+            line-height: 1.4;
+        }
+        
+        .cover-content h3 {
+            color: #00aaff;
+            font-size: 11pt;
+            margin-bottom: 8px;
+            padding-bottom: 3px;
+            border-bottom: 1px solid #00aaff;
+        }
+        
+        .signature {
+            margin-top: 20px;
+        }
+        
+        .contact-footer {
+            text-align: center;
+            margin-top: 20px;
+            padding-top: 15px;
+            border-top: 1px solid #eee;
+            font-size: 8pt;
+            color: #666;
+        }
+        
+        .contact-footer a {
+            color: #00aaff;
+            text-decoration: underline;
+        }
+        
+        /* Resume Styles */
+        .resume-header {
+            text-align: center;
+            border-bottom: 2px solid #00aaff;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .resume-title {
+            font-size: 16pt;
+            font-weight: bold;
+            color: #00aaff;
+            margin-bottom: 10px;
+        }
+        
+        .resume-name {
+            font-size: 20pt;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 6px;
+        }
+        
+        .resume-tagline {
+            font-size: 10pt;
+            color: #666;
+            margin-bottom: 10px;
+            line-height: 1.3;
+        }
+        
+        .resume-contact {
+            font-size: 9pt;
+            color: #333;
+        }
+        
+        .resume-contact a {
+            color: #00aaff;
+            text-decoration: none;
+        }
+        
+        .section {
+            margin-bottom: 18px;
+        }
+        
+        .section h2 {
+            font-size: 12pt;
+            color: #00aaff;
+            border-bottom: 1px solid #00aaff;
+            padding-bottom: 3px;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        
+        .job-entry {
+            margin-bottom: 12px;
+        }
+        
+        .job-header {
+            margin-bottom: 5px;
+        }
+        
+        .job-title {
+            font-weight: bold;
+            font-size: 10pt;
+            color: #333;
+        }
+        
+        .company {
+            color: #00aaff;
+            font-weight: 600;
+            font-size: 9pt;
+        }
+        
+        .dates {
+            color: #666;
+            font-size: 8pt;
+            font-style: italic;
+        }
+        
+        .job-content ul {
+            margin: 5px 0 0 18px;
+            padding: 0;
+        }
+        
+        .job-content li {
+            margin-bottom: 3px;
+            font-size: 8pt;
+            line-height: 1.2;
+        }
+        
+        .awards-section {
+            background: #f8f9fa;
+            padding: 10px;
+            border-left: 3px solid #00aaff;
+            margin-bottom: 15px;
+        }
+        
+        .awards-section h3 {
+            margin: 0 0 6px 0;
+            font-size: 10pt;
+            color: #00aaff;
+        }
+        
+        .awards-list {
+            margin: 0;
+            padding-left: 14px;
+        }
+        
+        .awards-list li {
+            font-size: 8pt;
+            margin-bottom: 3px;
+            line-height: 1.2;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            margin-top: 8px;
+        }
+        
+        .skill-category h4 {
+            font-size: 9pt;
+            color: #00aaff;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        
+        .skill-category ul {
+            margin: 0;
+            padding-left: 14px;
+        }
+        
+        .skill-category li {
+            font-size: 8pt;
+            margin-bottom: 2px;
+        }
+        
+        .education-entry {
+            margin-bottom: 8px;
+        }
+        
+        .degree {
+            font-weight: bold;
+            font-size: 9pt;
+        }
+        
+        .school {
+            color: #00aaff;
+            font-size: 8pt;
+        }
+        
+        .testimonial {
+            background: #f8f9fa;
+            padding: 10px;
+            border-left: 3px solid #00aaff;
+            margin-bottom: 12px;
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            font-size: 9pt;
+            margin-bottom: 5px;
+        }
+        
+        .testimonial-author {
+            font-size: 8pt;
+            color: #666;
+            font-weight: 600;
+        }
+        
+        .linkedin-ref {
+            font-size: 8pt;
+            color: #666;
+            text-align: center;
+            margin-top: 6px;
+        }
+        
+        .linkedin-ref a {
+            color: #00aaff;
+            text-decoration: underline;
+        }
+        
+        .cover-section {
+            margin-bottom: 30px;
+        }
+        
+        .resume-section {
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- COVER LETTER SECTION -->
+        <div class="cover-section">
+            <!-- Header -->
+            <div class="cover-header">
+                <div class="cover-letter-label">COVER LETTER</div>
+                <div class="date-location">
+                    September 7, 2025<br>
+                    Michigan, USA
+                </div>
+            </div>
+
+            <!-- Recipient Information -->
+            <div class="recipient-info">
+                <p>Andrea Mondragon, Sr. Executive Recruiter</p>
+                <p>CyberCoders</p>
+                <p>andrea.mondragon@cybercoders.com</p>
+            </div>
+
+            <!-- Subject -->
+            <div class="subject">
+                RE: Director of IT Position - JobID: linkedin : AM13-1841570
+            </div>
+
+            <!-- Name Header -->
+            <div class="name-header">
+                <h1 class="name">Obai Sukar</h1>
+                <div class="title">IT Director | Systems Architect | Infrastructure Transformation Leader</div>
+            </div>
+
+            <!-- Company Focus Section -->
+            <div class="company-focus">
+                <h3>Why CyberCoders Represents the Perfect Partnership</h3>
+                <p>CyberCoders' reputation as a leading permanent placement recruiting firm aligns perfectly with my commitment to building lasting professional relationships and delivering exceptional results. Your focus on quality-oriented placements mirrors my approach to IT transformation.</p>
+                <p>With proprietary recruiting technology and collaborative approach among 250 recruiters, I recognize a company that values innovation and teamwork—the exact qualities I bring to IT leadership.</p>
+            </div>
+
+            <!-- Cover Letter Content -->
+            <div class="cover-content">
+                <p>Dear Andrea,</p>
+
+                <p>Technology is my DNA. I assembled my first computer in 8th grade, was the kid running BASIC programming on MS-DOS with floppy disks, and I've never stopped progressing with IT as my greatest source of fun and discovery.</p>
+
+                <p>After building my IT and media career spanning 25+ years, I found myself in a conflict-zone building resilient broadcasting systems, and today I'm seeking a company that matches my ambition and brilliance forged through diverse challenges. The Director of IT position represents the perfect intersection of my proven enterprise leadership and my passion for infrastructure transformation.</p>
+
+                <h3>Enterprise Infrastructure Excellence</h3>
+                
+                <div class="achievements-grid">
+                    <div class="achievement-card">
+                        <h4>Multi-Site Architecture</h4>
+                        <p>Architected networks across 18+ facilities, achieving 99.8% uptime with zero security incidents.</p>
+                    </div>
+                    
+                    <div class="achievement-card">
+                        <h4>ERP & Systems Integration</h4>
+                        <p>Led comprehensive ERP integrations and digital transformation initiatives with workflow automation.</p>
+                    </div>
+                    
+                    <div class="achievement-card">
+                        <h4>Team Leadership</h4>
+                        <p>Directed international teams across 9 countries, fostering professional development in complex environments.</p>
+                    </div>
+                    
+                    <div class="achievement-card">
+                        <h4>Compliance & Security</h4>
+                        <p>Implemented HIPAA-compliant infrastructure with extensive regulated industry experience.</p>
+                    </div>
+                </div>
+
+                <h3>Addressing ERP Excellence & Glovia Readiness</h3>
+                <p>While my direct experience is with SAP-adjacent enterprise systems rather than Glovia specifically, my track record demonstrates exceptional adaptability in mastering complex platforms. I've successfully implemented Microsoft 365, Google Workspace, Intune MDM/MAM, and various enterprise systems across multiple industries.</p>
+                
+                <p>I don't just learn software—I architect solutions, train teams, and ensure seamless integration. My proven ability to rapidly master enterprise platforms while maintaining operational excellence positions me to excel with Glovia implementation.</p>
+
+                <!-- Value Proposition -->
+                <div class="value-proposition">
+                    <h3>Why This Partnership Works</h3>
+                    <p>You need someone who transforms IT. I bring 25+ years of infrastructure mastery and the unique perspective of building resilient systems under impossible conditions. I'm recognized by Sinan Hatahet, PhD — Co-Founder of Workiom CRM — as "by far one of the best professionals I had the pleasure to partner with."</p>
+                </div>
+
+                <p>I don't just meet requirements—I exceed them. My combination of enterprise infrastructure expertise, compliance mastery, and proven team leadership makes me THE candidate who can drive your client's IT strategy forward.</p>
+
+                <p>We're a win for each other. I welcome discussing how my unique combination of technical mastery, infrastructure excellence, and resilient leadership can accelerate your client's IT transformation initiatives.</p>
+            </div>
+
+            <!-- Signature -->
+            <div class="signature">
+                <p>Best regards,</p>
+                <p><strong>Obai Sukar</strong><br>
+                <a href="mailto:obai@obaisukar.com">obai@obaisukar.com</a> | 
+                <a href="tel:+18103998713">+1 (810) 399-8713</a></p>
+            </div>
+
+            <!-- Contact Footer -->
+            <div class="contact-footer">
+                Interactive Resume: <a href="https://www.obaisukar.com/resume.html">www.obaisukar.com/resume.html</a>
+            </div>
+        </div>
+
+        <!-- RESUME SECTION -->
+        <div class="resume-section">
+            <!-- Resume Header -->
+            <div class="resume-header">
+                <div class="resume-title">RESUME</div>
+                <h1 class="resume-name">Obai Sukar</h1>
+                <div class="resume-tagline">
+                    IT Director | Systems Architect | Infrastructure Transformation Leader<br>
+                    Healthcare IT Specialist | Zero Security Incidents | Crisis-to-Scale Excellence
+                </div>
+                <div class="resume-contact">
+                    <a href="mailto:obai@obaisukar.com">obai@obaisukar.com</a> | 
+                    <a href="tel:+18103998713">+1 (810) 399-8713</a> | 
+                    Michigan, USA
+                </div>
+            </div>
+
+            <!-- Awards Section -->
+            <div class="awards-section">
+                <h3>Selected Awards & Recognition</h3>
+                <ul class="awards-list">
+                    <li><strong>Sound Designer for Cloud Kumo, winner of the 2016 Student Academy Award (Silver)</strong> — Film won prestigious Oscar alternative category</li>
+                    <li><strong>Recipient of a prestigious award by the Governor of Dubai — the Mohammed Bin Rashid Arabic Language Award (2019)</strong> — Cultural innovation recognition</li>
+                    <li><strong>Featured in NPR & Al Jazeera</strong> for Radio Al-Kul innovation | <strong>Washington Post recognition</strong> as Syrian celebrity</li>
+                </ul>
+            </div>
+
+            <!-- Professional Experience -->
+            <div class="section">
+                <h2>Professional Experience</h2>
+                
+                <div class="job-entry">
+                    <div class="job-header">
+                        <div class="job-title">IT Director & Systems Architect</div>
+                        <div class="company">Synergy Senior Management</div>
+                        <div class="dates">2022–Present</div>
+                    </div>
+                    <div class="job-content">
+                        <ul>
+                            <li>Architected enterprise-grade networks across 18+ assisted-living facilities serving healthcare operations</li>
+                            <li>Implemented RMM/PSA automation achieving 99.8% uptime with HIPAA-compliant infrastructure</li>
+                            <li>Led digital transformation initiatives including ERP system integrations and workflow automation</li>
+                            <li>Managed multi-site connectivity, security segmentation, and comprehensive vendor relations</li>
+                            <li>Established cybersecurity protocols resulting in zero security incidents across all facilities</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="job-entry">
+                    <div class="job-header">
+                        <div class="job-title">IT Specialist & Consultant</div>
+                        <div class="company">Independent / Obai Sukar Consulting</div>
+                        <div class="dates">2005–Present</div>
+                    </div>
+                    <div class="job-content">
+                        <ul>
+                            <li>Designed & deployed secure IT infrastructure for global teams across Dubai, Syria, Malaysia, and Saudi Arabia</li>
+                            <li>Managed Microsoft 365 & Google Workspace environments with enterprise-level implementations</li>
+                            <li>Administered Intune MDM/MAM, Autopilot deployment, and cross-platform device fleet management</li>
+                            <li>Implemented identity management & SSO solutions, MFA, conditional access, and automated workflows</li>
+                            <li>Delivered compliance frameworks (HIPAA, SOC 2) for regulated industries and healthcare organizations</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="job-entry">
+                    <div class="job-header">
+                        <div class="job-title">AR/AP Coordinator & Operations Specialist</div>
+                        <div class="company">Catalyst Diagnostic</div>
+                        <div class="dates">2020–2022</div>
+                    </div>
+                    <div class="job-content">
+                        <ul>
+                            <li>Managed accounts receivable/payable operations with enterprise-level system integrations</li>
+                            <li>Coordinated with ERP-based medical billing systems and insurance processing workflows</li>
+                            <li>Optimized operational efficiency through technology integration and automated process improvement</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="job-entry">
+                    <div class="job-header">
+                        <div class="job-title">Founder & Executive Producer</div>
+                        <div class="company">SS Media Productions</div>
+                        <div class="dates">2010–2015</div>
+                    </div>
+                    <div class="job-content">
+                        <ul>
+                            <li>Led international production teams across 9 countries managing multiple time zones</li>
+                            <li>Implemented content management systems, distribution workflows, and technology infrastructure</li>
+                            <li>Managed enterprise-level technology budgets and vendor coordination for multi-site operations</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Core Competencies -->
+            <div class="section">
+                <h2>Core Competencies</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h4>Infrastructure & Systems</h4>
+                        <ul>
+                            <li>Network Architecture & Design</li>
+                            <li>Server Management & Virtualization</li>
+                            <li>Enterprise System Integration</li>
+                            <li>Multi-site Connectivity</li>
+                            <li>RMM/PSA Automation</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Security & Compliance</h4>
+                        <ul>
+                            <li>Cybersecurity Protocol Design</li>
+                            <li>HIPAA Compliance Implementation</li>
+                            <li>Identity Management & SSO</li>
+                            <li>Risk Assessment & Management</li>
+                            <li>Security Incident Prevention</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Enterprise Platforms</h4>
+                        <ul>
+                            <li>Microsoft 365 Administration</li>
+                            <li>Google Workspace Management</li>
+                            <li>Intune MDM/MAM</li>
+                            <li>Enterprise ERP Systems</li>
+                            <li>Cross-platform Device Management</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Leadership & Management</h4>
+                        <ul>
+                            <li>IT Strategy Development</li>
+                            <li>Team Leadership & Mentoring</li>
+                            <li>Vendor Relationship Management</li>
+                            <li>Project Management</li>
+                            <li>Budget Planning & Control</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Education -->
+            <div class="section">
+                <h2>Education</h2>
+                <div class="education-entry">
+                    <div class="degree">Associate of Science in Audio Production</div>
+                    <div class="school">Los Angeles Recording School • 2005</div>
+                    <div style="font-size: 8pt; color: #666; margin-top: 2px;">Studies included bachelor-level coursework in technology systems and technical project management</div>
+                </div>
+                <div class="education-entry">
+                    <div class="degree">Professional Development (Ongoing • 2000–Present)</div>
+                    <div class="school">Cloud security, network design, Microsoft 365 administration, automation, ERP systems</div>
+                </div>
+            </div>
+
+            <!-- Selected Testimonial -->
+            <div class="section">
+                <h2>Selected Testimonial</h2>
+                <div class="testimonial">
+                    <div class="testimonial-text">"By far one of the best professionals I had the pleasure to partner with."</div>
+                    <div class="testimonial-author">Sinan Hatahet, PhD — Co-Founder, Workiom CRM</div>
+                </div>
+                <div class="linkedin-ref">
+                    Additional verified testimonials: <a href="https://linkedin.com/in/obaisukar">linkedin.com/in/obaisukar</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
