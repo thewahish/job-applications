@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obai Sukar - Premium Cover Letter - Manager, Integration Support Engineering - Cedar</title>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Serif:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'IBM Plex Sans', Arial, sans-serif;
+            line-height: 1.5;
+            color: #333;
+            background: white;
+            max-width: 8.5in;
+            margin: 0 auto;
+            padding: 0.6in;
+        }
+        
+        /* DUAL LOGO HEADER */
+        .logo-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #FF6B47;
+        }
+        
+        .cover-letter-label {
+            font-family: 'IBM Plex Serif', serif;
+            font-size: 18pt;
+            font-weight: 600;
+            color: #FF6B47;
+            letter-spacing: 1px;
+        }
+        
+        .company-logo {
+            height: 40px;
+            width: auto;
+            opacity: 0.9;
+        }
+        
+        /* GRADIENT NAME TREATMENT */
+        .name-section {
+            text-align: center;
+            margin: 25px 0;
+        }
+        
+        .gradient-name {
+            font-family: 'IBM Plex Serif', serif;
+            font-size: 32pt;
+            font-weight: 700;
+            background: linear-gradient(135deg, #FF6B47 0%, #FF8A6B 50%, #FF6B47 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            color: #FF6B47; /* fallback */
+            margin-bottom: 8px;
+            letter-spacing: -0.5px;
+        }
+        
+        .professional-title {
+            font-family: 'IBM Plex Sans', sans-serif;
+            font-size: 16pt;
+            font-weight: 500;
+            color: #666;
+            margin-bottom: 10px;
+            letter-spacing: 0.3px;
+        }
+        
+        .contact-info {
+            font-size: 11pt;
+            color: #555;
+            margin-bottom: 4px;
+        }
+        
+        /* COMPANY FOCUS SECTION */
+        .company-focus {
+            background: linear-gradient(135deg, #F5F7FA 0%, #e9ecef 100%);
+            border: 1px solid #FF8A6B;
+            border-left: 5px solid #FF6B47;
+            padding: 25px;
+            margin: 25px 0;
+            border-radius: 8px;
+        }
+        
+        .company-focus h3 {
+            font-family: 'IBM Plex Serif', serif;
+            font-size: 16pt;
+            font-weight: 600;
+            color: #FF6B47;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        
+        .company-research {
+            font-size: 12pt;
+            line-height: 1.6;
+            color: #333;
+            text-align: center;
+        }
+        
+        .cedar-badge {
+            display: inline-block;
+            background: #FF6B47;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 10pt;
+            font-weight: 600;
+            margin-top: 12px;
+            letter-spacing: 0.5px;
+        }
+        
+        /* CONTENT STYLING */
+        .cover-content {
+            font-size: 12pt;
+            line-height: 1.6;
+            text-align: justify;
+            margin: 20px 0;
+        }
+        
+        .cover-content p {
+            margin-bottom: 15px;
+        }
+        
+        .passion-statement {
+            background: #FF6B47;
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            text-align: center;
+            font-style: italic;
+            font-size: 13pt;
+        }
+        
+        /* SECTIONED ACHIEVEMENTS */
+        .achievements-section {
+            background: #F5F7FA;
+            border: 1px solid #FF8A6B;
+            border-left: 5px solid #FF6B47;
+            padding: 25px;
+            margin: 25px 0;
+            border-radius: 6px;
+        }
+        
+        .achievements-section h4 {
+            font-family: 'IBM Plex Serif', serif;
+            font-size: 14pt;
+            font-weight: 600;
+            color: #FF6B47;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        
+        .achievement-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+        
+        .achievement-item {
+            font-size: 11pt;
+            line-height: 1.4;
+            color: #333;
+            padding: 15px;
+            background: white;
+            border-radius: 6px;
+            border-left: 3px solid #FF8A6B;
+            position: relative;
+        }
+        
+        .achievement-item strong {
+            color: #FF6B47;
+        }
+        
+        /* DARK VALUE PROPOSITION SECTION */
+        .value-proposition {
+            background: linear-gradient(135deg, #FF6B47 0%, #FF8A6B 100%);
+            color: white;
+            padding: 30px;
+            margin: 30px 0;
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        .value-proposition h3 {
+            font-family: 'IBM Plex Serif', serif;
+            font-size: 18pt;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #fff;
+        }
+        
+        .value-proposition p {
+            font-size: 12pt;
+            line-height: 1.6;
+            color: #f8f9fa;
+        }
+        
+        /* TESTIMONIAL STYLING */
+        .testimonial {
+            font-style: italic;
+            color: #FF6B47;
+            font-weight: 500;
+            padding: 15px 0;
+            text-align: center;
+            background: #F5F7FA;
+            border-radius: 6px;
+            margin: 15px 0;
+        }
+        
+        /* HEALTHCARE EXPERIENCE SECTION */
+        .healthcare-experience {
+            background: #F5F7FA;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #FF8A6B;
+            margin: 20px 0;
+            border-top: 4px solid #FF6B47;
+        }
+        
+        .healthcare-title {
+            font-family: 'IBM Plex Serif', serif;
+            font-size: 14pt;
+            color: #FF6B47;
+            margin-bottom: 10px;
+            font-weight: 600;
+            text-align: center;
+        }
+        
+        .healthcare-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 10px;
+            font-size: 11pt;
+            color: #333;
+        }
+        
+        .healthcare-item {
+            background: white;
+            padding: 8px 12px;
+            border-radius: 4px;
+            text-align: center;
+            border-left: 2px solid #FF8A6B;
+        }
+        
+        /* BRAND FOOTER */
+        .brand-footer {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 2px solid #FF6B47;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .footer-website {
+            font-size: 9pt;
+            color: #666;
+            font-family: 'IBM Plex Sans', sans-serif;
+        }
+        
+        .signature {
+            margin-top: 25px;
+            text-align: left;
+        }
+        
+        .signature strong {
+            font-family: 'IBM Plex Serif', serif;
+            color: #FF6B47;
+        }
+        
+        @media print {
+            body {
+                padding: 0.4in;
+            }
+            
+            .gradient-name {
+                font-size: 28pt;
+            }
+            
+            .professional-title {
+                font-size: 14pt;
+            }
+            
+            .achievement-grid {
+                grid-template-columns: 1fr;
+                gap: 10px;
+            }
+            
+            .healthcare-list {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- DUAL LOGO HEADER -->
+    <div class="logo-header">
+        <div class="cover-letter-label">Cover Letter</div>
+        <img src="Cedar.png" alt="Cedar" class="company-logo">
+    </div>
+    
+    <!-- GRADIENT NAME TREATMENT -->
+    <div class="name-section">
+        <div class="gradient-name">Obai (O.B.) Sukar</div>
+        <div class="professional-title">IT Director & Systems Architect | SaaS Integration | Incident Response | Healthcare Tech</div>
+        <div class="contact-info">obai@obaisukar.com | +1 (810) 399-8713</div>
+        <div class="contact-info">www.obaisukar.com/resume.html | Michigan, USA</div>
+        <div class="contact-info">Available for Remote Work | New York/Remote</div>
+    </div>
+    
+    <!-- COMPANY FOCUS SECTION -->
+    <div class="company-focus">
+        <h3>Cedar Healthcare Payment Technology</h3>
+        <div class="company-research">
+            <p><strong>Making Healthcare More Affordable and Accessible</strong> through innovative payment technology solutions. Cedar's mission to transform healthcare payments and improve patient access to care aligns perfectly with my experience in healthcare IT, SaaS integration, and mission-critical incident response.</p>
+            <div class="cedar-badge">🏥 MANAGER, INTEGRATION SUPPORT ENGINEERING</div>
+        </div>
+    </div>
+    
+    <div class="cover-content">
+        <p>Dear Cedar Hiring Committee,</p>
+        
+        <div class="passion-statement">
+            Cedar's mission to make healthcare more affordable and accessible resonates strongly with my career. For two decades, I've built IT systems and integration frameworks for healthcare, education, and nonprofit organizations. I understand both the technical and human side of escalations — where system failures impact real lives.
+        </div>
+        
+        <p>At Synergy Senior Management, I managed IT for 18+ facilities, deploying SaaS platforms (M365, Intune, Entra ID) with HIPAA compliance and near-perfect uptime. I transformed our incident process by rolling out RMM/PSA with automation, cutting response times by ~75%. In consulting, I supported healthcare SaaS integrations and incident response playbooks across diverse environments, coordinating root cause analysis between engineering and business stakeholders.</p>
+    </div>
+    
+    <!-- SECTIONED ACHIEVEMENTS -->
+    <div class="achievements-section">
+        <h4>Healthcare Technology Excellence & SaaS Integration Mastery</h4>
+        <div class="achievement-grid">
+            <div class="achievement-item">
+                <strong>SaaS Integration Leadership:</strong> 20+ years managing B2B healthcare technology, Microsoft 365, Azure AD/Entra ID, and multi-stack application environments
+            </div>
+            <div class="achievement-item">
+                <strong>Incident Response Excellence:</strong> Reduced response times by 75% through RMM/PSA automation and cross-functional escalation playbooks
+            </div>
+            <div class="achievement-item">
+                <strong>Healthcare Compliance Expertise:</strong> HIPAA-compliant operations across 18+ facilities with zero security incidents and perfect compliance record
+            </div>
+            <div class="achievement-item">
+                <strong>Cross-Functional Communication:</strong> Proven bridge between technical engineering teams and commercial stakeholders in high-pressure environments
+            </div>
+            <div class="achievement-item">
+                <strong>Crisis-Tested Leadership:</strong> Maintained critical systems supporting 500K+ daily users under extreme conditions, featured in NPR and Washington Post
+            </div>
+            <div class="achievement-item">
+                <strong>Global Team Coordination:</strong> Successfully managed international teams across 9 countries and multiple time zones with complex technical deliverables
+            </div>
+        </div>
+    </div>
+    
+    <div class="healthcare-experience">
+        <div class="healthcare-title">Healthcare Technology Experience</div>
+        <div class="healthcare-list">
+            <div class="healthcare-item">HIPAA Compliance</div>
+            <div class="healthcare-item">18+ Healthcare Facilities</div>
+            <div class="healthcare-item">SaaS Integration</div>
+            <div class="healthcare-item">Incident Response</div>
+            <div class="healthcare-item">Zero Security Incidents</div>
+            <div class="healthcare-item">Mission-Critical Operations</div>
+        </div>
+    </div>
+    
+    <!-- DARK VALUE PROPOSITION SECTION -->
+    <div class="value-proposition">
+        <h3>Why Cedar + Obai = Perfect Match</h3>
+        <p>You need a leader who understands that healthcare technology failures aren't just system issues—they impact real patients and real lives. I've spent two decades building resilient healthcare IT infrastructure and incident response frameworks that work when stakes are highest. I don't just manage escalations; I transform support functions into proactive, data-driven units that prevent problems before they impact patient care.</p>
+    </div>
+    
+    <div class="cover-content">
+        <p>My experience extends beyond enterprise IT into mission-driven media. As founder of Karazah Channel, I directed global teams in 9 countries to build one of the largest Arabic early education platforms (715K+ subscribers, 301M+ views). In every role, I've balanced technical depth with cross-functional leadership, ensuring teams deliver clarity, speed, and resilience under pressure.</p>
+        
+        <p>What distinguishes my candidacy is my unique combination of healthcare technology expertise and crisis-tested reliability. Managing IT operations for Radio Al-Kul under challenging conditions taught me that in healthcare technology, there are no second chances—systems must work flawlessly because real lives depend on them. This experience, recognized by <a href="https://www.npr.org/2021/04/11/985468479/from-syria-to-clubhouse-podcasters-are-finding-new-audiences" style="color: #FF8A6B; text-decoration: underline;">NPR</a> and <a href="https://www.washingtonpost.com/world/middle_east/syria-diaspora-clubhouse-middle-east/2021/03/09/90a2a55e-7c28-11eb-8c5e-32e47b42b51b_story.html" style="color: #FF8A6B; text-decoration: underline;">Washington Post</a>, demonstrates my ability to maintain critical infrastructure when stakes are highest.</p>
+        
+        <div class="testimonial">
+            I'm recognized by Sinan Hatahet, PhD, Co-Founder of Workiom CRM, as <strong>"by far one of the best professionals I had the pleasure to partner with."*</strong>
+        </div>
+        
+        <p>I see a direct fit between my background and Cedar's need for a leader who can evolve its Integration Support Engineering into a high-impact Escalations function. I bring the ability to triage complex incidents, drive cross-stack communication, and turn chronic issues into long-term improvements. My experience with healthcare SaaS integrations, HIPAA compliance, and incident management across distributed teams positions me to excel in Cedar's mission-critical environment.</p>
+        
+        <p>I would welcome the chance to discuss how my expertise in SaaS integration, incident management, and healthcare IT can advance Cedar's mission to transform healthcare payments and improve patient access to care.</p>
+    </div>
+    
+    <div class="signature">
+        <p><strong>Sincerely,</strong><br>
+        <strong>Obai (O.B.) Sukar</strong><br>
+        <em>IT Director & Systems Architect | Healthcare Technology</em></p>
+    </div>
+    
+    <!-- BRAND FOOTER -->
+    <div class="brand-footer">
+        <div class="footer-website">www.obaisukar.com/resume.html</div>
+        <div class="footer-website">*Additional verified testimonials can be viewed directly on my LinkedIn profile: linkedin.com/in/obaisukar</div>
+    </div>
+</body>
+</html>

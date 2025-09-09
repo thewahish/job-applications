@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obai Sukar - Cover Letter - GISD Technical Services Supervisor</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: white;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 8.5in;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        /* GISD Header Layout */
+        .gisd-header {
+            display: flex;
+            height: 120px;
+            position: relative;
+        }
+        
+        /* Left teal section */
+        .left-section {
+            background: #007780;
+            width: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        
+        /* Logo square */
+        .logo-square {
+            width: 80px;
+            height: 80px;
+            background: #007780;
+            position: relative;
+            border: 2px solid white;
+            border-radius: 4px;
+        }
+        
+        /* Diamond behind logo */
+        .logo-diamond {
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            background: #E6B07C;
+            transform: rotate(45deg);
+            top: 50%;
+            left: 50%;
+            margin-top: -30px;
+            margin-left: -30px;
+            z-index: 1;
+        }
+        
+        /* GISD text in logo */
+        .logo-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+            color: white;
+            font-weight: 700;
+            font-size: 16px;
+            text-align: center;
+            line-height: 0.8;
+        }
+        
+        /* Right white section with diagonal */
+        .right-section {
+            flex: 1;
+            background: white;
+            position: relative;
+            display: flex;
+            align-items: center;
+            padding-left: 40px;
+        }
+        
+        /* Teal diagonal accent */
+        .diagonal-accent {
+            position: absolute;
+            top: 0;
+            left: -20px;
+            width: 40px;
+            height: 100%;
+            background: #007780;
+            transform: skewX(-15deg);
+            z-index: 0;
+        }
+        
+        /* Text content in header */
+        .header-text {
+            z-index: 1;
+            position: relative;
+        }
+        
+        .primary-heading {
+            font-size: 18px;
+            font-weight: 700;
+            color: #007780;
+            text-transform: uppercase;
+            margin-bottom: 4px;
+            letter-spacing: 0.5px;
+        }
+        
+        .values-line {
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-bottom: 4px;
+            letter-spacing: 0.3px;
+        }
+        
+        .leadership { color: #C64527; }
+        .service { color: #D78B33; }
+        .innovation { color: #C64527; }
+        .diamond-sep { color: #D78B33; margin: 0 4px; }
+        
+        .tagline {
+            font-size: 14px;
+            font-style: italic;
+            color: #007780;
+            font-weight: 400;
+        }
+        
+        /* Application info section */
+        .app-info {
+            background: #f8fafb;
+            padding: 20px 40px;
+            border-bottom: 1px solid #e0e4e7;
+        }
+        
+        .position-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: #007780;
+            margin-bottom: 8px;
+        }
+        
+        .applicant-name {
+            font-size: 24px;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 6px;
+        }
+        
+        .applicant-tagline {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 12px;
+        }
+        
+        .contact-info {
+            display: flex;
+            gap: 20px;
+            font-size: 12px;
+            color: #666;
+            flex-wrap: wrap;
+        }
+        
+        /* Content area */
+        .content {
+            padding: 40px;
+        }
+        
+        .cover-letter-label {
+            font-size: 14px;
+            font-weight: 600;
+            color: #007780;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 2px solid #C64527;
+            padding-bottom: 8px;
+            display: inline-block;
+        }
+        
+        .section-box {
+            background: #f8fafb;
+            padding: 20px;
+            border-radius: 6px;
+            border-left: 4px solid #007780;
+            margin-bottom: 25px;
+        }
+        
+        .section-title {
+            color: #007780;
+            font-size: 16px;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+        
+        .focus-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            font-size: 14px;
+        }
+        
+        .focus-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+        }
+        
+        .focus-icon {
+            color: #D78B33;
+            font-size: 14px;
+            margin-top: 2px;
+        }
+        
+        .letter-content {
+            font-size: 15px;
+            line-height: 1.7;
+            color: #333;
+        }
+        
+        .letter-content p {
+            margin-bottom: 18px;
+        }
+        
+        .highlight-box {
+            background: #007780;
+            color: white;
+            padding: 20px;
+            border-radius: 6px;
+            margin: 25px 0;
+            font-style: italic;
+            text-align: center;
+        }
+        
+        .achievements-box {
+            background: #f8fafb;
+            padding: 20px;
+            border-radius: 6px;
+            border-left: 4px solid #C64527;
+            margin: 20px 0;
+        }
+        
+        .achievements-title {
+            color: #007780;
+            font-size: 15px;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+        
+        .achievement-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            list-style: none;
+            font-size: 13px;
+        }
+        
+        .achievement-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 6px;
+        }
+        
+        .achievement-list li::before {
+            content: "•";
+            color: #D78B33;
+            font-weight: bold;
+            font-size: 14px;
+        }
+        
+        .value-prop-box {
+            background: #007780;
+            color: white;
+            padding: 25px;
+            border-radius: 6px;
+            margin: 25px 0;
+            text-align: center;
+        }
+        
+        .value-prop-title {
+            font-size: 18px;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+        
+        .testimonial-box {
+            background: #f8fafb;
+            padding: 20px;
+            border-radius: 6px;
+            border-left: 4px solid #D78B33;
+            margin: 20px 0;
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            font-size: 15px;
+            color: #333;
+            margin-bottom: 8px;
+        }
+        
+        .testimonial-author {
+            font-weight: 600;
+            color: #007780;
+            font-size: 13px;
+        }
+        
+        .footer {
+            background: #f8fafb;
+            padding: 20px 40px;
+            border-top: 1px solid #e0e4e7;
+            text-align: center;
+            font-size: 12px;
+            color: #666;
+        }
+        
+        @media print {
+            body { padding: 0; }
+            .container { box-shadow: none; border-radius: 0; }
+            .focus-grid, .achievement-list { grid-template-columns: 1fr; gap: 8px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- GISD Header -->
+        <div class="gisd-header">
+            <div class="left-section">
+                <div class="logo-square">
+                    <div class="logo-diamond"></div>
+                    <div class="logo-text">GI<br>SD</div>
+                </div>
+            </div>
+            <div class="right-section">
+                <div class="diagonal-accent"></div>
+                <div class="header-text">
+                    <div class="primary-heading">Genesee Intermediate School District</div>
+                    <div class="values-line">
+                        <span class="leadership">Leadership</span><span class="diamond-sep">♦</span>
+                        <span class="service">Service</span><span class="diamond-sep">♦</span>
+                        <span class="innovation">Innovation</span>
+                    </div>
+                    <div class="tagline">Partnering for success!</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Application Info -->
+        <div class="app-info">
+            <div class="position-title">Technical Services Supervisor - Technology and Media Services</div>
+            <div class="applicant-name">Obai (O.B.) Sukar</div>
+            <div class="applicant-tagline">IT Director & Systems Architect | Technical Services Leader</div>
+            <div class="contact-info">
+                <span>Flint, MI</span>
+                <span>obai@obaisukar.com</span>
+                <span>+1 (810) 399-8713</span>
+                <span>www.obaisukar.com/resume.html</span>
+            </div>
+        </div>
+        
+        <!-- Content -->
+        <div class="content">
+            <div class="cover-letter-label">Cover Letter</div>
+            
+            <div class="section-box">
+                <div class="section-title">Hiring Committee</div>
+                <div style="font-size: 14px; line-height: 1.5;">
+                    Genesee Intermediate School District<br>
+                    Davis Education Center<br>
+                    2413 West Maple Avenue<br>
+                    Flint, MI 48507
+                </div>
+            </div>
+            
+            <div class="letter-content">
+                <p>Dear Hiring Committee,</p>
+                
+                <p>I've worked in IT and media for more than twenty years, managing teams, running networks, and building systems that people rely on. At Synergy Senior Management I oversee IT for 18+ facilities, lead staff, and maintain 99.8% uptime with zero security issues. I supervise application, Exchange, and VoIP teams, direct vendor contracts and RFPs, and keep disaster recovery plans tested and ready.</p>
+                
+                <p>My background also includes international consulting across the US, Middle East, and Asia, designing secure WAN/LAN, fiber, and cloud platforms for schools, labs, and enterprises. Earlier in my career, at Spacetoon/Tiger Media, I managed technology operations across Damascus, Dubai, and Kuala Lumpur—supporting broadcast infrastructure, distance-learning systems, and sound/media engineering teams. I also co-founded Radio Al-Kul, which reached half a million daily listeners during conflict, and built Karazah Channel on YouTube to more than 715,000 subscribers and 300 million views.</p>
+                
+                <p>I've been recognized with a prestigious award by the Governor of Dubai, profiled by the Washington Post, and endorsed by leaders such as Sinan Hatahet, PhD (Workiom CRM) and Husam Azma (Oracle Consulting) for integrity and professional excellence. These experiences show that I bring not only technical ability but also resilience, credibility, and leadership.</p>
+                
+                <p>I'd welcome the chance to bring this mix of IT and media expertise to GISD's Technical Services Supervisor role, strengthening operations, supporting staff, and advancing your mission of leadership, service, and innovation.</p>
+<div class="achievements-box">
+  <div class="achievements-title">Selected Recognitions & Impact</div>
+  <ul class="achievement-list">
+    <li>Profiled by <strong>The Washington Post</strong>; featured by <strong>NPR</strong>, <strong>Al&nbsp;Jazeera</strong>, and <strong>AFP</strong> for innovative war‑zone broadcasting.</li>
+    <li><strong>Student Academy Award (Silver, 2016)</strong> — Sound Designer for <em>Cloud Kumo</em> (film won the award).</li>
+    <li><strong>Mohammed Bin Rashid Arabic Language Award (2019)</strong> — For Karazah Channel’s contribution to Arabic education.</li>
+    <li>Co‑founded <strong>Radio Al‑Kul</strong>, reaching ~500,000 daily listeners during conflict.</li>
+    <li>Built <strong>Karazah Channel</strong> to 715K+ subscribers and 300M+ views.</li>
+  </ul>
+</div>
+
+                
+                <p><strong>Sincerely,<br>
+                Obai (O.B.) Sukar<br>
+                Additional verified testimonials: linkedin.com/in/obaisukar</strong></p>
+            </div>
+        </div>
+        
+        <div class="footer">
+            Professional Application Materials | obaisukar.com/resume.html
+        </div>
+    </div>
+</body>
+</html>

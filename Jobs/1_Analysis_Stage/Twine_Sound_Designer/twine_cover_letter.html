@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obai Sukar - Cover Letter | Twine Sound Designer</title>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Serif:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --twine-purple: #4A3B5C;
+            --twine-light-purple: #6A5B8D;
+            --twine-dark: #2E1A3A;
+            --accent-purple: #8B72BE;
+            --text-dark: #1a1a1a;
+            --text-medium: #4a4a4a;
+            --background: #ffffff;
+            --light-bg: #f8f7fb;
+        }
+
+        body {
+            font-family: 'IBM Plex Sans', Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 40px;
+            background: var(--background);
+            color: var(--text-dark);
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(106, 76, 147, 0.1);
+        }
+
+        .header {
+            background: linear-gradient(135deg, var(--twine-purple) 0%, var(--twine-light-purple) 100%);
+            padding: 30px 40px;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 200px;
+            height: 200px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            transform: rotate(45deg);
+        }
+
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .cover-label {
+            font-size: 14px;
+            font-weight: 500;
+            opacity: 0.9;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .company-logo {
+            width: 120px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .company-logo img {
+            max-width: 100px;
+            max-height: 50px;
+            filter: brightness(0) invert(1);
+            opacity: 0.95;
+        }
+
+        .name-section {
+            position: relative;
+            z-index: 2;
+        }
+
+        .name {
+            font-size: 42px;
+            font-weight: 700;
+            margin: 0;
+            background: linear-gradient(45deg, #ffffff 0%, #f0f0f0 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .tagline {
+            font-size: 16px;
+            margin: 8px 0 0 0;
+            opacity: 0.95;
+            font-weight: 400;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        .company-focus {
+            background: var(--light-bg);
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            border-left: 4px solid var(--twine-purple);
+        }
+
+        .company-focus h3 {
+            color: var(--twine-purple);
+            margin: 0 0 15px 0;
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        .company-focus p {
+            margin: 0;
+            color: var(--text-medium);
+            line-height: 1.7;
+        }
+
+        .content p {
+            margin: 18px 0;
+            font-size: 15px;
+            line-height: 1.7;
+            color: var(--text-dark);
+        }
+
+        .achievements-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 25px 0;
+        }
+
+        .achievement-box {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #e8e8e8;
+            border-left: 4px solid var(--twine-purple);
+        }
+
+        .achievement-box h4 {
+            margin: 0 0 10px 0;
+            color: var(--twine-purple);
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .achievement-box p {
+            margin: 0;
+            font-size: 14px;
+            line-height: 1.6;
+            color: var(--text-medium);
+        }
+
+        .value-proposition {
+            background: linear-gradient(135deg, var(--twine-dark) 0%, var(--twine-purple) 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 12px;
+            margin: 30px 0;
+            text-align: center;
+        }
+
+        .value-proposition h3 {
+            margin: 0 0 15px 0;
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        .value-proposition p {
+            margin: 0;
+            font-size: 15px;
+            opacity: 0.95;
+            line-height: 1.7;
+        }
+
+        .testimonial {
+            background: var(--light-bg);
+            padding: 25px;
+            border-radius: 10px;
+            border-left: 4px solid var(--accent-purple);
+            margin: 25px 0;
+            font-style: italic;
+        }
+
+        .testimonial p {
+            margin: 0 0 10px 0;
+            font-size: 15px;
+            color: var(--text-medium);
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+            color: var(--twine-purple);
+            font-style: normal;
+            font-size: 14px;
+        }
+
+        .closing {
+            margin-top: 30px;
+        }
+
+        .footer {
+            background: var(--light-bg);
+            padding: 25px 40px;
+            text-align: center;
+            border-top: 1px solid #e8e8e8;
+        }
+
+        .footer-brand {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .personal-logo {
+            width: 40px;
+            height: 40px;
+            opacity: 0.8;
+        }
+
+        .website-link {
+            color: var(--twine-purple);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
+
+        .website-link:hover {
+            color: var(--twine-light-purple);
+        }
+
+        .linkedin-ref {
+            font-size: 12px;
+            color: #666;
+            margin-top: 10px;
+        }
+
+        .contact-info {
+            font-size: 14px;
+            color: var(--text-medium);
+            margin: 10px 0;
+        }
+
+        @media print {
+            body { padding: 15px; }
+            .container { box-shadow: none; }
+            .header { break-inside: avoid; }
+            .company-focus { break-inside: avoid; }
+            .value-proposition { break-inside: avoid; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="header-top">
+                <div class="cover-label">Cover Letter</div>
+                <div class="company-logo">
+                    <img src="Twine.png" alt="Twine Logo">
+                </div>
+            </div>
+            <div class="name-section">
+                <h1 class="name">Obai Sukar</h1>
+                <div class="tagline">Award-Winning Sound Designer | Cinematic Audio Specialist | Student Academy Award Winner</div>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="company-focus">
+                <h3>Why Twine & This Project Excite Me</h3>
+                <p>Twine's mission to empower creators in an AI-driven, freelance-first world perfectly aligns with my journey as an independent sound designer. The sci-fi thriller "Phase 1: Encounter" presents the exact type of atmospheric challenge I thrive on—building tension through immersive soundscapes that capture the dark, mysterious essence of corporate espionage and technological secrets.</p>
+            </div>
+
+            <p>Sound is what I breathe. When I see a teaser trailer that needs to capture the ominous atmosphere of an infiltrator working undercover at Skyreach Holdings, I don't just hear the potential—I feel the frequencies where others only hear silence.</p>
+
+            <p>This project speaks to my core expertise. As the sound designer for Cloud Kumo, winner of the 2016 Student Academy Award (Silver), I understand how to create cinematic soundscapes that enhance narrative tension. The sci-fi genre is particularly close to my heart, where every ambient tone and layered effect serves the story's deeper mystery.</p>
+
+            <div class="achievements-grid">
+                <div class="achievement-box">
+                    <h4>Award-Winning Film Experience</h4>
+                    <p>Student Academy Award for Cloud Kumo sound design, demonstrating proven ability to create cinema-quality audio</p>
+                </div>
+                <div class="achievement-box">
+                    <h4>Sci-Fi Sound Mastery</h4>
+                    <p>Specialized expertise in atmospheric, ambient soundscapes that build immersive sci-fi environments</p>
+                </div>
+                <div class="achievement-box">
+                    <h4>Professional DAW Proficiency</h4>
+                    <p>Expert-level skills in Steinberg Nuendo and Pro Tools with professional studio setup for immediate project delivery</p>
+                </div>
+                <div class="achievement-box">
+                    <h4>Deadline Excellence</h4>
+                    <p>Proven track record delivering high-quality sound design projects within 1-2 day turnaround requirements</p>
+                </div>
+            </div>
+
+            <p>What sets me apart is my ability to work from audio references and adapt creatively to align with the director's vision. I've managed international production teams across 9 countries, creating content that achieved 301M+ views, but more importantly—I've learned to listen to what the story needs, not just what sounds impressive.</p>
+
+            <p>My technical approach combines spatial design knowledge with narrative intuition. I understand how to layer atmospheric elements that don't compete with dialogue, how to build tension without overwhelming the story, and how to create the kind of immersive sci-fi environment that makes viewers feel like they're inside Skyreach Holdings themselves.</p>
+
+            <div class="value-proposition">
+                <h3>Your Project Success Guarantee</h3>
+                <p>I bring award-winning cinematic sound design experience, professional-grade equipment, and the creative vision to transform your teaser trailer into an atmospheric masterpiece. With reliable communication and a professional remote setup, I'll deliver the dark, suspenseful sci-fi soundscape that makes "Phase 1: Encounter" impossible to ignore.</p>
+            </div>
+
+            <div class="testimonial">
+                <p><strong>"When it comes to audio, Obai is a perfectionist and his creativity is unmatched."*</strong></p>
+                <div class="testimonial-author">Michael Shagoury — SVP of Audience Development</div>
+            </div>
+
+            <div class="closing">
+                <p>I'm ready to start immediately and excited to contribute to a project that perfectly matches my passion for cinematic storytelling through sound. Let's create something extraordinary together.</p>
+
+                <p>Looking forward to bringing Phase 1: Encounter to life through immersive audio design.</p>
+
+                <p>Best regards,<br>
+                <strong>Obai Sukar</strong><br>
+                <span style="color: var(--text-medium);">Award-Winning Sound Designer</span></p>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="footer-brand">
+                <img src="obai_sukar_logo.png" alt="Obai Sukar Logo" class="personal-logo">
+                <a href="https://obaisukar.com" class="website-link">www.obaisukar.com</a>
+            </div>
+            <div class="contact-info">
+                obai@obaisukar.com | +1 (810) 399-8713 | Michigan, USA
+            </div>
+            <div class="linkedin-ref">
+                *Additional verified testimonials can be viewed directly on my LinkedIn profile: linkedin.com/in/obaisukar
+            </div>
+        </div>
+    </div>
+</body>
+</html>
