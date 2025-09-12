@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obai Sukar - Cover Letter - Twine Sound Designer</title>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Serif:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'IBM Plex Sans', sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background: #ffffff;
+            font-size: 11pt;
+        }
+
+        .container {
+            max-width: 8.5in;
+            margin: 0 auto;
+            padding: 0.3in 0.5in;
+            min-height: 11in;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 0.4in;
+            position: relative;
+        }
+
+        .header::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #8B5CF6, #EC4899, #F59E0B);
+        }
+
+        .cover-letter-label {
+            background: linear-gradient(135deg, #8B5CF6, #EC4899);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-family: 'IBM Plex Sans', sans-serif;
+            font-weight: 600;
+            font-size: 14pt;
+            letter-spacing: 1px;
+        }
+
+        .company-section {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 8px;
+        }
+
+        .twine-logo {
+            width: 45px;
+            height: 45px;
+        }
+
+        .date {
+            font-size: 9pt;
+            color: #5A4B9D;
+            font-weight: 500;
+        }
+
+        .name-section {
+            text-align: center;
+            margin-bottom: 0.3in;
+        }
+
+        .name {
+            font-family: 'IBM Plex Serif', serif;
+            font-size: 24pt;
+            font-weight: 600;
+            background: linear-gradient(135deg, #8B5CF6 0%, #EC4899 35%, #F59E0B 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 8px;
+            letter-spacing: 0.5px;
+        }
+
+        .contact-info {
+            font-size: 10pt;
+            color: #5A4B9D;
+            font-weight: 500;
+        }
+
+        .contact-info a {
+            color: #5A4B9D;
+            text-decoration: none;
+            border-bottom: 1px solid rgba(90, 75, 157, 0.3);
+        }
+
+        .contact-info a:hover {
+            color: #EC4899;
+            border-bottom-color: #EC4899;
+        }
+
+        .divider {
+            width: 60px;
+            height: 2px;
+            background: linear-gradient(90deg, #8B5CF6, #EC4899);
+            margin: 0.2in auto 0.3in;
+        }
+
+        .content-section {
+            margin-bottom: 0.25in;
+        }
+
+        .section-title {
+            font-family: 'IBM Plex Sans', sans-serif;
+            font-size: 13pt;
+            font-weight: 600;
+            color: #5A4B9D;
+            margin-bottom: 12px;
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(90, 75, 157, 0.2);
+        }
+
+        .project-focus {
+            background: linear-gradient(135deg, rgba(139, 92, 246, 0.05), rgba(236, 72, 153, 0.05));
+            border: 1px solid rgba(90, 75, 157, 0.2);
+            border-radius: 8px;
+            padding: 16px;
+            margin-bottom: 0.25in;
+        }
+
+        .project-title {
+            font-weight: 600;
+            color: #5A4B9D;
+            font-size: 12pt;
+            margin-bottom: 6px;
+        }
+
+        .project-details {
+            font-size: 10pt;
+            color: #666;
+            line-height: 1.4;
+        }
+
+        .experience-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-bottom: 0.25in;
+        }
+
+        .experience-item {
+            background: #fafbfc;
+            border: 1px solid rgba(90, 75, 157, 0.1);
+            border-radius: 6px;
+            padding: 14px;
+        }
+
+        .experience-title {
+            font-weight: 600;
+            color: #5A4B9D;
+            font-size: 10pt;
+            margin-bottom: 4px;
+        }
+
+        .experience-desc {
+            font-size: 9pt;
+            color: #555;
+            line-height: 1.4;
+        }
+
+        .value-prop {
+            background: linear-gradient(135deg, #2d1b69, #5A4B9D);
+            color: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 0.25in;
+        }
+
+        .value-prop-title {
+            font-size: 12pt;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #F59E0B;
+        }
+
+        .value-prop-text {
+            font-size: 10pt;
+            line-height: 1.5;
+        }
+
+        .testimonials {
+            background: linear-gradient(135deg, rgba(245, 158, 11, 0.05), rgba(236, 72, 153, 0.05));
+            border: 1px solid rgba(245, 158, 11, 0.2);
+            border-radius: 8px;
+            padding: 16px;
+            margin-bottom: 0.25in;
+        }
+
+        .testimonial-quote {
+            font-style: italic;
+            color: #555;
+            margin-bottom: 6px;
+            font-size: 10pt;
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+            font-size: 9pt;
+            color: #F59E0B;
+        }
+
+        .footer {
+            margin-top: 0.3in;
+            padding-top: 16px;
+            border-top: 1px solid rgba(90, 75, 157, 0.2);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .signature {
+            font-family: 'IBM Plex Serif', serif;
+            font-size: 12pt;
+            font-weight: 500;
+            color: #5A4B9D;
+        }
+
+        .brand-watermark {
+            opacity: 0.6;
+            font-size: 8pt;
+            color: #999;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .brand-logo-small {
+            width: 20px;
+            height: 20px;
+        }
+
+        p {
+            margin-bottom: 12px;
+            text-align: justify;
+            font-size: 10.5pt;
+            line-height: 1.5;
+        }
+
+        .highlight {
+            background: linear-gradient(135deg, rgba(139, 92, 246, 0.1), rgba(236, 72, 153, 0.1));
+            padding: 2px 4px;
+            border-radius: 3px;
+            font-weight: 500;
+        }
+
+        @media print {
+            .container {
+                padding: 0.2in 0.4in;
+                max-width: none;
+            }
+            
+            .header {
+                margin-bottom: 0.3in;
+            }
+            
+            .name-section {
+                margin-bottom: 0.2in;
+            }
+            
+            .content-section {
+                margin-bottom: 0.2in;
+            }
+            
+            .divider {
+                margin: 0.15in auto 0.2in;
+            }
+            
+            .value-prop, .testimonials, .project-focus {
+                padding: 12px;
+                margin-bottom: 0.2in;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="cover-letter-label">COVER LETTER</div>
+            <div class="company-section">
+                <img src="Twine.png" alt="Twine Logo" class="twine-logo">
+                <div class="date">December 9, 2024</div>
+            </div>
+        </header>
+
+        <div class="name-section">
+            <h1 class="name">Obai Sukar</h1>
+            <div class="contact-info">
+                <a href="mailto:obai@obaisukar.com">obai@obaisukar.com</a> • 
+                <a href="tel:+18103998713">+1 (810) 399-8713</a> • 
+                Michigan, USA<br>
+                <a href="https://obaisukar.com/resume.html">www.obaisukar.com/resume.html</a>
+            </div>
+            <div class="divider"></div>
+        </div>
+
+        <div class="project-focus">
+            <div class="project-title">Project: "Phase 1: Encounter" - Sci-Fi Short Film Teaser Trailer</div>
+            <div class="project-details">
+                Remote sound design for cinematic sci-fi thriller atmosphere • 1-2 day project timeline • Twine freelance marketplace
+            </div>
+        </div>
+
+        <div class="content-section">
+            <p><span class="highlight">"Sound is what I breathe"</span> – and your "Phase 1: Encounter" sci-fi project represents exactly the kind of cinematic challenge where my expertise creates magic.</p>
+
+            <p>As <strong>Audio Director for Eternal Parade</strong> (animated short film) and <strong>Sound Designer for Cloud Kumo</strong> (2016 Student Academy Award Silver winner), I've mastered the art of crafting atmospheric soundscapes that elevate narrative tension. My approach combines technical precision with creative intuition – I see frequencies where others hear noise.</p>
+        </div>
+
+        <div class="content-section">
+            <h3 class="section-title">Perfect Match for Your Sci-Fi Vision</h3>
+            
+            <div class="experience-grid">
+                <div class="experience-item">
+                    <div class="experience-title">Eternal Parade Short Film</div>
+                    <div class="experience-desc">Complete audio post-production for animated short film with atmospheric elements and immersive soundscapes</div>
+                </div>
+                
+                <div class="experience-item">
+                    <div class="experience-title">Award-Winning Excellence</div>
+                    <div class="experience-desc">Sound Designer for Student Academy Award winning film demonstrating industry-recognized quality standards</div>
+                </div>
+                
+                <div class="experience-item">
+                    <div class="experience-title">Professional DAW Mastery</div>
+                    <div class="experience-desc">Steinberg Nuendo and Pro Tools expertise with professional studio setup for immediate project delivery</div>
+                </div>
+                
+                <div class="experience-item">
+                    <div class="experience-title">Independent Contractor</div>
+                    <div class="experience-desc">Established freelance business since 2005 with international production experience and tight deadline delivery</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="value-prop">
+            <div class="value-prop-title">What Sets This Collaboration Apart</div>
+            <div class="value-prop-text">
+                You're not just getting technical execution – you're partnering with an audio artist who understands that sci-fi sound design is about creating believable otherworldly experiences. My crisis-forged innovation and international perspective bring unique creative solutions to your trailer's atmospheric requirements.
+            </div>
+        </div>
+
+        <div class="testimonials">
+            <div class="testimonial-quote">
+                <strong>"Technical knowledge is vast, paired with artistic sense and attention to detail. It's an honour to work with him."*</strong>
+            </div>
+            <div class="testimonial-author">— Shamel Haydar, Creative Director</div>
+            <div style="margin-top: 12px;">
+                <div class="testimonial-quote">
+                    <strong>"His creativity and adaptation to new trends were well received."*</strong>
+                </div>
+                <div class="testimonial-author">— Kamel Weiss, GM @ SpacetoonGo, Spacetoon Group</div>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <p>I deliver more than sound effects – I create sonic experiences that serve your story. Whether it's subtle ambient tension or bold dramatic accents, every frequency choice supports your director's vision.</p>
+
+            <p>Your "Phase 1: Encounter" deserves the level of audio craftsmanship that turns a good trailer into an unforgettable one. Let's create something extraordinary together.</p>
+        </div>
+
+        <footer class="footer">
+            <div class="signature">
+                Obai Sukar<br>
+                <span style="font-size: 9pt; color: #666;">Sound Designer & Audio Director</span>
+            </div>
+            <div class="brand-watermark">
+                <img src="obai_sukar_logo.png" alt="OS" class="brand-logo-small">
+                <span>obaisukar.com</span>
+            </div>
+        </footer>
+
+        <div style="margin-top: 12px; font-size: 8pt; color: #999; text-align: center;">
+            *Additional verified testimonials can be viewed directly on my LinkedIn profile: <a href="https://linkedin.com/in/obaisukar" style="color: #666;">linkedin.com/in/obaisukar</a>
+        </div>
+    </div>
+</body>
+</html>
