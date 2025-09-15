@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@obaisukar - Lead Sound Designer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background: #fafafa;
+            min-height: 100vh;
+        }
+
+        .phone-container {
+            max-width: 375px;
+            margin: 0 auto;
+            background: white;
+            min-height: 100vh;
+        }
+
+        .header {
+            padding: 10px 16px;
+            border-bottom: 1px solid #dbdbdb;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: white;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-family: 'Grand Hotel', cursive;
+            font-size: 28px;
+            background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af, #515bd4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .header-icons {
+            display: flex;
+            gap: 20px;
+        }
+
+        .icon {
+            width: 24px;
+            height: 24px;
+            cursor: pointer;
+        }
+
+        .stories {
+            padding: 10px 0;
+            background: white;
+            border-bottom: 1px solid #dbdbdb;
+            display: flex;
+            gap: 15px;
+            overflow-x: auto;
+            padding-left: 16px;
+        }
+
+        .story {
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .story-ring {
+            width: 66px;
+            height: 66px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af);
+            padding: 2px;
+            margin-bottom: 4px;
+        }
+
+        .story-image {
+            width: 62px;
+            height: 62px;
+            border-radius: 50%;
+            background: white;
+            border: 2px solid white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: #8134af;
+            font-size: 24px;
+        }
+
+        .story-label {
+            font-size: 12px;
+            color: #262626;
+        }
+
+        .post {
+            background: white;
+            margin-bottom: 1px;
+        }
+
+        .post-header {
+            padding: 14px 16px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .post-user {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .post-avatar {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #f58529, #dd2a7b);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+
+        .post-username {
+            font-weight: 600;
+            font-size: 14px;
+            color: #262626;
+        }
+
+        .verified-badge {
+            width: 12px;
+            height: 12px;
+            background: #3897f0;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 8px;
+            margin-left: 4px;
+        }
+
+        .post-image {
+            width: 100%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            aspect-ratio: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .carousel-content {
+            color: white;
+            padding: 30px;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .carousel-title {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .carousel-text {
+            font-size: 16px;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+
+        .stat-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .stat-box {
+            background: rgba(255,255,255,0.2);
+            backdrop-filter: blur(10px);
+            padding: 15px;
+            border-radius: 10px;
+        }
+
+        .stat-value {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .stat-label {
+            font-size: 12px;
+            opacity: 0.9;
+        }
+
+        .post-actions {
+            padding: 10px 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .actions-left {
+            display: flex;
+            gap: 16px;
+        }
+
+        .action-icon {
+            width: 24px;
+            height: 24px;
+            cursor: pointer;
+        }
+
+        .likes {
+            padding: 0 16px;
+            font-weight: 600;
+            font-size: 14px;
+            color: #262626;
+        }
+
+        .caption {
+            padding: 0 16px 8px;
+            font-size: 14px;
+            line-height: 1.4;
+            color: #262626;
+        }
+
+        .caption-username {
+            font-weight: 600;
+            margin-right: 4px;
+        }
+
+        .hashtag {
+            color: #00376b;
+            cursor: pointer;
+        }
+
+        .comments {
+            padding: 0 16px 8px;
+        }
+
+        .view-comments {
+            color: #8e8e8e;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        .time-ago {
+            padding: 0 16px 12px;
+            font-size: 10px;
+            color: #8e8e8e;
+            text-transform: uppercase;
+        }
+
+        .skill-carousel {
+            background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+        }
+
+        .experience-carousel {
+            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+        }
+
+        .award-carousel {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+
+        .contact-carousel {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        }
+
+        .achievement-list {
+            text-align: left;
+            margin: 20px 0;
+        }
+
+        .achievement-item {
+            background: rgba(255,255,255,0.2);
+            backdrop-filter: blur(10px);
+            padding: 12px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        .achievement-emoji {
+            font-size: 20px;
+            margin-right: 8px;
+        }
+
+        .cta-button {
+            background: white;
+            color: #262626;
+            padding: 12px 24px;
+            border-radius: 25px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 20px;
+            transition: transform 0.2s;
+        }
+
+        .cta-button:hover {
+            transform: scale(1.05);
+        }
+
+        .carousel-dots {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 4px;
+        }
+
+        .dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.5);
+        }
+
+        .dot.active {
+            background: white;
+        }
+
+        .profile-highlight {
+            padding: 20px 16px;
+            background: white;
+            border-bottom: 1px solid #dbdbdb;
+        }
+
+        .profile-stats {
+            display: flex;
+            justify-content: space-around;
+            padding: 20px 0;
+            border-top: 1px solid #dbdbdb;
+            border-bottom: 1px solid #dbdbdb;
+            margin-top: 15px;
+        }
+
+        .profile-stat {
+            text-align: center;
+        }
+
+        .profile-stat-number {
+            font-weight: 600;
+            font-size: 18px;
+            color: #262626;
+        }
+
+        .profile-stat-label {
+            font-size: 14px;
+            color: #8e8e8e;
+        }
+    </style>
+</head>
+<body>
+    <div class="phone-container">
+        <!-- Header -->
+        <div class="header">
+            <div class="logo">Obai Sukar</div>
+            <div class="header-icons">
+                <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+                </svg>
+                <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                </svg>
+            </div>
+        </div>
+
+        <!-- Stories -->
+        <div class="stories">
+            <div class="story">
+                <div class="story-ring">
+                    <div class="story-image">OS</div>
+                </div>
+                <div class="story-label">Pro Tools</div>
+            </div>
+            <div class="story">
+                <div class="story-ring">
+                    <div class="story-image">🎬</div>
+                </div>
+                <div class="story-label">Academy</div>
+            </div>
+            <div class="story">
+                <div class="story-ring">
+                    <div class="story-image">🎧</div>
+                </div>
+                <div class="story-label">Lead</div>
+            </div>
+            <div class="story">
+                <div class="story-ring">
+                    <div class="story-image">🌍</div>
+                </div>
+                <div class="story-label">Global</div>
+            </div>
+            <div class="story">
+                <div class="story-ring">
+                    <div class="story-image">🎯</div>
+                </div>
+                <div class="story-label">97% Match</div>
+            </div>
+        </div>
+
+        <!-- Main Introduction Post -->
+        <div class="post">
+            <div class="post-header">
+                <div class="post-user">
+                    <div class="post-avatar">OS</div>
+                    <div>
+                        <div class="post-username">
+                            obaisukar
+                            <span class="verified-badge">✓</span>
+                        </div>
+                    </div>
+                </div>
+                <svg class="icon" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z"></path>
+                </svg>
+            </div>
+
+            <div class="post-image">
+                <div class="carousel-content">
+                    <div class="carousel-title">🎬 Lead Sound Designer</div>
+                    <div class="carousel-text">Perfect 97% Match for Distant Moon</div>
+                    <div class="stat-grid">
+                        <div class="stat-box">
+                            <div class="stat-value">25+</div>
+                            <div class="stat-label">Years Experience</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-value">301M+</div>
+                            <div class="stat-label">Content Views</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-value">200+</div>
+                            <div class="stat-label">Shows Mixed</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-value">9</div>
+                            <div class="stat-label">Countries</div>
+                        </div>
+                    </div>
+                    <a href="mailto:obai@obaisukar.com" class="cta-button">Connect Now</a>
+                    <div class="carousel-dots">
+                        <div class="dot active"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="post-actions">
+                <div class="actions-left">
+                    <svg class="action-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                    </svg>
+                    <svg class="action-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+                    </svg>
+                    <svg class="action-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
+                    </svg>
+                </div>
+                <svg class="action-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"></path>
+                </svg>
+            </div>
+
+            <div class="likes">10,847 likes</div>
+
+            <div class="caption">
+                <span class="caption-username">obaisukar</span>
+                Your Pro Tools expert has arrived! 🎚️ 25+ years mastering the exact tools you need
+                <span class="hashtag">#ProTools</span> <span class="hashtag">#iZotopeRX</span> <span class="hashtag">#LeadSoundDesigner</span> <span class="hashtag">#PostProduction</span> <span class="hashtag">#DistantMoon</span>
+            </div>
+
+            <div class="comments">
+                <div class="view-comments">View all 127 comments</div>
+            </div>
+
+            <div class="time-ago">2 hours ago</div>
+        </div>
+
+        <!-- Skills & Expertise Post -->
+        <div class="post">
+            <div class="post-header">
+                <div class="post-user">
+                    <div class="post-avatar">OS</div>
+                    <div>
+                        <div class="post-username">obaisukar</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="post-image skill-carousel">
+                <div class="carousel-content">
+                    <div class="carousel-title">🎧 Technical Mastery</div>
+                    <div class="achievement-list">
+                        <div class="achievement-item">
+                            <span class="achievement-emoji">🎚️</span> Pro Tools Expert (20+ years)
+                        </div>
+                        <div class="achievement-item">
+                            <span class="achievement-emoji">🔊</span> iZotope RX Specialist
+                        </div>
+                        <div class="achievement-item">
+                            <span class="achievement-emoji">🎬</span> Dialogue Editing Master
+                        </div>
+                        <div class="achievement-item">
+                            <span class="achievement-emoji">🎵</span> 5.1 Surround Mixing
+                        </div>
+                        <div class="achievement-item">
+                            <span class="achievement-emoji">🎭</span> Foley & ADR Direction
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="post-actions">
+                <div class="actions-left">
+                    <svg class="action-icon" fill="red" stroke="red" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                    </svg>
+                </div>
+            </div>
+
+            <div class="likes">8,392 likes</div>
+
+            <div class="caption">
+                <span class="caption-username">obaisukar</span>
+                Every skill you listed? Mastered. Every tool you need? Expert level.
+                <span class="hashtag">#SoundDesign</span> <span class="hashtag">#AudioPost</span>
+            </div>
+
+            <div class="time-ago">1 day ago</div>
+        </div>
+
+        <!-- Experience & Leadership Post -->
+        <div class="post">
+            <div class="post-header">
+                <div class="post-user">
+                    <div class="post-avatar">OS</div>
+                    <div>
+                        <div class="post-username">obaisukar</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="post-image experience-carousel">
+                <div class="carousel-content">
+                    <div class="carousel-title">👥 Leadership Experience</div>
+                    <div class="achievement-list">
+                        <div class="achievement-item">
+                            <span class="achievement-emoji">📺</span> Sound Department Head - Spacetoon
+                        </div>
+                        <div class="achievement-item">
+                            <span class="achievement-emoji">🌍</span> Managed teams across 9 countries
+                        </div>
+                        <div class="achievement-item">
+                            <span class="achievement-emoji">🎯</span> 200+ shows post-production
+                        </div>
+                        <div class="achievement-item">
+                            <span class="achievement-emoji">💡</span> Workflow architect for 18+ facilities
+                        </div>
+                        <div class="achievement-item">
+                            <span class="achievement-emoji">⚡</span> 99.8% system uptime maintained
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="post-actions">
+                <div class="actions-left">
+                    <svg class="action-icon" fill="red" stroke="red" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                    </svg>
+                </div>
+            </div>
+
+            <div class="likes">9,745 likes</div>
+
+            <div class="caption">
+                <span class="caption-username">obaisukar</span>
+                Leading isn't managing—it's inspiring excellence while architecting success
+                <span class="hashtag">#Leadership</span> <span class="hashtag">#TeamManagement</span>
+            </div>
+
+            <div class="time-ago">2 days ago</div>
+        </div>
+
+        <!-- Awards & Recognition Post -->
+        <div class="post">
+            <div class="post-header">
+                <div class="post-user">
+                    <div class="post-avatar">OS</div>
+                    <div>
+                        <div class="post-username">obaisukar</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="post-image award-carousel">
+                <div class="carousel-content">
+                    <div class="carousel-title">🏆 Award-Winning Excellence</div>
+                    <div class="achievement-list">
+                        <div class="achievement-item">
+                            <span class="achievement-emoji">🎬</span> Student Academy Award - Cloud Kumo
+                        </div>
+                        <div class="achievement-item">
+                            <span class="achievement-emoji">🏅</span> Governor of Dubai Award Recipient
+                        </div>
+                        <div class="achievement-item">
+                            <span class="achievement-emoji">📺</span> 301M+ YouTube Views
+                        </div>
+                        <div class="achievement-item">
+                            <span class="achievement-emoji">🎙️</span> NPR & Al Jazeera Featured
+                        </div>
+                        <div class="achievement-item">
+                            <span class="achievement-emoji">🌟</span> Washington Post Recognition
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="post-actions">
+                <div class="actions-left">
+                    <svg class="action-icon" fill="red" stroke="red" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                    </svg>
+                </div>
+            </div>
+
+            <div class="likes">12,483 likes</div>
+
+            <div class="caption">
+                <span class="caption-username">obaisukar</span>
+                When your work wins Academy recognition, that's not luck—it's decades of mastery meeting opportunity
+                <span class="hashtag">#AcademyAward</span> <span class="hashtag">#Excellence</span>
+            </div>
+
+            <div class="time-ago">3 days ago</div>
+        </div>
+
+        <!-- Contact CTA Post -->
+        <div class="post">
+            <div class="post-header">
+                <div class="post-user">
+                    <div class="post-avatar">OS</div>
+                    <div>
+                        <div class="post-username">obaisukar</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="post-image contact-carousel">
+                <div class="carousel-content">
+                    <div class="carousel-title">🚀 Let's Create Magic</div>
+                    <div class="carousel-text" style="margin: 30px 0;">
+                        97% compatibility match!<br><br>
+                        📧 obai@obaisukar.com<br>
+                        📱 (810) 399-8713<br>
+                        🌐 obaisukar.com/resume.html<br>
+                        💼 linkedin.com/in/obaisukar
+                    </div>
+                    <a href="mailto:obai@obaisukar.com" class="cta-button">Hire Me Now</a>
+                </div>
+            </div>
+
+            <div class="post-actions">
+                <div class="actions-left">
+                    <svg class="action-icon" fill="red" stroke="red" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                    </svg>
+                </div>
+            </div>
+
+            <div class="likes">15,927 likes</div>
+
+            <div class="caption">
+                <span class="caption-username">obaisukar</span>
+                Your perfect Lead Sound Designer is one click away. Let's elevate your sonic storytelling together!
+                <span class="hashtag">#HireMe</span> <span class="hashtag">#DistantMoon</span> <span class="hashtag">#SoundDesigner</span>
+            </div>
+
+            <div class="time-ago">Just now</div>
+        </div>
+
+        <!-- Profile Stats Summary -->
+        <div class="profile-highlight">
+            <div class="profile-stats">
+                <div class="profile-stat">
+                    <div class="profile-stat-number">25+</div>
+                    <div class="profile-stat-label">Years</div>
+                </div>
+                <div class="profile-stat">
+                    <div class="profile-stat-number">200+</div>
+                    <div class="profile-stat-label">Projects</div>
+                </div>
+                <div class="profile-stat">
+                    <div class="profile-stat-number">97%</div>
+                    <div class="profile-stat-label">Match</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

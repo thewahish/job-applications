@@ -1,0 +1,1342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Meta Creative Audio AI Lead - Obai Sukar</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            overflow-x: hidden;
+            width: 100%;
+            max-width: 100vw;
+        }
+
+        /* META BRAND FONTS */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap');
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background: #f8f9fa;
+            margin: 0;
+            padding: 0;
+            line-height: 1.5;
+            color: #1c2b33;
+        }
+
+        /* META PAGE STRUCTURE */
+        .meta-page {
+            min-height: 100vh;
+            background: #f8f9fa;
+        }
+
+        /* META HEADER */
+        .meta-header {
+            background: #ffffff;
+            border-bottom: 1px solid #e3e3e3;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+            padding: 0 20px;
+            height: 64px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .meta-logo {
+            font-size: 28px;
+            font-weight: 700;
+            color: #1877f2;
+            font-family: 'Inter', sans-serif;
+            letter-spacing: -0.5px;
+        }
+
+        .meta-search {
+            flex: 1;
+            max-width: 400px;
+            margin: 0 20px;
+            position: relative;
+        }
+
+        .meta-search input {
+            width: 100%;
+            background: #f0f2f5;
+            border: none;
+            border-radius: 24px;
+            padding: 12px 20px;
+            font-size: 15px;
+            outline: none;
+            transition: all 0.2s ease;
+        }
+
+        .meta-search input:focus {
+            background: #ffffff;
+            box-shadow: 0 2px 8px rgba(24, 119, 242, 0.15);
+        }
+
+        .search-results {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+            max-height: 320px;
+            overflow-y: auto;
+            z-index: 1000;
+            display: none;
+        }
+
+        .search-result-item {
+            padding: 16px 20px;
+            border-bottom: 1px solid #f0f2f5;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            transition: background 0.2s ease;
+        }
+
+        .search-result-item:hover {
+            background: #f8f9fa;
+        }
+
+        .search-result-item:last-child {
+            border-bottom: none;
+        }
+
+        .search-result-icon {
+            width: 44px;
+            height: 44px;
+            background: linear-gradient(135deg, #1877f2, #42a5f5);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 20px;
+            flex-shrink: 0;
+        }
+
+        .search-result-content {
+            flex: 1;
+        }
+
+        .search-result-title {
+            font-weight: 600;
+            font-size: 15px;
+            color: #1c2b33;
+            margin-bottom: 4px;
+        }
+
+        .search-result-description {
+            font-size: 13px;
+            color: #65676b;
+        }
+
+        /* Meta-style popup modal */
+        .meta-popup-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: 9999;
+            display: none;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .meta-popup {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
+            width: 90%;
+            max-width: 520px;
+            max-height: 80vh;
+            overflow: hidden;
+            animation: popupSlideIn 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        @keyframes popupSlideIn {
+            from {
+                transform: scale(0.9) translateY(-30px);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1) translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .meta-popup-header {
+            padding: 20px 24px;
+            border-bottom: 1px solid #e3e3e3;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: #f8f9fa;
+        }
+
+        .meta-popup-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: #1c2b33;
+        }
+
+        .meta-popup-close {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #e4e6ea;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            color: #65676b;
+            transition: background 0.2s ease;
+        }
+
+        .meta-popup-close:hover {
+            background: #d0d2d6;
+        }
+
+        .meta-popup-content {
+            padding: 32px 24px;
+            text-align: center;
+        }
+
+        .meta-popup-emoji {
+            font-size: 72px;
+            margin-bottom: 20px;
+        }
+
+        .meta-popup-message {
+            font-size: 26px;
+            font-weight: 700;
+            color: #1c2b33;
+            margin-bottom: 12px;
+        }
+
+        .meta-popup-submessage {
+            font-size: 16px;
+            color: #65676b;
+            margin-bottom: 32px;
+            line-height: 1.5;
+        }
+
+        .meta-popup-button {
+            background: linear-gradient(135deg, #1877f2, #42a5f5);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            padding: 14px 28px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+
+        .meta-popup-button:hover {
+            transform: translateY(-1px);
+        }
+
+        .meta-nav {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .nav-item {
+            width: 44px;
+            height: 44px;
+            background: #f0f2f5;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 20px;
+            transition: background 0.2s ease;
+            text-decoration: none;
+            color: #65676b;
+        }
+
+        .nav-item:hover {
+            background: #e4e6ea;
+        }
+
+        /* META MAIN CONTENT */
+        .meta-content {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 24px;
+            width: 100%;
+        }
+
+        /* META POST/CARD */
+        .meta-card {
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            margin-bottom: 24px;
+            overflow: hidden;
+            transition: box-shadow 0.3s ease;
+        }
+
+        .meta-card:hover {
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+        }
+
+        .card-header {
+            padding: 20px 24px;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid #f0f2f5;
+        }
+
+        .profile-picture {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #1877f2, #42a5f5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 20px;
+            margin-right: 16px;
+            border: 2px solid #1877f2;
+        }
+
+        .card-author-info {
+            flex: 1;
+        }
+
+        .card-author-name {
+            font-weight: 700;
+            color: #1c2b33;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .verified-badge {
+            background: linear-gradient(135deg, #1877f2, #42a5f5);
+            color: white;
+            padding: 4px 8px;
+            border-radius: 6px;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .card-timestamp {
+            color: #65676b;
+            font-size: 14px;
+            margin-top: 4px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .card-options {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            color: #65676b;
+            font-size: 20px;
+            transition: background 0.2s ease;
+        }
+
+        .card-options:hover {
+            background: #f0f2f5;
+        }
+
+        /* CARD CONTENT */
+        .card-content {
+            padding: 24px;
+        }
+
+        .card-text {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #1c2b33;
+            margin-bottom: 16px;
+        }
+
+        .highlight-text {
+            background: linear-gradient(135deg, #e8f4fd, #d1ecf9);
+            padding: 3px 6px;
+            border-radius: 4px;
+            font-weight: 600;
+            color: #1565c0;
+        }
+
+        .card-media {
+            background: linear-gradient(135deg, #1877f2 0%, #42a5f5 100%);
+            color: white;
+            padding: 48px;
+            text-align: center;
+            border-radius: 12px;
+            margin: 20px 0;
+        }
+
+        .media-title {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .media-subtitle {
+            font-size: 18px;
+            opacity: 0.9;
+        }
+
+        /* CARD ENGAGEMENT */
+        .card-engagement {
+            padding: 16px 24px;
+            border-top: 1px solid #f0f2f5;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 14px;
+            color: #65676b;
+            min-height: 52px;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .reaction-summary {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+            max-width: 70%;
+        }
+
+        .reaction-icons {
+            display: flex;
+            margin-right: 8px;
+        }
+
+        .reaction-icon {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            margin-left: -3px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 13px;
+            border: 2px solid white;
+        }
+
+        .like-icon { background: #1877f2; color: white; }
+        .love-icon { background: #f33e58; color: white; }
+        .wow-icon { background: #f7b928; color: white; }
+
+        .engagement-stats {
+            display: flex;
+            gap: 16px;
+            flex-shrink: 0;
+            align-items: center;
+        }
+
+        /* CARD ACTIONS */
+        .card-actions {
+            display: flex;
+            border-top: 1px solid #f0f2f5;
+        }
+
+        .card-action {
+            flex: 1;
+            padding: 16px 12px;
+            text-align: center;
+            color: #65676b;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+
+        .card-action:hover {
+            background: #f8f9fa;
+            color: #65676b;
+        }
+
+        .card-action.active {
+            color: #1877f2;
+        }
+
+        /* HYPERLINK STYLES */
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .profile-link:hover {
+            text-decoration: underline;
+        }
+
+        .hashtag-link {
+            color: #1877f2;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .hashtag-link:hover {
+            text-decoration: underline;
+        }
+
+        .username-link {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .username-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Experience Section */
+        .experience-section {
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            margin-bottom: 24px;
+            padding: 32px;
+        }
+
+        .experience-title {
+            font-size: 22px;
+            font-weight: 700;
+            color: #1c2b33;
+            margin-bottom: 24px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .experience-item {
+            padding: 24px 0;
+            border-bottom: 1px solid #f0f2f5;
+        }
+
+        .experience-item:last-child {
+            border-bottom: none;
+        }
+
+        .exp-header {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            margin-bottom: 16px;
+        }
+
+        .exp-icon {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, #1877f2, #42a5f5);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 20px;
+            flex-shrink: 0;
+        }
+
+        .exp-details {
+            flex: 1;
+        }
+
+        .exp-role {
+            font-size: 18px;
+            font-weight: 700;
+            color: #1c2b33;
+            margin-bottom: 4px;
+        }
+
+        .exp-company {
+            font-size: 16px;
+            font-weight: 600;
+            color: #1877f2;
+            margin-bottom: 8px;
+        }
+
+        .exp-duration {
+            font-size: 14px;
+            color: #65676b;
+            margin-bottom: 16px;
+        }
+
+        .exp-description {
+            font-size: 15px;
+            line-height: 1.6;
+            color: #1c2b33;
+        }
+
+        .exp-achievements {
+            list-style: none;
+            margin-top: 16px;
+        }
+
+        .exp-achievements li {
+            padding: 8px 0;
+            position: relative;
+            padding-left: 24px;
+        }
+
+        .exp-achievements li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #42a5f5;
+            font-weight: 700;
+        }
+
+        /* Awards Section */
+        .awards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 24px;
+        }
+
+        .award-item {
+            background: linear-gradient(135deg, #fff3e0, #ffe0b2);
+            padding: 24px;
+            border-radius: 12px;
+            border-left: 4px solid #ff9800;
+            position: relative;
+        }
+
+        .award-icon {
+            font-size: 32px;
+            margin-bottom: 16px;
+        }
+
+        .award-title {
+            font-size: 16px;
+            font-weight: 700;
+            color: #e65100;
+            margin-bottom: 8px;
+        }
+
+        .award-description {
+            font-size: 14px;
+            color: #bf360c;
+            line-height: 1.5;
+        }
+
+        /* Skills Section */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            margin-top: 24px;
+        }
+
+        .skill-item {
+            background: linear-gradient(135deg, #f3e5f5, #e1bee7);
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            transition: transform 0.2s ease;
+        }
+
+        .skill-item:hover {
+            transform: translateY(-2px);
+        }
+
+        .skill-icon {
+            font-size: 32px;
+            margin-bottom: 12px;
+        }
+
+        .skill-name {
+            font-size: 14px;
+            font-weight: 600;
+            color: #4a148c;
+        }
+
+        /* Contact Footer */
+        .contact-footer {
+            background: linear-gradient(135deg, #1877f2, #42a5f5);
+            color: white;
+            padding: 32px;
+            text-align: center;
+            border-radius: 12px;
+            margin-top: 32px;
+        }
+
+        .contact-title {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 32px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .contact-item:hover {
+            text-decoration: underline;
+        }
+
+        /* PRINT STYLES */
+        @media print {
+            .meta-header {
+                position: static;
+                box-shadow: none;
+                height: 50px !important;
+                padding: 0 16px !important;
+            }
+
+            .meta-page {
+                page-break-inside: avoid;
+            }
+
+            * {
+                -webkit-print-color-adjust: exact !important;
+                color-adjust: exact !important;
+            }
+
+            .meta-content {
+                max-width: 100% !important;
+                padding: 16px !important;
+            }
+
+            .meta-card {
+                margin-bottom: 16px !important;
+                padding: 20px !important;
+            }
+        }
+
+        /* MOBILE RESPONSIVE */
+        @media (max-width: 768px) {
+            html, body {
+                overflow-x: hidden !important;
+                max-width: 100vw !important;
+            }
+
+            .meta-header {
+                height: 56px !important;
+                padding: 0 16px !important;
+            }
+
+            .meta-logo {
+                font-size: 24px !important;
+            }
+
+            .meta-search {
+                display: none !important;
+            }
+
+            .meta-nav {
+                gap: 8px !important;
+            }
+
+            .nav-item {
+                width: 36px !important;
+                height: 36px !important;
+                font-size: 16px !important;
+            }
+
+            .meta-content {
+                padding: 12px !important;
+            }
+
+            .meta-card {
+                border-radius: 8px !important;
+                margin-bottom: 16px !important;
+            }
+
+            .card-header {
+                padding: 16px 20px !important;
+            }
+
+            .card-content {
+                padding: 20px !important;
+            }
+
+            .card-text {
+                font-size: 15px !important;
+            }
+
+            .experience-section {
+                padding: 24px 20px !important;
+            }
+
+            .exp-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 12px;
+            }
+
+            .awards-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .skills-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .contact-info {
+                flex-direction: column;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- META PAGE -->
+    <div class="meta-page">
+        <!-- Meta Header -->
+        <div class="meta-header">
+            <a href="https://about.meta.com" class="meta-logo">Meta</a>
+            <div class="meta-search">
+                <input type="text" placeholder="Search for AI Audio expertise..." id="searchInput">
+                <div id="searchResults" class="search-results"></div>
+            </div>
+            <div class="meta-nav">
+                <a href="https://www.linkedin.com/in/obaisukar" class="nav-item" title="My Professional Profile">🏠</a>
+                <a href="https://careers.meta.com" class="nav-item" title="Meta Careers - Creative Audio AI Lead">🎯</a>
+                <a href="https://www.youtube.com/watch?v=7o7TOSM9R-k" class="nav-item" title="Eternal Parade - My Featured Work">🎬</a>
+                <a href="https://linkedin.com/in/obaisukar" class="nav-item" title="Awards & Recognition">🏆</a>
+                <a href="https://www.youtube.com/c/karazahchannel" class="nav-item" title="Karazah Channel - 715K+ Subscribers">🎧</a>
+                <a href="mailto:obai@obaisukar.com" class="nav-item" title="Contact Me Directly">📧</a>
+                <a href="tel:+18103998713" class="nav-item" title="Call Me: +1 (810) 399-8713">📱</a>
+                <a href="https://www.linkedin.com/in/obaisukar" class="nav-item">OS</a>
+            </div>
+        </div>
+
+        <!-- Meta Content -->
+        <div class="meta-content">
+            <div class="meta-card">
+                <!-- Card Header -->
+                <div class="card-header">
+                    <a href="https://www.linkedin.com/in/obaisukar" class="profile-picture">OS</a>
+                    <div class="card-author-info">
+                        <div class="card-author-name">
+                            <a href="https://www.linkedin.com/in/obaisukar" class="username-link">Obai Sukar</a>
+                            <a href="https://careers.meta.com" class="verified-badge">Creative Audio AI Lead Candidate</a>
+                        </div>
+                        <div class="card-timestamp">
+                            Available Now • 🌐 Global • <strong>To: <a href="https://about.meta.com" class="profile-link">Meta Creative Audio AI Team</a></strong>
+                        </div>
+                    </div>
+                    <a href="https://about.meta.com/careers" class="card-options">⋯</a>
+                </div>
+
+                <!-- Card Content -->
+                <div class="card-content">
+                    <div class="card-text">
+                        🎧 Meta Creative Audio AI Team,
+                        <br><br>
+                        You need someone who gets it. And no one gets it more than me.
+                        <br><br>
+                        For me, sound has always been a second language, a way of understanding life itself.
+                        <br><br>
+                        From my early days shaping sound at Spacetoon, the first Arabic kids' channel watched by millions across continents, to leading audio design in studios across Damascus, Dubai, and Kuala Lumpur, my journey has been all about creating experiences people can feel.
+                        <br><br>
+                        🎶 As the creator of the award-winning <span class="highlight-text">Karazah Channel with over 300 million views</span>, I learned how to connect with the wonder of a child's heart—and turn curiosity into magic. That's why I became a sound designer, why I pushed boundaries in VR, AR, spatial audio, Foley, and orchestral soundtracks.
+                        <br><br>
+                        My work—like <span class="highlight-text">Eternal Parade, a world-class animated production where I directed audio for hundreds of artists</span>—proves that I don't just design sound, I build worlds.
+                        <br><br>
+                        At the same time, I'm not just a "title" or a résumé. I'm the person who blends into a team with ease, who brings humor, energy, and a fresh perspective. I believe in making people feel good while doing great work.
+                        <br><br>
+                        Because the truth is simple:
+                        <br>
+                        <span class="highlight-text">You want your project to be unforgettable.</span>
+                        <br>
+                        <span class="highlight-text">I want to make it unforgettable.</span>
+                        <br>
+                        <span class="highlight-text">We're a win for each other.</span>
+                        <br><br>
+                    </div>
+
+                    <!-- Featured Work -->
+                    <div class="card-media">
+                        <div class="media-title">🏆 Creative Audio AI Excellence</div>
+                        <div class="media-subtitle">25+ Years | Academy Award Winner | VR Audio Leader</div>
+                    </div>
+                </div>
+
+                <!-- Card Engagement -->
+                <div class="card-engagement">
+                    <div class="reaction-summary">
+                        <div class="reaction-icons">
+                            <div class="reaction-icon like-icon">👍</div>
+                            <div class="reaction-icon love-icon">❤️</div>
+                            <div class="reaction-icon wow-icon">🚀</div>
+                        </div>
+                        <span><a href="https://about.meta.com" class="profile-link"><strong>Meta AI Team</strong></a>, <a href="https://www.linkedin.com/in/markzuckerberg" class="profile-link"><strong>Mark Zuckerberg</strong></a> and 2,347 others</span>
+                    </div>
+                    <div class="engagement-stats">
+                        <a href="https://www.linkedin.com/in/obaisukar" class="profile-link">156 comments</a>
+                        <a href="https://www.linkedin.com/in/obaisukar" class="profile-link">89 shares</a>
+                    </div>
+                </div>
+
+                <!-- Card Actions -->
+                <div class="card-actions">
+                    <a href="https://careers.meta.com" class="card-action">
+                        <span>👍</span> Hire
+                    </a>
+                    <a href="mailto:obai@obaisukar.com" class="card-action">
+                        <span>💬</span> Interview
+                    </a>
+                    <a href="https://www.linkedin.com/in/obaisukar" class="card-action">
+                        <span>↗️</span> Connect
+                    </a>
+                </div>
+            </div>
+
+            <!-- Professional Experience Section -->
+            <div class="experience-section">
+                <div class="experience-title">
+                    <span>🎯</span> Professional Experience
+                </div>
+
+                <div class="experience-item">
+                    <div class="exp-header">
+                        <div class="exp-icon">🎧</div>
+                        <div class="exp-details">
+                            <div class="exp-role">IT Specialist & Creative Audio Consultant</div>
+                            <div class="exp-company">Independent / Obai Sukar Consulting</div>
+                            <div class="exp-duration">2005–Present</div>
+                        </div>
+                    </div>
+                    <div class="exp-description">
+                        <strong>Currently leading VR audio project for Qatar government (2024-Present)</strong> - Direct relevance to Meta's AI audio vision.
+                    </div>
+                    <ul class="exp-achievements">
+                        <li>Designed & deployed secure IT infrastructure across international studios and production facilities</li>
+                        <li>Managed cloud-based audio production workflows for global teams (Dubai, Syria, Malaysia, Saudi Arabia)</li>
+                        <li>Implemented AI-ready infrastructure supporting modern audio production pipelines</li>
+                        <li>Oversaw enterprise technology budgets and vendor contracts for creative industries</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <div class="exp-header">
+                        <div class="exp-icon">🏢</div>
+                        <div class="exp-details">
+                            <div class="exp-role">IT Director & Systems Architect</div>
+                            <div class="exp-company">Synergy Senior Management</div>
+                            <div class="exp-duration">2022–Present</div>
+                        </div>
+                    </div>
+                    <div class="exp-description">
+                        Leading technology infrastructure and digital transformation initiatives.
+                    </div>
+                    <ul class="exp-achievements">
+                        <li>Architected enterprise networks across 18+ facilities achieving 99.8% uptime</li>
+                        <li>Implemented automation systems and AI-ready infrastructure foundations</li>
+                        <li>Led cross-functional teams through complex technology rollouts and integrations</li>
+                        <li>Drove digital transformation for healthcare operations and compliance frameworks</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <div class="exp-header">
+                        <div class="exp-icon">🎬</div>
+                        <div class="exp-details">
+                            <div class="exp-role">Sound Department Manager & Senior Sound Designer</div>
+                            <div class="exp-company">Spacetoon/Tiger Media</div>
+                            <div class="exp-duration">2000–2010</div>
+                        </div>
+                    </div>
+                    <div class="exp-description">
+                        Dubbing Supervisor & Department Head overseeing voice talent direction and multilingual content localization.
+                    </div>
+                    <ul class="exp-achievements">
+                        <li>Managed international sound production departments across Damascus, Dubai, and Kuala Lumpur</li>
+                        <li>Supervised dubbing operations for major animated series watched by millions globally</li>
+                        <li>Built and designed professional dubbing and music studios from ground-up</li>
+                        <li>Trained technical teams on digital audio workstations and emerging production workflows</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <div class="exp-header">
+                        <div class="exp-icon">📺</div>
+                        <div class="exp-details">
+                            <div class="exp-role">Founder & Executive Producer</div>
+                            <div class="exp-company">SS Media Productions</div>
+                            <div class="exp-duration">2010–2015</div>
+                        </div>
+                    </div>
+                    <div class="exp-description">
+                        Founded award-winning children's content production company with global reach.
+                    </div>
+                    <ul class="exp-achievements">
+                        <li>Led international production teams across 9 countries managing multiple time zones</li>
+                        <li>Created Karazah Channel achieving 715K+ subscribers and 301M+ views</li>
+                        <li>Winner of Mohammed Bin Rashid Arabic Language Award for educational excellence</li>
+                        <li>Implemented content management systems and global distribution workflows</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Awards & Recognition -->
+            <div class="experience-section">
+                <div class="experience-title">
+                    <span>🏆</span> Awards & Recognition
+                </div>
+                <div class="awards-grid">
+                    <div class="award-item">
+                        <div class="award-icon">🎬</div>
+                        <div class="award-title">Student Academy Award Winner</div>
+                        <div class="award-description">Sound Designer for Cloud Kumo, winner of the 2016 Student Academy Award (Silver) — Academy-recognized excellence in audio production.</div>
+                    </div>
+                    <div class="award-item">
+                        <div class="award-icon">🏅</div>
+                        <div class="award-title">Governor of Dubai Award</div>
+                        <div class="award-description">Recipient of the Mohammed Bin Rashid Arabic Language Award (2019) — Recognition for cultural innovation and educational excellence.</div>
+                    </div>
+                    <div class="award-item">
+                        <div class="award-icon">📰</div>
+                        <div class="award-title">International Media Recognition</div>
+                        <div class="award-description">Featured in NPR, Al Jazeera, AFP, and Washington Post for innovative broadcasting solutions and creative leadership.</div>
+                    </div>
+                    <div class="award-item">
+                        <div class="award-icon">📺</div>
+                        <div class="award-title">Content Creation Excellence</div>
+                        <div class="award-description">Karazah Channel: 715K+ subscribers, 301M+ views — Proven ability to create content that resonates with global audiences.</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Technical Skills -->
+            <div class="experience-section">
+                <div class="experience-title">
+                    <span>⚡</span> Core Competencies
+                </div>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <div class="skill-icon">🎛️</div>
+                        <div class="skill-name">Pro Tools & Nuendo Mastery</div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon">🎮</div>
+                        <div class="skill-name">VR/AR Audio Design</div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon">🤖</div>
+                        <div class="skill-name">AI Audio Integration</div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon">🎵</div>
+                        <div class="skill-name">Spatial Audio Engineering</div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon">🎬</div>
+                        <div class="skill-name">Interactive Audio Systems</div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon">👥</div>
+                        <div class="skill-name">Team Leadership & Training</div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon">🌍</div>
+                        <div class="skill-name">Global Project Management</div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon">🔧</div>
+                        <div class="skill-name">Audio Technology Innovation</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Footer -->
+            <div class="contact-footer">
+                <div class="contact-title">Ready to Build the Future of AI Audio Together?</div>
+                <div class="contact-info">
+                    <a href="mailto:obai@obaisukar.com" class="contact-item">
+                        📧 obai@obaisukar.com
+                    </a>
+                    <a href="tel:+18103998713" class="contact-item">
+                        📱 +1 (810) 399-8713
+                    </a>
+                    <a href="https://www.linkedin.com/in/obaisukar" class="contact-item">
+                        🔗 LinkedIn Profile
+                    </a>
+                    <a href="https://obaisukar.com/resume.html" class="contact-item">
+                        🌐 Interactive Portfolio
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Meta-style Popup Modal -->
+    <div class="meta-popup-overlay" id="metaPopup">
+        <div class="meta-popup">
+            <div class="meta-popup-header">
+                <div class="meta-popup-title">Search Complete!</div>
+                <button class="meta-popup-close" onclick="closeMetaPopup()">×</button>
+            </div>
+            <div class="meta-popup-content">
+                <div class="meta-popup-emoji">🚀</div>
+                <div class="meta-popup-message">Perfect Match Found!</div>
+                <div class="meta-popup-submessage">You've just discovered Meta's next Creative Audio AI Lead. <br>Ready to revolutionize AI audio experiences together?</div>
+                <button class="meta-popup-button" onclick="closeMetaPopup()">Let's Build the Future! 🎧</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Meta-style search functionality
+        const searchInput = document.getElementById('searchInput');
+        const searchResults = document.getElementById('searchResults');
+
+        // Enhanced search data with AI Audio focus
+        const searchData = [
+            {
+                icon: '🤖',
+                title: 'AI Audio Leadership',
+                description: 'Creative Audio AI Lead expertise - VR audio project leadership, Academy recognition',
+                keywords: ['ai', 'audio', 'lead', 'creative', 'artificial', 'intelligence', 'vr', 'ar', 'leadership']
+            },
+            {
+                icon: '🏆',
+                title: 'Academy Award Excellence',
+                description: 'Student Academy Award winner - Proven creative excellence at highest industry standards',
+                keywords: ['academy', 'award', 'oscar', 'student', 'excellence', 'recognition', 'film', 'audio']
+            },
+            {
+                icon: '🎬',
+                title: 'Eternal Parade Audio Direction',
+                description: 'Audio Director for world-class animated feature - Orchestral, sound design mastery',
+                keywords: ['eternal', 'parade', 'audio', 'director', 'animation', 'orchestral', 'sound', 'design']
+            },
+            {
+                icon: '🎮',
+                title: 'VR/AR Audio Innovation',
+                description: 'Currently leading VR audio project for Qatar government - Perfect Meta alignment',
+                keywords: ['vr', 'ar', 'virtual', 'reality', 'augmented', 'spatial', 'immersive', 'interactive']
+            },
+            {
+                icon: '📺',
+                title: 'Global Content Success',
+                description: 'Karazah Channel: 715K+ subscribers, 301M+ views - Massive audience engagement',
+                keywords: ['karazah', 'youtube', 'channel', 'content', 'viral', 'engagement', 'global', 'audience']
+            },
+            {
+                icon: '🏢',
+                title: 'Enterprise IT Leadership',
+                description: 'IT Director managing 18+ facilities with 99.8% uptime - Technical infrastructure mastery',
+                keywords: ['it', 'director', 'enterprise', 'infrastructure', 'technical', 'leadership', 'systems']
+            },
+            {
+                icon: '🎛️',
+                title: 'Pro Audio Mastery',
+                description: 'Pro Tools, Nuendo expert - Professional studio design and international operations',
+                keywords: ['protools', 'nuendo', 'mixing', 'mastering', 'studio', 'professional', 'audio', 'production']
+            },
+            {
+                icon: '🌍',
+                title: 'International Experience',
+                description: 'Led teams across 9 countries - Damascus, Dubai, Kuala Lumpur operations',
+                keywords: ['international', 'global', 'damascus', 'dubai', 'kuala', 'lumpur', 'spacetoon', 'media']
+            }
+        ];
+
+        searchInput.addEventListener('input', function(e) {
+            const query = e.target.value.toLowerCase().trim();
+
+            if (query.length < 2) {
+                searchResults.style.display = 'none';
+                return;
+            }
+
+            // Enhanced search with fuzzy matching
+            const results = searchData.filter(item =>
+                item.keywords.some(keyword =>
+                    keyword.includes(query) ||
+                    query.includes(keyword) ||
+                    levenshteinDistance(keyword, query) <= 2
+                ) ||
+                item.title.toLowerCase().includes(query) ||
+                item.description.toLowerCase().includes(query)
+            );
+
+            if (results.length > 0) {
+                displayResults(results);
+                searchResults.style.display = 'block';
+            } else {
+                const noResultsItem = {
+                    icon: '🎯',
+                    title: `"${query}" - Perfect for Meta AI Audio!`,
+                    description: 'Every search proves Obai\'s AI Audio expertise. Click to see the perfect match!',
+                    isNoResults: true
+                };
+                displayResults([noResultsItem]);
+                searchResults.style.display = 'block';
+            }
+        });
+
+        // Levenshtein distance for fuzzy search
+        function levenshteinDistance(str1, str2) {
+            const matrix = [];
+            for (let i = 0; i <= str2.length; i++) {
+                matrix[i] = [i];
+            }
+            for (let j = 0; j <= str1.length; j++) {
+                matrix[0][j] = j;
+            }
+            for (let i = 1; i <= str2.length; i++) {
+                for (let j = 1; j <= str1.length; j++) {
+                    if (str2.charAt(i - 1) === str1.charAt(j - 1)) {
+                        matrix[i][j] = matrix[i - 1][j - 1];
+                    } else {
+                        matrix[i][j] = Math.min(
+                            matrix[i - 1][j - 1] + 1,
+                            matrix[i][j - 1] + 1,
+                            matrix[i - 1][j] + 1
+                        );
+                    }
+                }
+            }
+            return matrix[str2.length][str1.length];
+        }
+
+        function displayResults(results) {
+            searchResults.innerHTML = results.map((item, index) => `
+                <div class="search-result-item" data-index="${index}">
+                    <div class="search-result-icon">${item.icon}</div>
+                    <div class="search-result-content">
+                        <div class="search-result-title">${item.title}</div>
+                        <div class="search-result-description">${item.description}</div>
+                    </div>
+                </div>
+            `).join('');
+
+            // Add click handlers
+            const resultItems = searchResults.querySelectorAll('.search-result-item');
+            resultItems.forEach((item, index) => {
+                item.addEventListener('click', () => {
+                    handleResultClick(results[index]);
+                });
+            });
+        }
+
+        function handleResultClick(resultItem) {
+            searchInput.value = resultItem.title;
+            searchResults.style.display = 'none';
+
+            // Show the Meta popup
+            showMetaPopup();
+
+            // Scroll to relevant section after popup
+            setTimeout(() => {
+                const scrollTargets = {
+                    'AI Audio Leadership': '.experience-title',
+                    'Academy Award Excellence': '.awards-grid',
+                    'Eternal Parade Audio Direction': '.experience-item:nth-child(3)',
+                    'VR/AR Audio Innovation': '.experience-item:first-child',
+                    'Global Content Success': '.experience-item:nth-child(4)',
+                    'Enterprise IT Leadership': '.experience-item:nth-child(2)',
+                    'Pro Audio Mastery': '.skills-grid',
+                    'International Experience': '.experience-section'
+                };
+
+                const target = document.querySelector(scrollTargets[resultItem.title]) ||
+                              document.querySelector('.experience-title');
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            }, 500);
+        }
+
+        // Hide search results when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!searchInput.contains(e.target) && !searchResults.contains(e.target)) {
+                searchResults.style.display = 'none';
+            }
+        });
+
+        // Enhanced keyboard navigation
+        searchInput.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                searchInput.value = '';
+                searchResults.style.display = 'none';
+            } else if (e.key === 'Enter') {
+                if (searchInput.value.trim().length > 0) {
+                    searchResults.style.display = 'none';
+                    showMetaPopup();
+                }
+            }
+        });
+
+        // Meta popup functions
+        function showMetaPopup() {
+            document.getElementById('metaPopup').style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeMetaPopup() {
+            document.getElementById('metaPopup').style.display = 'none';
+            document.body.style.overflow = '';
+        }
+
+        // Close popup when clicking outside
+        document.getElementById('metaPopup').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeMetaPopup();
+            }
+        });
+
+        // Close popup with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && document.getElementById('metaPopup').style.display === 'flex') {
+                closeMetaPopup();
+            }
+        });
+
+        // Auto-focus search on page load
+        window.addEventListener('load', function() {
+            if (window.innerWidth > 768) {
+                searchInput.focus();
+            }
+        });
+    </script>
+</body>
+</html>

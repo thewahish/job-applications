@@ -358,11 +358,12 @@ Technology Leader | Media Innovator | Crisis Management Expert
 ## 📊 Professional Experience (FIXED PRIMARY IDENTITY - MANDATORY ORDER)
 
 ### First Entry (ALWAYS) - PRIMARY IDENTITY
-**IT Specialist & Consultant**  
+**IT Specialist & Consultant**
 *Independent / Obai Sukar Consulting · 2005–Present*
 
+- **Leading VR audio project for Qatar government** (2024-Present)
 - Designed & deployed secure IT infrastructure (networks, servers, VPN, Wi-Fi, VoIP) for studios, clinics, global teams (Dubai, Syria, Malaysia, Saudi Arabia)
-- Managed Microsoft 365 & Google Workspace environments for multi-site organizations  
+- Managed Microsoft 365 & Google Workspace environments for multi-site organizations
 - Administered Intune MDM/MAM, Autopilot, cross-platform device fleets
 - Implemented identity & SSO (SAML/OAuth2), MFA, conditional access, automated workflows
 - Oversaw IT budgets & vendor contracts for enterprise-level implementations
@@ -383,10 +384,12 @@ Technology Leader | Media Innovator | Crisis Management Expert
 
 ### Additional Entries (Compress/Expand by Relevance)
 
-**Sound Department Manager / Senior Sound Designer**  
+**Sound Department Manager / Senior Sound Designer**
 *Spacetoon/Tiger Media · 2000–2005, 2006–2010*
+- **Dubbing Supervisor & Department Head** overseeing voice talent direction and multilingual content localization
 - Managed sound production departments across Damascus, Dubai, and Kuala Lumpur facilities
-- Trained technical teams on digital audio workstations and production workflows  
+- Supervised dubbing operations for major animated series (Detective Conan, Beyblade, Samurai Jack, Gundam Wing)
+- Trained technical teams on digital audio workstations and production workflows
 - Built dubbing and music studios from ground-up in multiple international locations
 - Delivered technical training programs for audio engineers and production staff
 - Recognized for production excellence at young age with solid industry reputation
