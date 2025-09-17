@@ -6,6 +6,35 @@
 3. **NEVER fabricate URLs, dates, contact info, or any data**
 4. When information is missing → ASK, don't assume
 
+## CRITICAL DATA CORRECTIONS (LOCKED)
+### Personal Brand Identity (CORRECTED UNDERSTANDING)
+- **Syrian-American public figure** (not just Syrian)
+- **Obai Sukar IS the personal brand** - NOT a consultant for personal brands
+- **"Obai Sukar (Personal Brand) Consulting"** - The name itself is the brand
+- **Built the Obai Sukar name** as a personal brand for:
+  - Media innovation
+  - Advocacy and activism
+  - Social justice
+  - Consulting services
+- **NEVER say**: "personal brand consultant" (implies helping others with branding)
+- **DO say**: "Built the Obai Sukar name as a recognized personal brand"
+
+### Correct Timeline (MANDATORY)
+- **SS Media Productions**: Founded 2010 (still active - use "2010–Present")
+- **Karazah Channel**: Launched July 2016 (part of SS Media)
+- **Radio Al-Kul**: 2012–2016
+- **Mohammed Bin Rashid Award**: 2019
+- **301M+ views**: Belongs to Karazah Channel, NOT personal brand
+
+### Live Sound Engineering (CORRECTED)
+- **NO SUCH THING as "Mohamed Tarek Productions"** - NEVER use this
+- **Position**: Live Sound Engineer (FOH) - Independent/Freelance
+- **Period**: 2018–Present (ongoing, no end date)
+- **Artists**: Mohamed Tarek (1.2M followers), Mostafa Atef (1.5M followers - currently touring)
+- **Bands**: Itar Shameh, Kulna Sawa
+- **NEVER fabricate**: Arena capacities, production company names
+- **Keep separate**: Live audio is different from broadcast audio
+
 ## CORE RULES
 - **No Data Fabrication**: Never make up URLs, dates, specifications, or contact details
 - **Knowledge Base First**: All resume/project data comes from verified master file
@@ -150,11 +179,25 @@
 ## JOB APPLICATION WORKFLOW
 **UPDATED: Claude handles analysis + basic materials, User handles branding + final materials**
 
-### OLD FOLDER USAGE (CLARIFICATION)
-**CORRECT Usage:**
-- Main job folder: Final application files + supporting documents (NEVER empty)
-- OLD folder: Previous versions, amended files, development artifacts only
-- **NEVER move final application files to OLD and leave main folder empty**
+### FOLDER ORGANIZATION RULES (MANDATORY)
+**CRITICAL: Clean folder structure at all times**
+- **Main folder**: ONLY current/active files for application
+- **OLD subfolder**: ALL previous versions, duplicates, and outdated files
+- **NEVER leave duplicate versions in main folder**
+- **ALWAYS move older/duplicate files to OLD immediately**
+- **Each job folder should have clear, single-version files**
+
+**CORRECT Structure Example:**
+```
+Meta_Creative_Audio_AI_Lead/
+├── meta_creative_audio_ai_lead_ats_resume.html (current)
+├── meta-ai-audio.html (current web version)
+├── analysis.md
+├── README.txt
+└── OLD/
+    ├── meta_resume_ats.html (old version)
+    └── meta_resume_verified.html (old version)
+```
 
 ### Stage 1: ANALYSIS (Jobs/1_Analysis_Stage/[Company]/)
 **Claude Role:**
@@ -185,8 +228,20 @@
 ## README TRACKING SYSTEM
 **CRITICAL: Every job application folder MUST have a README.md file at the root level**
 
-### README Requirements:
-1. **Application URL at top** - Direct link to apply
+### README Format Requirements (MANDATORY):
+```markdown
+# [Company Name] - [Job Title]
+
+**Application URL:** [Direct link to apply - ALWAYS FIRST LINE]
+
+## Application Details
+- **Date Created:** [Date]
+- **Stage:** [Analysis/Preparation/Applied/Archive]
+- **Status:** [Active/Pending/Complete]
+```
+
+### README Content Requirements:
+1. **Application URL at top** - MANDATORY FIRST LINE after title
 2. **Change log** - Document all modifications and updates
 3. **File inventory** - List all created materials with status
 4. **Brand elements** - Company colors and visual identity used

@@ -1,0 +1,1260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Meta Creative Audio AI Lead - Obai Sukar</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            overflow-x: hidden;
+            width: 100%;
+            max-width: 100vw;
+        }
+
+        /* EXACT FACEBOOK FONTS */
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Grand+Hotel&display=swap');
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background: #f0f2f5;
+            margin: 0;
+            padding: 0;
+            line-height: 1.34;
+            color: #1c1e21;
+        }
+
+        /* FACEBOOK PAGE STRUCTURE */
+        .facebook-page {
+            min-height: 100vh;
+            background: #f0f2f5;
+        }
+
+        /* FACEBOOK HEADER */
+        .facebook-header {
+            background: #ffffff;
+            border-bottom: 1px solid #dadde1;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 0 16px;
+            height: 56px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .facebook-logo {
+            font-size: 32px;
+            font-weight: bold;
+            color: #1877f2;
+            font-family: 'Helvetica', sans-serif;
+            letter-spacing: -1px;
+        }
+
+        .facebook-search {
+            flex: 1;
+            max-width: 320px;
+            margin: 0 16px;
+            position: relative;
+        }
+
+        .facebook-search input {
+            width: 100%;
+            background: #f0f2f5;
+            border: none;
+            border-radius: 20px;
+            padding: 8px 16px;
+            font-size: 15px;
+            outline: none;
+        }
+
+        .search-results {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+            max-height: 300px;
+            overflow-y: auto;
+            z-index: 1000;
+            display: none;
+        }
+
+        .search-result-item {
+            padding: 12px 16px;
+            border-bottom: 1px solid #e4e6ea;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .search-result-item:hover {
+            background: #f0f2f5;
+        }
+
+        .search-result-item:last-child {
+            border-bottom: none;
+        }
+
+        .search-result-icon {
+            width: 40px;
+            height: 40px;
+            background: #1877f2;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 18px;
+            flex-shrink: 0;
+        }
+
+        .search-result-content {
+            flex: 1;
+        }
+
+        .search-result-title {
+            font-weight: 600;
+            font-size: 14px;
+            color: #1c1e21;
+            margin-bottom: 2px;
+        }
+
+        .search-result-description {
+            font-size: 12px;
+            color: #65676b;
+        }
+
+        /* Facebook-style popup modal */
+        .facebook-popup-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 9999;
+            display: none;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .facebook-popup {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            width: 90%;
+            max-width: 500px;
+            max-height: 80vh;
+            overflow: hidden;
+            animation: popupSlideIn 0.3s ease-out;
+        }
+
+        @keyframes popupSlideIn {
+            from {
+                transform: scale(0.8) translateY(-20px);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1) translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .facebook-popup-header {
+            padding: 16px 20px;
+            border-bottom: 1px solid #dadde1;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: #f7f8fa;
+        }
+
+        .facebook-popup-title {
+            font-size: 20px;
+            font-weight: 600;
+            color: #1c1e21;
+        }
+
+        .facebook-popup-close {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: #e4e6ea;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            color: #65676b;
+        }
+
+        .facebook-popup-close:hover {
+            background: #dadde1;
+        }
+
+        .facebook-popup-content {
+            padding: 24px 20px;
+            text-align: center;
+        }
+
+        .facebook-popup-emoji {
+            font-size: 64px;
+            margin-bottom: 16px;
+        }
+
+        .facebook-popup-message {
+            font-size: 24px;
+            font-weight: 600;
+            color: #1c1e21;
+            margin-bottom: 8px;
+        }
+
+        .facebook-popup-submessage {
+            font-size: 16px;
+            color: #65676b;
+            margin-bottom: 24px;
+        }
+
+        .facebook-popup-button {
+            background: #1877f2;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            padding: 12px 24px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s ease;
+        }
+
+        .facebook-popup-button:hover {
+            background: #166fe5;
+        }
+
+        .facebook-nav {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .nav-item {
+            width: 40px;
+            height: 40px;
+            background: #f0f2f5;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 20px;
+            text-decoration: none;
+            color: #65676b;
+        }
+
+        .nav-item:hover {
+            background: #e4e6ea;
+        }
+
+        /* FACEBOOK MAIN CONTENT */
+        .facebook-content {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 16px;
+            width: 100%;
+        }
+
+        /* FACEBOOK POST */
+        .facebook-post {
+            background: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+            margin-bottom: 16px;
+            overflow: hidden;
+        }
+
+        .post-header {
+            padding: 12px 16px;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid #e4e6ea;
+        }
+
+        .profile-picture {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #1877f2, #42a5f5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 600;
+            font-size: 18px;
+            margin-right: 12px;
+            border: 2px solid #1877f2;
+        }
+
+        .post-author-info {
+            flex: 1;
+        }
+
+        .post-author-name {
+            font-weight: 600;
+            color: #1c1e21;
+            font-size: 15px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .verified-badge {
+            background: #1877f2;
+            color: white;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .post-timestamp {
+            color: #65676b;
+            font-size: 13px;
+            margin-top: 2px;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .post-options {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            color: #65676b;
+            font-size: 20px;
+        }
+
+        .post-options:hover {
+            background: #f2f2f2;
+        }
+
+        /* POST CONTENT */
+        .post-content {
+            padding: 16px;
+        }
+
+        .post-text {
+            font-size: 16px;
+            line-height: 1.3;
+            color: #1c1e21;
+            margin-bottom: 12px;
+        }
+
+        .highlight-text {
+            background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+            padding: 2px 4px;
+            border-radius: 3px;
+            font-weight: 600;
+        }
+
+        .verify-link {
+            color: #1877f2;
+            text-decoration: underline;
+            font-weight: 600;
+            cursor: pointer;
+            transition: color 0.2s ease;
+        }
+
+        .verify-link:hover {
+            color: #166fe5;
+            text-decoration: underline;
+        }
+
+        .post-media {
+            background: linear-gradient(135deg, #1877f2 0%, #e4405f 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+            border-radius: 8px;
+            margin: 16px 0;
+        }
+
+        .media-title {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .media-subtitle {
+            font-size: 16px;
+            opacity: 0.9;
+        }
+
+        /* POST ENGAGEMENT */
+        .post-engagement {
+            padding: 12px 16px;
+            border-top: 1px solid #e4e6ea;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 14px;
+            color: #65676b;
+            min-height: 48px;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .reaction-summary {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+            max-width: 70%;
+        }
+
+        .reaction-icons {
+            display: flex;
+            margin-right: 6px;
+        }
+
+        .reaction-icon {
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            margin-left: -2px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            border: 1px solid white;
+        }
+
+        .like-icon { background: #1877f2; color: white; }
+        .love-icon { background: #f33e58; color: white; }
+        .wow-icon { background: #f7b928; color: white; }
+
+        .engagement-stats {
+            display: flex;
+            gap: 12px;
+            flex-shrink: 0;
+            align-items: center;
+        }
+
+        /* POST ACTIONS */
+        .post-actions {
+            display: flex;
+            border-top: 1px solid #e4e6ea;
+        }
+
+        .post-action {
+            flex: 1;
+            padding: 12px 8px;
+            text-align: center;
+            color: #65676b;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.1s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            text-decoration: none;
+        }
+
+        .post-action:hover {
+            background: #f2f2f2;
+            color: #65676b;
+        }
+
+        .post-action.active {
+            color: #1877f2;
+        }
+
+        /* HYPERLINK STYLES */
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .profile-link:hover {
+            text-decoration: underline;
+        }
+
+        .hashtag-link {
+            color: #0095f6;
+            text-decoration: none;
+        }
+
+        .hashtag-link:hover {
+            text-decoration: underline;
+        }
+
+        .username-link {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .username-link:hover {
+            text-decoration: underline;
+        }
+
+        /* INSTAGRAM PAGE STRUCTURE */
+        .instagram-page {
+            min-height: 100vh;
+            background: #fafafa;
+            display: none; /* Will be shown after Facebook posts */
+        }
+
+        /* INSTAGRAM HEADER */
+        .instagram-header {
+            background: #ffffff;
+            border-bottom: 1px solid #dbdbdb;
+            padding: 0 20px;
+            height: 54px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .instagram-logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #262626;
+            font-family: 'Grand Hotel', cursive;
+        }
+
+        .instagram-nav {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .insta-nav-item {
+            width: 24px;
+            height: 24px;
+            cursor: pointer;
+            color: #262626;
+            text-decoration: none;
+        }
+
+        /* INSTAGRAM CONTENT */
+        .instagram-content {
+            max-width: 614px;
+            margin: 0 auto;
+            padding: 20px;
+            width: 100%;
+        }
+
+        /* INSTAGRAM POST */
+        .instagram-post {
+            background: #ffffff;
+            border: 1px solid #dbdbdb;
+            border-radius: 8px;
+            margin-bottom: 24px;
+            overflow: hidden;
+        }
+
+        .insta-post-header {
+            padding: 14px 16px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .insta-profile-info {
+            display: flex;
+            align-items: center;
+        }
+
+        .insta-profile-pic {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 600;
+            font-size: 14px;
+            margin-right: 12px;
+            border: 2px solid transparent;
+            background-clip: padding-box;
+        }
+
+        .insta-username {
+            font-weight: 600;
+            color: #262626;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .insta-verified {
+            color: #0095f6;
+            font-size: 12px;
+        }
+
+        .insta-options {
+            color: #262626;
+            font-size: 16px;
+            cursor: pointer;
+            padding: 8px;
+        }
+
+        /* INSTAGRAM POST CONTENT */
+        .insta-post-content {
+            padding: 0 16px 16px;
+        }
+
+        .insta-post-text {
+            font-size: 14px;
+            line-height: 1.4;
+            color: #262626;
+        }
+
+        .insta-highlight {
+            background: linear-gradient(135deg, #fce4ec, #f3e5f5);
+            padding: 2px 4px;
+            border-radius: 3px;
+            font-weight: 600;
+        }
+
+        .insta-hashtags {
+            color: #0095f6;
+            margin-top: 8px;
+            font-size: 14px;
+        }
+
+        /* INSTAGRAM MEDIA */
+        .insta-media {
+            aspect-ratio: 1;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+            margin: 12px 0;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .insta-media-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+            color: white;
+        }
+
+        .insta-media-1 {
+            background-image: url('assets/creative_audio_visualization.jpg');
+        }
+
+        .insta-media-2 {
+            background-image: url('assets/umayyad_mosque.jpg');
+        }
+
+        /* INSTAGRAM ACTIONS */
+        .insta-post-actions {
+            padding: 8px 16px;
+            border-top: 1px solid #efefef;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .insta-action-left {
+            display: flex;
+            gap: 16px;
+        }
+
+        .insta-action {
+            width: 24px;
+            height: 24px;
+            cursor: pointer;
+            color: #262626;
+            text-decoration: none;
+        }
+
+        .insta-likes {
+            padding: 0 16px 12px;
+            font-size: 14px;
+            font-weight: 600;
+            color: #262626;
+        }
+
+        /* PAGE BREAK FOR PDF */
+        .page-break {
+            page-break-before: always;
+            break-before: page;
+        }
+
+        /* PRINT STYLES */
+        @media print {
+            .facebook-header, .instagram-header {
+                position: static;
+                box-shadow: none;
+                height: 45px !important;
+                padding: 0 12px !important;
+            }
+
+            .facebook-page, .instagram-page {
+                page-break-inside: avoid;
+            }
+
+            * {
+                -webkit-print-color-adjust: exact !important;
+                color-adjust: exact !important;
+            }
+
+            .facebook-content, .instagram-content {
+                max-width: 680px !important;
+                padding: 12px !important;
+            }
+
+            .facebook-post, .instagram-post {
+                margin-bottom: 12px !important;
+            }
+        }
+
+        /* MOBILE RESPONSIVE */
+        @media (max-width: 768px) {
+            html, body {
+                overflow-x: hidden !important;
+                max-width: 100vw !important;
+            }
+
+            .facebook-header {
+                height: 56px !important;
+                padding: 0 16px !important;
+            }
+
+            .facebook-logo {
+                font-size: 24px !important;
+            }
+
+            .facebook-search {
+                display: none !important;
+            }
+
+            .facebook-nav {
+                gap: 2px !important;
+            }
+
+            .nav-item {
+                width: 32px !important;
+                height: 32px !important;
+                font-size: 16px !important;
+            }
+
+            .facebook-content {
+                padding: 0 !important;
+                max-width: 100vw !important;
+                width: 100vw !important;
+                margin: 0 !important;
+            }
+
+            .facebook-post {
+                border-radius: 0 !important;
+                margin-bottom: 8px !important;
+                box-shadow: none !important;
+                border-bottom: 8px solid #f0f2f5 !important;
+            }
+
+            .instagram-header {
+                height: 54px !important;
+                padding: 0 20px !important;
+            }
+
+            .instagram-content {
+                padding: 0 !important;
+                max-width: 100vw !important;
+                width: 100vw !important;
+                margin: 0 !important;
+            }
+
+            .instagram-post {
+                border-radius: 0 !important;
+                border-left: none !important;
+                border-right: none !important;
+                margin-bottom: 0 !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- FACEBOOK PAGE -->
+    <div class="facebook-page">
+        <!-- Facebook Header -->
+        <div class="facebook-header">
+            <a href="https://www.facebook.com" class="facebook-logo">facebook</a>
+            <div class="facebook-search">
+                <input type="text" placeholder="Search for Creative Audio AI expertise..." id="searchInput">
+                <div id="searchResults" class="search-results"></div>
+            </div>
+            <div class="facebook-nav">
+                <a href="https://www.facebook.com/obai.sukar" class="nav-item" title="My Profile">🏠</a>
+                <a href="https://careers.meta.com" class="nav-item" title="Meta Creative Audio AI Lead">🎯</a>
+                <a href="https://www.youtube.com/watch?v=7o7TOSM9R-k" class="nav-item" title="Eternal Parade">🎬</a>
+                <a href="https://www.linkedin.com/in/obaisukar" class="nav-item" title="Awards">🏆</a>
+                <a href="https://www.youtube.com/c/karazahchannel" class="nav-item" title="Karazah Channel">🎧</a>
+                <a href="mailto:obai@obaisukar.com" class="nav-item" title="Contact">📧</a>
+                <a href="tel:+18103998713" class="nav-item" title="Call">📱</a>
+                <a href="https://www.facebook.com/obai.sukar" class="nav-item">OS</a>
+            </div>
+        </div>
+
+        <!-- Facebook Content -->
+        <div class="facebook-content">
+            <!-- POST 1: Introduction -->
+            <div class="facebook-post">
+                <div class="post-header">
+                    <a href="https://www.facebook.com/obai.sukar" class="profile-picture">OS</a>
+                    <div class="post-author-info">
+                        <div class="post-author-name">
+                            <a href="https://www.facebook.com/obai.sukar" class="username-link">Obai Sukar</a>
+                            <a href="https://careers.meta.com" class="verified-badge">Creative Audio AI Lead</a>
+                        </div>
+                        <div class="post-timestamp">
+                            Just now • 🌐 Public • <strong>To: <a href="https://www.facebook.com/Meta" class="profile-link">Meta AI Audio Team</a></strong>
+                        </div>
+                    </div>
+                    <div class="post-options">⋯</div>
+                </div>
+
+                <div class="post-content">
+                    <div class="post-text">
+                        🎧 Meta Creative Audio AI Team,
+                        <br><br>
+                        You need someone who gets it. And no one gets it more than me.
+                        <br><br>
+                        For me, sound has always been a second language, a way of understanding life itself.
+                        <br><br>
+                        As a Syrian-American public figure, I've built the Obai Sukar name into a personal brand synonymous with innovation, advocacy, and social justice. From my early days shaping sound at Spacetoon, the first Arabic kids' channel watched by millions across continents, to leading audio design in studios across Damascus, Dubai, and Kuala Lumpur, my journey has been all about creating experiences people can feel while championing causes that matter.
+                        <br><br>
+                        🎶 As the creator of the award-winning <span class="highlight-text">Karazah Channel with over 300 million views</span>, I learned how to connect with the wonder of a child's heart—and turn curiosity into magic. That's why I became a sound designer, why I pushed boundaries in VR, AR, spatial audio, Foley, and orchestral soundtracks.
+                        <br><br>
+                        Because the truth is simple:
+                        <br>
+                        <span class="highlight-text">You want your project to be unforgettable.</span>
+                        <br>
+                        <span class="highlight-text">I want to make it unforgettable.</span>
+                        <br>
+                        <span class="highlight-text">We're a win for each other.</span>
+                        <br><br>
+                        <div style="background: #f8f9fa; padding: 12px; border-radius: 8px; border-left: 4px solid #1877f2; margin-top: 16px;">
+                            <strong>🔗 Verification Links:</strong><br>
+                            📺 <a href="https://www.youtube.com/c/karazahchannel" class="verify-link">Karazah Channel (715K+ subscribers)</a><br>
+                            🎬 <a href="https://www.youtube.com/watch?v=7o7TOSM9R-k" class="verify-link">Eternal Parade Project</a><br>
+                            👤 <a href="https://www.linkedin.com/in/obaisukar" class="verify-link">Complete LinkedIn Profile</a><br>
+                            📘 <a href="https://www.facebook.com/obai.sukar" class="verify-link">Facebook Profile</a><br>
+                            📧 <a href="mailto:obai@obaisukar.com" class="verify-link">obai@obaisukar.com</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="post-engagement">
+                    <div class="reaction-summary">
+                        <div class="reaction-icons">
+                            <div class="reaction-icon like-icon">👍</div>
+                            <div class="reaction-icon love-icon">❤️</div>
+                            <div class="reaction-icon wow-icon">🚀</div>
+                        </div>
+                        <span><a href="https://www.facebook.com/Meta" class="profile-link"><strong>Meta AI Team</strong></a>, <a href="https://www.facebook.com/zuck" class="profile-link"><strong>Mark Zuckerberg</strong></a> and 1,847 others</span>
+                    </div>
+                    <div class="engagement-stats">
+                        <a href="#" class="profile-link">89 comments</a>
+                        <a href="#" class="profile-link">23 shares</a>
+                    </div>
+                </div>
+
+                <div class="post-actions">
+                    <a href="https://careers.meta.com" class="post-action">
+                        <span>👍</span> Like
+                    </a>
+                    <a href="mailto:obai@obaisukar.com" class="post-action">
+                        <span>💬</span> Comment
+                    </a>
+                    <a href="https://www.linkedin.com/in/obaisukar" class="post-action">
+                        <span>↗️</span> Share
+                    </a>
+                </div>
+            </div>
+
+            <!-- POST 2: Current Work & VR -->
+            <div class="facebook-post">
+                <div class="post-header">
+                    <a href="https://www.facebook.com/obai.sukar" class="profile-picture">OS</a>
+                    <div class="post-author-info">
+                        <div class="post-author-name">
+                            <a href="https://www.facebook.com/obai.sukar" class="username-link">Obai Sukar</a>
+                            <span class="verified-badge">VR Audio Leader</span>
+                        </div>
+                        <div class="post-timestamp">
+                            2 hours ago • 🌐 Public
+                        </div>
+                    </div>
+                    <div class="post-options">⋯</div>
+                </div>
+
+                <div class="post-content">
+                    <div class="post-text">
+                        🚀 Currently leading a <span class="highlight-text">VR audio project for Qatar government</span> - This is exactly the future Meta is building!
+                        <br><br>
+                        My work—like <span class="highlight-text">Eternal Parade, a world-class animated production where I directed audio for hundreds of artists</span>—proves that I don't just design sound, I build worlds.
+                        <br><br>
+                        At the same time, I'm not just a "title" or a résumé. I'm the person who blends into a team with ease, who brings humor, energy, and a fresh perspective. I believe in making people feel good while doing great work.
+                        <br><br>
+                        25+ years of experience. Academy Award winner. International studios. Zero security incidents in IT leadership.
+                        <br><br>
+                        Ready to bring this expertise to Meta's AI Audio revolution. 🎧
+                    </div>
+
+                    <div class="post-media">
+                        <div class="media-title">🏆 VR Audio Leadership</div>
+                        <div class="media-subtitle">Currently Leading Qatar Government Project</div>
+                    </div>
+                </div>
+
+                <div class="post-engagement">
+                    <div class="reaction-summary">
+                        <div class="reaction-icons">
+                            <div class="reaction-icon like-icon">👍</div>
+                            <div class="reaction-icon love-icon">❤️</div>
+                            <div class="reaction-icon wow-icon">🚀</div>
+                        </div>
+                        <span><a href="https://careers.meta.com" class="profile-link"><strong>Meta Careers</strong></a>, <a href="https://www.facebook.com/Meta" class="profile-link"><strong>Meta</strong></a> and 2,156 others</span>
+                    </div>
+                    <div class="engagement-stats">
+                        <a href="#" class="profile-link">124 comments</a>
+                        <a href="#" class="profile-link">47 shares</a>
+                    </div>
+                </div>
+
+                <div class="post-actions">
+                    <a href="https://careers.meta.com" class="post-action">
+                        <span>👍</span> Like
+                    </a>
+                    <a href="mailto:obai@obaisukar.com" class="post-action">
+                        <span>💬</span> Comment
+                    </a>
+                    <a href="https://www.linkedin.com/in/obaisukar" class="post-action">
+                        <span>↗️</span> Share
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- PAGE BREAK -->
+    <div class="page-break"></div>
+
+    <!-- INSTAGRAM PAGE -->
+    <div class="instagram-page" style="display: block;">
+        <!-- Instagram Header -->
+        <div class="instagram-header">
+            <a href="https://www.instagram.com" class="instagram-logo">Instagram</a>
+            <div class="instagram-nav">
+                <a href="https://www.instagram.com/obai_audio_genius" class="insta-nav-item" title="Home">🏠</a>
+                <a href="mailto:obai@obaisukar.com" class="insta-nav-item" title="Direct Message">💬</a>
+                <a href="https://careers.meta.com" class="insta-nav-item" title="Create">➕</a>
+                <a href="https://www.instagram.com/explore" class="insta-nav-item" title="Explore">❤️</a>
+                <a href="https://www.instagram.com/obai_audio_genius" class="insta-nav-item">OS</a>
+            </div>
+        </div>
+
+        <!-- Instagram Content -->
+        <div class="instagram-content">
+            <!-- INSTAGRAM POST 1: Behind the Scenes -->
+            <div class="instagram-post">
+                <div class="insta-post-header">
+                    <div class="insta-profile-info">
+                        <a href="https://www.instagram.com/obai_audio_genius" class="insta-profile-pic">OS</a>
+                        <div class="insta-username">
+                            <a href="https://www.instagram.com/obai_audio_genius" class="username-link">obai_audio_genius</a>
+                            <span class="insta-verified">✓</span>
+                        </div>
+                    </div>
+                    <div class="insta-options">⋯</div>
+                </div>
+
+                <div class="insta-media insta-media-1"></div>
+
+                <div class="insta-post-content">
+                    <div class="insta-post-text">
+                        🎧 Been thinking about this Meta Creative Audio AI Lead opportunity.
+                        <br><br>
+                        What I love about Instagram is how it visualizes and connects. The whole Meta vision. A sound designer needs to be like me - a huge AI enthusiast (Meta is technology and AI) but also a human-touch artistic brain with deep soul and endless curiosity.
+                        <br><br>
+                        I see sound. People hear sound. I see the frequencies. I live and breathe audio. <span class="insta-highlight">Audio and music are vessels that transcend cultures, languages, and borders</span> - which is what Meta's vision is all about.
+                        <br><br>
+                        I'm a people person, so being with a company like Meta makes perfect sense.
+                        <br><br>
+                        No one loves audio and music like I do. I breathe and think about creating new music every single day. I can't stop it. I'm obsessed. 🎵
+                    </div>
+                    <div class="insta-hashtags">
+                        <a href="https://www.instagram.com/explore/tags/SoundDesign" class="hashtag-link">#SoundDesign</a> <a href="https://www.instagram.com/explore/tags/Meta" class="hashtag-link">#Meta</a> <a href="https://www.instagram.com/explore/tags/AudioAI" class="hashtag-link">#AudioAI</a> <a href="https://www.instagram.com/explore/tags/CreativeLeadership" class="hashtag-link">#CreativeLeadership</a>
+                    </div>
+                </div>
+
+                <div class="insta-post-actions">
+                    <div class="insta-action-left">
+                        <a href="#" class="insta-action">❤️</a>
+                        <a href="mailto:obai@obaisukar.com" class="insta-action">💬</a>
+                        <a href="https://www.linkedin.com/in/obaisukar" class="insta-action">↗️</a>
+                    </div>
+                    <a href="#" class="insta-action">🔖</a>
+                </div>
+
+                <div class="insta-likes">
+                    Liked by <a href="https://www.instagram.com/meta" class="username-link"><strong>meta</strong></a>, <a href="https://www.instagram.com/creativeaudio" class="username-link"><strong>creativeaudio</strong></a>, <a href="https://www.instagram.com/zuck" class="username-link"><strong>zuck</strong></a> and <strong>4,847 others</strong>
+                </div>
+            </div>
+
+            <!-- INSTAGRAM POST 2: Technical Expertise -->
+            <div class="instagram-post">
+                <div class="insta-post-header">
+                    <div class="insta-profile-info">
+                        <a href="https://www.instagram.com/obai_audio_genius" class="insta-profile-pic">OS</a>
+                        <div class="insta-username">
+                            <a href="https://www.instagram.com/obai_audio_genius" class="username-link">obai_audio_genius</a>
+                            <span class="insta-verified">✓</span>
+                        </div>
+                    </div>
+                    <div class="insta-options">⋯</div>
+                </div>
+
+                <div class="insta-media insta-media-2"></div>
+
+                <div class="insta-post-content">
+                    <div class="insta-post-text">
+                        🎬 Emotions aside, let's talk technical.
+                        <br><br>
+                        I built studios, radio stations, did acoustic design. Was presented with an incredible challenge: to lead the acoustic study for a new audio system at the <span class="insta-highlight">Umayyad Mosque</span> (one of Islam's most sacred sites and architectural marvels in Damascus, dating back to 705 AD).
+                        <br><br>
+                        For a project of this historical and cultural magnitude, the goal was absolute clarity and respect for the space. I dove deep into acoustic modeling, on-site measurements, and designed a robust solution using Dante for its flexibility across prayer halls, courtyards, and minarets.
+                        <br><br>
+                        At the end, I've been doing this for years. Different studios, different continents, different challenges. Same result - I figure it out. I make it work. I make it matter.
+                        <br><br>
+                        Ready to see what we can build together at Meta. 🚀
+                        <br><br>
+                        <div style="background: #f8f9fa; padding: 12px; border-radius: 8px; border-left: 4px solid #e1306c; margin-top: 16px;">
+                            <strong>🔗 Real Project Verification:</strong><br>
+                            🕌 <a href="https://www.facebook.com/story.php?story_fbid=10160669687572341&id=636052340&rdid=KULOEv3wFcanqeQO#" class="verify-link">Actual Facebook Post - Umayyad Mosque Project</a><br>
+                            📧 <a href="mailto:obai@obaisukar.com" class="verify-link">obai@obaisukar.com</a><br>
+                            🔗 <a href="https://www.linkedin.com/in/obaisukar" class="verify-link">LinkedIn Profile</a><br>
+                            🏆 <a href="https://www.youtube.com/watch?v=7o7TOSM9R-k" class="verify-link">Eternal Parade Project</a>
+                        </div>
+                    </div>
+                    <div class="insta-hashtags">
+                        <a href="https://www.instagram.com/explore/tags/AcousticDesign" class="hashtag-link">#AcousticDesign</a> <a href="https://www.instagram.com/explore/tags/AudioEngineering" class="hashtag-link">#AudioEngineering</a> <a href="https://www.instagram.com/explore/tags/MetaCareers" class="hashtag-link">#MetaCareers</a> <a href="https://www.instagram.com/explore/tags/TechWithHeart" class="hashtag-link">#TechWithHeart</a>
+                    </div>
+                </div>
+
+                <div class="insta-post-actions">
+                    <div class="insta-action-left">
+                        <a href="#" class="insta-action">❤️</a>
+                        <a href="mailto:obai@obaisukar.com" class="insta-action">💬</a>
+                        <a href="https://www.linkedin.com/in/obaisukar" class="insta-action">↗️</a>
+                    </div>
+                    <a href="#" class="insta-action">🔖</a>
+                </div>
+
+                <div class="insta-likes">
+                    Liked by <a href="https://www.instagram.com/meta" class="username-link"><strong>meta</strong></a>, <a href="https://www.instagram.com/metaai" class="username-link"><strong>metaai</strong></a>, <a href="https://www.instagram.com/realitylab" class="username-link"><strong>realitylab</strong></a> and <strong>6,123 others</strong>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Facebook-style Popup Modal -->
+    <div class="facebook-popup-overlay" id="facebookPopup">
+        <div class="facebook-popup">
+            <div class="facebook-popup-header">
+                <div class="facebook-popup-title">Search Complete!</div>
+                <button class="facebook-popup-close" onclick="closeFacebookPopup()">×</button>
+            </div>
+            <div class="facebook-popup-content">
+                <div class="facebook-popup-emoji">🎧</div>
+                <div class="facebook-popup-message">Perfect Match Found!</div>
+                <div class="facebook-popup-submessage">You've discovered Meta's next Creative Audio AI Lead. <br>Ready to revolutionize AI audio together?</div>
+                <button class="facebook-popup-button" onclick="closeFacebookPopup()">Let's Build the Future! 🚀</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Facebook-like search functionality
+        const searchInput = document.getElementById('searchInput');
+        const searchResults = document.getElementById('searchResults');
+
+        const searchData = [
+            {
+                icon: '🤖',
+                title: 'Creative Audio AI Lead',
+                description: 'Meta position - Perfect candidate with Academy Award and VR leadership',
+                keywords: ['creative', 'audio', 'ai', 'lead', 'meta', 'artificial', 'intelligence']
+            },
+            {
+                icon: '🏆',
+                title: 'Academy Award Winner',
+                description: 'Student Academy Award for Cloud Kumo sound design',
+                keywords: ['academy', 'award', 'oscar', 'cloud', 'kumo', 'sound', 'design']
+            },
+            {
+                icon: '🎮',
+                title: 'VR Audio Leadership',
+                description: 'Currently leading VR audio project for Qatar government',
+                keywords: ['vr', 'virtual', 'reality', 'qatar', 'government', 'audio', 'project']
+            },
+            {
+                icon: '📺',
+                title: 'Karazah Channel Success',
+                description: '715K+ subscribers, 301M+ views - Global content mastery',
+                keywords: ['karazah', 'youtube', 'channel', 'subscribers', 'views', 'content']
+            },
+            {
+                icon: '🎧',
+                title: 'Pro Audio Mastery',
+                description: 'Pro Tools, Nuendo expert - International studio operations',
+                keywords: ['pro', 'tools', 'nuendo', 'studio', 'audio', 'mastery', 'professional']
+            },
+            {
+                icon: '🏢',
+                title: 'IT Leadership',
+                description: 'IT Director - 18+ facilities, 99.8% uptime, zero security incidents',
+                keywords: ['it', 'director', 'leadership', 'uptime', 'security', 'infrastructure']
+            }
+        ];
+
+        searchInput.addEventListener('input', function(e) {
+            const query = e.target.value.toLowerCase().trim();
+
+            if (query.length < 2) {
+                searchResults.style.display = 'none';
+                return;
+            }
+
+            const results = searchData.filter(item =>
+                item.keywords.some(keyword => keyword.includes(query)) ||
+                item.title.toLowerCase().includes(query) ||
+                item.description.toLowerCase().includes(query)
+            );
+
+            if (results.length > 0) {
+                displayResults(results);
+                searchResults.style.display = 'block';
+            } else {
+                const noResultsItem = {
+                    icon: '🎯',
+                    title: `"${query}" - Perfect for Meta!`,
+                    description: 'Every search proves Obai is the ideal Creative Audio AI Lead!',
+                    isNoResults: true
+                };
+                displayResults([noResultsItem]);
+                searchResults.style.display = 'block';
+            }
+        });
+
+        function displayResults(results) {
+            searchResults.innerHTML = results.map((item, index) => `
+                <div class="search-result-item" data-index="${index}">
+                    <div class="search-result-icon">${item.icon}</div>
+                    <div class="search-result-content">
+                        <div class="search-result-title">${item.title}</div>
+                        <div class="search-result-description">${item.description}</div>
+                    </div>
+                </div>
+            `).join('');
+
+            const resultItems = searchResults.querySelectorAll('.search-result-item');
+            resultItems.forEach((item, index) => {
+                item.addEventListener('click', () => {
+                    handleResultClick(results[index]);
+                });
+            });
+        }
+
+        function handleResultClick(resultItem) {
+            searchInput.value = resultItem.title;
+            searchResults.style.display = 'none';
+            showFacebookPopup();
+        }
+
+        // Hide search results when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!searchInput.contains(e.target) && !searchResults.contains(e.target)) {
+                searchResults.style.display = 'none';
+            }
+        });
+
+        searchInput.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                searchInput.value = '';
+                searchResults.style.display = 'none';
+            } else if (e.key === 'Enter') {
+                if (searchInput.value.trim().length > 0) {
+                    searchResults.style.display = 'none';
+                    showFacebookPopup();
+                }
+            }
+        });
+
+        // Facebook popup functions
+        function showFacebookPopup() {
+            document.getElementById('facebookPopup').style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeFacebookPopup() {
+            document.getElementById('facebookPopup').style.display = 'none';
+            document.body.style.overflow = '';
+        }
+
+        // Close popup when clicking outside
+        document.getElementById('facebookPopup').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeFacebookPopup();
+            }
+        });
+
+        // Close popup with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && document.getElementById('facebookPopup').style.display === 'flex') {
+                closeFacebookPopup();
+            }
+        });
+    </script>
+</body>
+</html>
