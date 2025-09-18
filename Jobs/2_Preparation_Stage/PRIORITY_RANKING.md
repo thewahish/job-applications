@@ -9,14 +9,31 @@ Jobs are ranked based on:
 - **Career Alignment**: IT Director/Management track vs. specialized roles
 - **Expertise Match**: Alignment with core competencies
 
+## 📁 New Organization Structure
+Jobs are now organized by **Category → Priority** for easier navigation:
+```
+2_Preparation_Stage/
+├── IT_Technology/
+│   ├── 1_HIGH_PRIORITY/ (15 jobs)
+│   └── 2_MEDIUM_PRIORITY/ (4 jobs)
+├── Audio_Sound/
+│   ├── 1_HIGH_PRIORITY/ (4 jobs)
+│   ├── 2_MEDIUM_PRIORITY/ (4 jobs)
+│   └── 3_LOW_PRIORITY/ (7 jobs)
+└── Creative_Media/
+    ├── 1_HIGH_PRIORITY/ (1 job)
+    └── 3_LOW_PRIORITY/ (2 jobs)
+```
+
 ---
 
-## 🔴 HIGH PRIORITY (20 positions)
-*Apply within 24-48 hours*
+## 💻 IT/TECHNOLOGY (19 positions)
 
-### IT Leadership/Director Roles (15)
-1. **CyberCoders - Director IT** ⭐ Already has premium materials
-2. **Harlem Children's Zone - Managing Director IT** 
+### 🔴 HIGH PRIORITY (15 positions)
+*Apply within 24-48 hours - Focus here for career advancement*
+
+1. **CyberCoders - Director IT** ⭐ Has premium materials
+2. **Harlem Children's Zone - Managing Director IT** ⭐ Has premium cover
 3. **Moore Foundation - Director IT & Head Technology**
 4. **Headway - Director IT**
 5. **Business Wire - Director IT**
@@ -27,85 +44,112 @@ Jobs are ranked based on:
 10. **BWE - Director IT Security**
 11. **Mutual Group - Director IT Business Applications**
 12. **Dubai - IT Manager** (Has cover letter)
-13. **Adyen - Head Technical Support Americas** (Has premium materials)
-14. **Cedar - Integration Support Manager** (Has premium materials)
+13. **Adyen - Head Technical Support Americas** ⭐ Has premium materials
+14. **Cedar - Integration Support Manager** ⭐ Has premium materials
 15. **Coca-Cola Consolidated - IT Enterprise Architecture Manager**
 
-### Audio/Creative Leadership (5)
-16. **University of Michigan - Theatrical Sound Manager** ⭐ Michigan location
-17. **Meta - Interaction UX Sound Designer** ⭐ Prestigious company
-18. **Valve Software - Sound Designer** ⭐ Gaming industry leader
-19. **Distant Moon - Lead Sound Designer** (Has social media resumes)
-20. **Boys & Girls Clubs - Music Studio Director**
-
----
-
-## 🟡 MEDIUM PRIORITY (8 positions)
+### 🟡 MEDIUM PRIORITY (4 positions)
 *Apply within 3-5 days*
 
-### Enterprise Architecture (4)
 1. **Deloitte - Enterprise Architect** ⭐ Big 4 consulting
 2. **Leidos - Enterprise Architect**
 3. **Draper - IT Enterprise Architect**
 4. **Credit One Bank - IT Enterprise Architect IV**
 
-### Audio Engineering (4)
-5. **Live Nation - Audio Engineer** (Has premium cover)
-6. **Ramsey Solutions - Audio Engineer**
-7. **Crossing Church - Audio Engineer**
-8. **Union Company - Sound Engineer**
-
 ---
 
-## 🟢 LOW PRIORITY (9 positions)
+## 🎵 AUDIO/SOUND (15 positions)
+
+### 🔴 HIGH PRIORITY (4 positions)
+*Apply within 24-48 hours*
+
+1. **University of Michigan - Theatrical Sound Manager** ⭐ Michigan location
+2. **Meta - Interaction UX Sound Designer** ⭐ Prestigious company
+3. **Valve Software - Sound Designer** ⭐ Gaming industry leader
+4. **Distant Moon - Lead Sound Designer** (Has social media resumes)
+
+### 🟡 MEDIUM PRIORITY (4 positions)
+*Apply within 3-5 days*
+
+1. **Live Nation - Audio Engineer** (Has premium cover)
+2. **Ramsey Solutions - Audio Engineer**
+3. **Crossing Church - Audio Engineer**
+4. **Union Company - Sound Engineer**
+
+### 🟢 LOW PRIORITY (7 positions)
 *Apply within 1 week if time permits*
 
-### Entry/Mid-Level Audio (7)
 1. **Tencent - Sound Designer III**
 2. **Lightspeed Studios - Sound Designer**
 3. **Lensa - Sound Designer**
 4. **QuaverEd - Music Producer**
 5. **Juilliard - Audio Technician**
 6. **MIX UNION - Studio Assistant**
-7. **Aristocrat Gaming - Sound Designer** ❌ (Gambling industry)
+7. **Aristocrat Gaming - Sound Designer** ❌ (Gambling industry - consider removing)
 
-### Creative/Production (2)
-8. **audiio - Creative Producer**
-9. **Coastal Sound Studios**
+---
+
+## 🎨 CREATIVE/MEDIA (3 positions)
+
+### 🔴 HIGH PRIORITY (1 position)
+*Apply within 24-48 hours*
+
+1. **Boys & Girls Clubs - Music Studio Director**
+
+### 🟢 LOW PRIORITY (2 positions)
+*Apply within 1 week if time permits*
+
+1. **audiio - Creative Producer**
+2. **Coastal Sound Studios**
 
 ---
 
 ## 📋 Action Items
 
 ### Immediate Actions (Today)
-1. **Review HIGH PRIORITY positions** with existing premium materials:
+1. **Focus on IT/Technology HIGH PRIORITY** folder first:
+   - Review 4 positions with existing premium materials
+   - Create materials for top Director roles without them
+
+2. **IT Positions with Premium Materials Ready**:
    - CyberCoders Director IT
    - Adyen Head Technical Support
    - Cedar Integration Support Manager
-   - Harlem Children's Zone (has premium cover)
+   - Harlem Children's Zone
 
-2. **Create premium materials** for top Director roles without them:
+3. **IT Positions Needing Premium Materials**:
    - Moore Foundation Director IT
    - Headway Director IT
    - Business Wire Director IT
+   - Hello Innovation Director IT
 
 ### This Week
-- Complete applications for all HIGH PRIORITY positions
-- Begin MEDIUM PRIORITY Enterprise Architecture roles (Deloitte priority)
-- Follow up on any pending applications
+- Complete all 15 IT HIGH PRIORITY applications
+- Review Audio HIGH PRIORITY (U of M, Meta, Valve)
+- Begin MEDIUM PRIORITY Enterprise Architecture roles
+
+### Navigation Tips
+- Each category folder contains priority subfolders
+- Start with `IT_Technology/1_HIGH_PRIORITY/`
+- Jobs with existing premium materials are marked with ⭐
 
 ### Notes
-- **Aristocrat Gaming** should be deprioritized or removed (gambling industry)
-- Focus on Director/Head/Lead titles for maximum career progression
-- Michigan-based positions (U of M) get automatic priority boost
-- Meta and Valve represent prestigious tech opportunities worth pursuing despite being Audio roles
+- **Aristocrat Gaming** in Audio/Sound LOW priority should be skipped (gambling)
+- IT Director roles offer best career progression path
+- Michigan-based positions get automatic priority boost
+- Prestigious tech companies (Meta, Valve) worth pursuing even in Audio category
 
 ---
 
 ## 📊 Summary Statistics
 - **Total Positions**: 37
-- **High Priority**: 20 (54%)
-- **Medium Priority**: 8 (22%)
-- **Low Priority**: 9 (24%)
+- **By Category**:
+  - IT/Technology: 19 (51%)
+  - Audio/Sound: 15 (41%)
+  - Creative/Media: 3 (8%)
+- **By Priority**:
+  - High Priority: 20 (54%)
+  - Medium Priority: 8 (22%)
+  - Low Priority: 9 (24%)
 
-**Recommendation**: Focus exclusively on HIGH PRIORITY positions first, as they align best with your career trajectory toward IT Director/CTO roles and offer the most strategic value.
+**Recommendation**: Navigate to `IT_Technology/1_HIGH_PRIORITY/` and start with positions that already have premium materials ready for immediate submission.
