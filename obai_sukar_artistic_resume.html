@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Obai Sukar — Artistic Resume</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg-dark: #0a0a0a;
+  --bg-navy: #1a1f3a;
+  --cyan: #00D4FF;
+  --pink: #FF0080;
+  --orange: #FF8C00;
+  --white: #ffffff;
+  --gray: #8892b0;
+  --text-light: #e6f1ff;
+  --text-dark: #0a0a0a;
+  --neon-cyan: 0 0 20px #00D4FF;
+  --neon-pink: 0 0 20px #FF0080;
+  --neon-orange: 0 0 20px #FF8C00;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:var(--bg-dark);color:var(--text-light);font:16px/1.65 Roboto,system-ui,-apple-system,Segoe UI,Helvetica,Arial,sans-serif}
+h1,h2,h3{font-family:Poppins,sans-serif;font-weight:700}
+a{color:var(--cyan);text-decoration:none;transition:color 0.3s ease}
+a:hover{color:var(--pink);text-decoration:underline}
+.container{width:92%;max-width:1180px;margin:0 auto;position:relative}
+.section{padding:40px 20px;margin:20px 0;background:var(--bg-navy);border-radius:24px;border:2px solid transparent}
+.section:first-of-type{border:2px solid var(--cyan);box-shadow:var(--neon-cyan)}
+.section:nth-child(4){border:2px solid var(--pink);box-shadow:var(--neon-pink)}
+.section:nth-child(5){border:2px solid var(--orange);box-shadow:var(--neon-orange)}
+.section:nth-child(6){border:2px solid var(--cyan);box-shadow:var(--neon-cyan)}
+.section:nth-child(7){border:2px solid var(--pink);box-shadow:var(--neon-pink)}
+.section:nth-child(8){border:2px solid var(--orange);box-shadow:var(--neon-orange)}
+.section:nth-child(9){border:2px solid var(--cyan);box-shadow:var(--neon-cyan)}
+
+/* Header */
+.header{display:grid;grid-template-columns:1.35fr .65fr;gap:28px;align-items:center;padding:36px 0}
+.name{font:800 46px/1.12 Poppins,sans-serif;color:var(--white);text-shadow:0 0 30px var(--cyan)}
+.role{font-weight:700;color:var(--text-light);margin-top:6px;opacity:0.9}
+.kicker{font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--gray);font-size:12px}
+.key{background:var(--bg-navy);border:2px solid var(--orange);border-radius:24px;padding:24px;box-shadow:var(--neon-orange)}
+.key h3{margin:0 0 16px 0;font-size:18px;color:var(--white);text-align:center}
+.key ul{margin:0 0 0 18px;color:var(--text-light)}
+.key li{margin:8px 0;color:var(--text-light)}
+.badges{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.badge{border:2px solid var(--cyan);border-radius:999px;padding:8px 16px;font-size:12px;background:transparent;color:var(--cyan);font-weight:600;box-shadow:var(--neon-cyan);transition:transform 0.3s ease}
+
+/* Blocks */
+.grid{display:grid;gap:16px}
+.grid-2{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+.card{border:2px solid var(--gray);border-radius:24px;padding:24px;background:var(--bg-navy);transition:transform 0.3s ease,border-color 0.3s ease,box-shadow 0.3s ease}
+.card h3{margin:0 0 16px 0;color:var(--white);font-size:20px;text-align:center}
+.card ul{margin:12px 0 0 18px;color:var(--text-light)}
+.card li{margin:8px 0;color:var(--text-light);line-height:1.6}
+.note{color:var(--gray);font-size:14px;font-weight:500}
+
+/* Project banner */
+.banner{display:grid;grid-template-columns:1fr .9fr;gap:24px;align-items:start;background:var(--bg-navy);border:2px solid var(--pink);border-radius:24px;padding:32px;box-shadow:var(--neon-pink)}
+.banner h2{margin:0 0 16px 0;color:var(--white);font-size:28px;text-align:center}
+.meta{display:flex;flex-wrap:wrap;gap:8px}
+.meta .chip{border:2px solid var(--orange);border-radius:999px;padding:8px 16px;font-size:12px;background:transparent;color:var(--orange);font-weight:600;box-shadow:var(--neon-orange)}
+
+/* Lists */
+.linklist{list-style:none;margin:6px 0 0 0;padding:0}
+.linklist li{margin:8px 0}
+.linklist a{word-break:break-word}
+
+/* Footer */
+.footer{padding:32px 0;text-align:center;color:var(--gray);background:var(--bg-navy);margin-top:40px;border-radius:24px;border:2px solid var(--gray)}
+
+/* Card Icons & Hover Effects */
+.card:nth-child(odd){border-color:var(--cyan);box-shadow:0 0 10px var(--cyan)}
+.card:nth-child(even){border-color:var(--pink);box-shadow:0 0 10px var(--pink)}
+.card:hover{transform:translateY(-8px);box-shadow:0 0 30px var(--cyan)}
+.card:nth-child(even):hover{box-shadow:0 0 30px var(--pink)}
+
+.badge:hover{transform:translateY(-2px);box-shadow:0 0 25px var(--cyan)}
+.badge:nth-child(even){border-color:var(--pink);color:var(--pink);box-shadow:0 0 10px var(--pink)}
+.badge:nth-child(3n){border-color:var(--orange);color:var(--orange);box-shadow:0 0 10px var(--orange)}
+
+.name{animation:glow 3s ease-in-out infinite alternate}
+@keyframes glow{from{text-shadow:0 0 30px var(--cyan)}to{text-shadow:0 0 40px var(--pink),0 0 60px var(--cyan)}}
+
+/* Section Headers with Icons */
+.section h2:before{content:'●';display:inline-block;width:40px;height:40px;border-radius:50%;background:var(--cyan);color:var(--bg-dark);text-align:center;line-height:40px;margin-right:16px;box-shadow:0 0 20px var(--cyan)}
+
+/* Responsive */
+@media (max-width:900px){.header{grid-template-columns:1fr}.banner{grid-template-columns:1fr}}
+@media print{.section{page-break-inside:avoid}}
+</style>
+</head>
+<body>
+  <div class="container">
+
+    <!-- Header with Key Creative Features on the right -->
+    <header class="header">
+      <div>
+        <div class="kicker">Creative Director • Sound Designer • Media Pioneer</div>
+        <h1 class="name">Obai Sukar</h1>
+        <div class="role">LARS Graduate • Karazah Channel Founder • Student Academy Award Winner</div>
+        <div class="badges">
+          <span class="badge">715K+ YouTube subs</span>
+          <span class="badge">301M+ views</span>
+          <span class="badge">Governor of Dubai Award</span>
+          <span class="badge">25+ years in media</span>
+        </div>
+      </div>
+      <aside class="key">
+        <h3>Key Creative Features</h3>
+        <ul>
+          <li><strong>KARAZAH Channel</strong> founder. Arabic edutainment at scale.</li>
+          <li><strong>Spacetoon/Tiger</strong> audio department head and dubbing supervisor.</li>
+          <li><strong>Audio Director</strong> for "الموكب الخالد" (The Eternal Parade) feature animation.</li>
+          <li><strong>LARS Graduate</strong> — Los Angeles Recording School (2005).</li>
+          <li><strong>Crisis Innovation</strong> — Radio Al-Kul co-founder under conflict.</li>
+        </ul>
+      </aside>
+    </header>
+
+    <!-- Creative Summary -->
+    <section class="section">
+      <div class="banner">
+        <div>
+          <h2>Creative Summary</h2>
+          <p style="color:var(--text-light);line-height:1.7;font-size:16px">Sound is what I breathe. I build sonic identities and story worlds for children's media and social impact projects. My work spans broadcast dubbing leadership at Spacetoon/Tiger, founding an Arabic edutainment channel with 301M+ views, and directing award-winning audio for animated features. I compose and produce music, design studios and pipelines, and lead cross-border creative teams across 9+ countries.</p>
+        </div>
+        <div>
+          <h3 style="color:var(--white);font-size:20px">Contact</h3>
+          <ul class="linklist" style="color:var(--text-light)">
+            <li><a href="mailto:obai@obaisukar.com">obai@obaisukar.com</a></li>
+            <li><a href="tel:+18103998713">+1 (810) 399-8713</a></li>
+            <li><a href="https://obaisukar.com/resume.html" target="_blank" rel="noopener">obaisukar.com/resume.html</a></li>
+            <li><a href="https://www.linkedin.com/in/obaisukar" target="_blank" rel="noopener">linkedin.com/in/obaisukar</a></li>
+            <li><a href="https://youtube.com/@karazahchannel" target="_blank" rel="noopener">YouTube: Karazah Channel</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Signature Projects -->
+    <section class="section">
+      <h2 style="color:var(--white);text-align:center;margin-bottom:40px;font-size:32px">Signature Projects & Roles</h2>
+      <div class="grid grid-2">
+        <article class="card">
+          <h3>الموكب الخالد — The Eternal Parade (Audio Director)</h3>
+          <ul>
+            <li>Served as credited Audio Director for large-scale national animation feature</li>
+            <li>Directed complete audio post-production pipeline including sound design and orchestral score mixing</li>
+            <li>Managed international production teams and oversaw final theatrical mix for cinema release</li>
+          </ul>
+          <ul class="linklist">
+            <li><a href="https://www.youtube.com/watch?v=7o7TOSM9R-k" target="_blank" rel="noopener">Watch: الموكب الخالد</a></li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3>KARAZAH Channel (Founder & Executive Producer)</h3>
+          <ul>
+            <li>715K+ subscribers, 301M+ views. 1,000+ videos; hundreds of original songs</li>
+            <li>Winner of prestigious award by the Governor of Dubai — the <a href="https://www.arabicaward.ae/p/award-winners/2019" target="_blank" rel="noopener">Mohammed Bin Rashid Arabic Language Award (2019)</a></li>
+            <li>Led international production teams across 9 countries managing multiple time zones</li>
+            <li>Edutainment model combining animation, voice direction, and original composition</li>
+          </ul>
+          <ul class="linklist">
+            <li><a href="https://youtube.com/@karazahchannel" target="_blank" rel="noopener">youtube.com/@karazahchannel</a></li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3>Spacetoon / Tiger Productions (Audio Dept. Head & Dubbing Supervisor)</h3>
+          <ul>
+            <li>Led sound department for all post-production audio on animated series, establishing sonic identity for a generation</li>
+            <li>Supervised Arabic dubbing for major anime: Detective Conan, Beyblade, Samurai Jack, Gundam Wing, Samurai 7</li>
+            <li>Built dubbing and music studios from ground-up in Damascus, Dubai, and Kuala Lumpur</li>
+            <li>Trained technical teams on digital audio workstations and production workflows</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3>AYA & Yusuf (Voice & Sound Supervisor)</h3>
+          <ul>
+            <li>Voice direction and audio post-production supervision across multilingual versions</li>
+            <li>Optimized vocal performance and sound effects for early-childhood edutainment content</li>
+          </ul>
+          <ul class="linklist">
+            <li><a href="https://www.youtube.com/@ayaandyusuf2439" target="_blank" rel="noopener">YouTube: Aya & Yusuf</a></li>
+            <li><a href="https://ayaanimations.com/" target="_blank" rel="noopener">AYA Animations</a></li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3>Radio Al-Kul (Co-Founder & Technical Director)</h3>
+          <ul>
+            <li>Co-founded conflict-zone radio station reaching ~500,000 daily listeners at peak</li>
+            <li>Built mobile FM transmission infrastructure and emergency broadcast protocols under extreme conditions</li>
+            <li>Trained journalists, editors, and sound engineers with zero safety incidents</li>
+            <li>Featured in international media coverage for innovative crisis broadcasting</li>
+          </ul>
+          <ul class="linklist">
+            <li><a href="https://www.npr.org/2014/03/16/290615013/radio-pirates-risk-dangers-of-war-to-reach-syrian-people" target="_blank" rel="noopener">NPR coverage</a></li>
+            <li><a href="https://www.aljazeera.com/features/2014/4/7/syrias-opposition-radio-makes-waves" target="_blank" rel="noopener">Al Jazeera feature</a></li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3>SS Media Productions (Founder)</h3>
+          <ul>
+            <li>Founded award-winning children's content production company (2010-Present)</li>
+            <li>Sound design, mixing/mastering, and voice production for film, series, and games</li>
+            <li>Cross-border creative leadership managing international teams</li>
+            <li>Delivered 100+ audio projects utilizing Pro Tools, Nuendo, and comprehensive plugin suites</li>
+          </ul>
+          <ul class="linklist">
+            <li><a href="https://www.mlive.com/news/2022/09/ss-media-productions-looking-to-put-media-stamp-into-flint-area.html" target="_blank" rel="noopener">MLive feature</a></li>
+          </ul>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Awards & Recognition -->
+    <section class="section">
+      <h2 style="color:var(--white);text-align:center;margin-bottom:40px;font-size:32px">Awards & Recognition</h2>
+      <div class="grid grid-2">
+
+        <div class="card">
+          <h3>Major Awards</h3>
+          <ul class="linklist">
+            <li><a href="https://www.oscars.org/news/medalists-revealed-2016-student-academy-awardsr" target="_blank" rel="noopener">Student Academy Awards — Silver Medal (2016) for "Cloud Kumo" (Lead Sound Designer)</a></li>
+            <li><a href="https://www.arabicaward.ae/p/award-winners/2019" target="_blank" rel="noopener">Mohammed Bin Rashid Arabic Language Award (2019) — KARAZAH Channel</a></li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Selected Press Coverage</h3>
+          <ul class="linklist">
+            <li><a href="https://www.washingtonpost.com/world/middle_east/syria-diaspora-clubhouse-middle-east/2021/03/09/90a2a55e-7c28-11eb-8c5e-32e47b42b51b_story.html" target="_blank" rel="noopener">Washington Post — Syrian diaspora and Spacetoon legacy</a></li>
+            <li><a href="https://www.npr.org/2014/03/16/290615013/radio-pirates-risk-dangers-of-war-to-reach-syrian-people" target="_blank" rel="noopener">NPR — Radio Al-Kul innovation</a></li>
+            <li><a href="https://www.aljazeera.com/features/2014/4/7/syrias-opposition-radio-makes-waves" target="_blank" rel="noopener">Al Jazeera — Crisis broadcasting feature</a></li>
+            <li><a href="https://www.youtube.com/watch?v=xbHSJqgyKkc" target="_blank" rel="noopener">Syria TV — Biographical documentary</a></li>
+            <li><a href="https://www.mlive.com/news/2022/09/ss-media-productions-looking-to-put-media-stamp-into-flint-area.html" target="_blank" rel="noopener">MLive — SS Media expansion</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+    
+    <!-- Live Sound Engineering -->
+    <section class="section">
+      <h2 style="color:var(--white);text-align:center;margin-bottom:40px;font-size:32px">Live Sound Engineering</h2>
+      <div class="grid grid-2">
+        <article class="card">
+          <h3>Live Sound Engineer (FOH) — Freelance (2018–Present)</h3>
+          <ul>
+            <li>Touring Front-of-House engineer for <strong>Mohamed Tarek</strong> (1.2M+ followers) during international concert performances</li>
+            <li>Live sound engineer for renowned Syrian bands <strong>Itar Shameh</strong> and <strong>Kulna Sawa</strong> on major concert tours</li>
+            <li>Currently touring with <strong>Mostafa Atef</strong> (1.5M+ followers) as dedicated FOH engineer</li>
+            <li>Managed RF coordination, backline setup, and technical show advancing for high-profile performances</li>
+            <li>Delivered professional live sound mixing for audiences ranging from intimate venues to large concert halls</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>Technical Expertise</h3>
+          <ul>
+            <li><strong>Front-of-House Mixing</strong> — Digital and analog console expertise</li>
+            <li><strong>RF Coordination</strong> — Wireless microphone and in-ear monitor systems</li>
+            <li><strong>Show Advancing</strong> — Technical coordination with venues and production teams</li>
+            <li><strong>Backline Management</strong> — Artist technical requirements and equipment setup</li>
+            <li><strong>Live Recording</strong> — Multi-track recording and post-production from live performances</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- Innovation & Entrepreneurship -->
+    <section class="section">
+      <h2 style="color:var(--white);text-align:center;margin-bottom:40px;font-size:32px">Innovation & Entrepreneurship</h2>
+      <div class="grid grid-2">
+        <article class="card">
+          <h3>Media Ventures</h3>
+          <ul>
+            <li><strong>KARAZAH Channel</strong> — Founder. 715K+ subs, 301M+ views, Governor of Dubai Award recipient</li>
+            <li><strong>Radio Al-Kul</strong> — Co-founder & Technical Director. Built mobile FM infrastructure reaching 500K+ daily listeners. Coverage: 
+              <a href="https://www.npr.org/2014/03/16/290615013/radio-pirates-risk-dangers-of-war-to-reach-syrian-people" target="_blank" rel="noopener">NPR</a> • 
+              <a href="https://www.aljazeera.com/features/2014/4/7/syrias-opposition-radio-makes-waves" target="_blank" rel="noopener">Al Jazeera</a> • 
+              <a href="https://www.washingtonpost.com/world/middle_east/2014/03/02/fbe5c190-9e3d-11e3-9ba6-800d1192d08b_story.html" target="_blank" rel="noopener">Washington Post</a>
+            </li>
+            <li><strong>SS Media Productions</strong> — Founder. Full-service audio post for films, games, commercials; international teams across 9+ countries</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>Technical Innovation</h3>
+          <ul>
+            <li>Designed and built broadcast-grade studios in Damascus, Dubai, and Malaysia for Spacetoon/Tiger Productions</li>
+            <li>Engineered mobile FM transmission systems and secure communications for crisis broadcasting</li>
+            <li>Created custom DAW workflows and automation platforms for international production teams</li>
+            <li>Implemented advanced audio pipelines integrating Pro Tools, Steinberg Nuendo, and extensive plugin ecosystems</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- Education & Professional Development -->
+    <section class="section">
+      <h2 style="color:var(--white);text-align:center;margin-bottom:40px;font-size:32px">Education & Professional Development</h2>
+      <div class="grid grid-2">
+        <article class="card">
+          <h3>Professional Education</h3>
+          <ul>
+            <li><strong>Los Angeles Recording School (LARS) Graduate</strong> — Audio Production & Sound Design (2005)</li>
+            <li><strong>Associate Diploma in Printing & Publishing</strong> — Damascus, Syria (1999)</li>
+            <li><strong>Ongoing Professional Development</strong> — Audio technology, emerging media, spatial audio, game audio pipelines</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>Core Technical Skills</h3>
+          <ul>
+            <li><strong>DAWs:</strong> Pro Tools (Expert), Steinberg Nuendo (Expert), Wavelab, Adobe Audition</li>
+            <li><strong>Audio Processing:</strong> iZotope RX (Expert), Waves plugins, UAD ecosystem</li>
+            <li><strong>Specializations:</strong> Sound Design, Music Production, Dialogue Editing, Dubbing, Mixing & Mastering</li>
+            <li><strong>Broadcast:</strong> Live sound engineering, studio design, RF coordination, streaming infrastructure</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section" style="background:var(--stone)">
+      <h2 style="color:var(--white);text-align:center;margin-bottom:40px;font-size:32px">Testimonials</h2>
+      <div class="grid grid-2">
+        <article class="card">
+          <p>"He is by far one of the best professionals I had the pleasure to partner with. Obai has not only brought his energy, integrity, and exquisite taste to the radio, he also gave it its soul."</p>
+          <p class="note">Sinan Hatahet, PhD — Co-Founder at Workiom CRM</p>
+        </article>
+        <article class="card">
+          <p>"Obai was one of the strong sound engineers we had, his creativity and adaptation to new trends is well received! He's very capable and well-liked team player..."</p>
+          <p class="note">Kamel Weiss — GM @ SpacetoonGo | Director BD @ SpacetoonGroup</p>
+        </article>
+        <article class="card">
+          <p>"...it is rare to find brilliant sound engineer, with great personality, discipline, talent and honest, stick to the project timeline, and not only meet but exceed all expectations."</p>
+          <p class="note">Fawaz Gheibeh — BEng, PMP, MBA</p>
+        </article>
+        <article class="card">
+          <p>"When it comes to audio, Obai is a perfectionist and his creativity is unmatched."</p>
+          <p class="note">Michael Shagoury — SVP of Audience Development</p>
+        </article>
+        <article class="card">
+          <p>"The skills, talent, dedication and creativity Obai brings to any project are simply unmatched. I saw him run the day to day operation, grow and manage a full radio station team..."</p>
+          <p class="note">Khalid Saleh — CEO @ Invesp</p>
+        </article>
+        <article class="card">
+          <p>"Obai is hard working, authentic, and creative. Would strongly recommend for anyone looking for help in sound engineering."</p>
+          <p class="note">Mohamad Alkhouli, MD MBA — Professor & Vice Chair, Mayo Clinic</p>
+        </article>
+      </div>
+      <div style="margin-top:12px">
+        <a href="https://www.linkedin.com/in/obaisukar/details/recommendations/?detailScreenTabIndex=0" target="_blank" rel="noopener">Additional verified testimonials on LinkedIn →</a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      © 2025 Obai Sukar — Michigan, USA | <a href="mailto:obai@obaisukar.com">obai@obaisukar.com</a> | <a href="https://obaisukar.com/resume.html">obaisukar.com/resume.html</a>
+    </footer>
+
+  </div>
+</body>
+</html>
