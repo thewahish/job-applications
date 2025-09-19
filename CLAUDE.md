@@ -333,6 +333,63 @@ Personal values conflict with gambling industry participation.
 ### Note: 
 Regular video game development (non-gambling) is acceptable, even at companies that have gambling divisions.
 
+## CRITICAL SYNC PROTOCOL (CORE MEMORY - PERMANENT)
+**MANDATORY: NEVER miss sync discrepancies - This caused user trust failure**
+
+### BIDIRECTIONAL SYNC REQUIREMENTS:
+**CRITICAL: Sync must work BOTH ways with newest versions always**
+
+1. **FETCH FIRST**: Always check for remote changes before local assessment
+2. **PULL LATEST**: Get newest remote commits before comparing
+3. **COMPARE BOTH DIRECTIONS**:
+   - Remote→Local: What's missing locally from GitHub
+   - Local→Remote: What local changes need to be pushed
+4. **NEWEST VERSION WINS**: Always ensure latest changes from both sides are preserved
+5. **NEVER lose work**: Commit local changes before pulling if needed
+
+### MANDATORY BIDIRECTIONAL SYNC SEQUENCE:
+```bash
+# 1. FETCH & CHECK REMOTE STATUS
+git fetch origin
+git status
+git log origin/master --oneline -5
+git log HEAD --oneline -5
+
+# 2. CHECK FOR REMOTE CHANGES
+git diff HEAD origin/master --name-only
+
+# 3. IF REMOTE IS AHEAD: Pull first, then verify
+git pull origin master
+
+# 4. CHECK FOR LOCAL CHANGES TO PUSH
+git status
+git diff --name-only
+
+# 5. VERIFY COMPLETE SYNC
+git ls-tree -r --name-only HEAD | wc -l
+find "D:\Applications" -type f -not -path "*/.git/*" -not -path "*/.claude/*" -not -path "*/node_modules/*" | wc -l
+
+# 6. COMPARE STRUCTURES
+git ls-tree -r --name-only HEAD > /tmp/git_files.txt
+find "D:\Applications" -type f -not -path "*/.git/*" -not -path "*/.claude/*" -not -path "*/node_modules/*" -printf '%P\n' | sort > /tmp/local_files.txt
+diff /tmp/git_files.txt /tmp/local_files.txt
+
+# 7. IF LOCAL CHANGES EXIST: Add, commit, push
+git add -A
+git commit -m "Sync local changes with remote"
+git push origin master
+```
+
+### TRUST PROTOCOL:
+- **NEVER assume sync is correct** without verification
+- **ALWAYS investigate when user questions sync**
+- **ADMIT when wrong** and correct immediately
+- **Be thorough, not fast** - accuracy over speed
+- **BIDIRECTIONAL ALWAYS** - Check both local→remote and remote→local
+- **NEWEST VERSION WINS** - Preserve latest changes from both sides
+
+**This bidirectional protocol is now PERMANENT core memory for this project.**
+
 ## SESSION CONFIRMATION REQUIRED
 Confirm you've read the master knowledge base before starting any resume/job application work.
 
