@@ -367,9 +367,10 @@
         }
         
         .skill-category {
-            background: var(--dm-light);
+            background: var(--dm-cream);
             padding: 15px;
             border-radius: 6px;
+            border-left: 4px solid var(--dm-charcoal);
         }
         
         .skill-category h4 {
@@ -377,6 +378,8 @@
             font-size: 14px;
             margin-bottom: 8px;
             font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
         
         .skill-category p {
@@ -431,6 +434,32 @@
             text-decoration: none;
         }
         
+        .testimonial-card {
+            border-left: 3px solid var(--dm-charcoal);
+        }
+        
+        .achievements-list li::before {
+            content: "▶";
+            color: var(--dm-charcoal);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-section {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .hero-logo {
+                margin-left: 0;
+                margin-top: 20px;
+            }
+            
+            .hero-logo img {
+                height: 60px;
+            }
+        }
+        
         /* Print Styles */
         @media print {
             .container {
@@ -461,6 +490,10 @@
                 grid-template-columns: 1fr;
                 gap: 8px;
             }
+            
+            .hero-section {
+                flex-direction: row;
+            }
         }
     </style>
 </head>
@@ -469,16 +502,20 @@
         <!-- COVER LETTER -->
         <header class="cover-header">
             <div class="cover-label">COVER LETTER</div>
-            <img src="DM.png" alt="Distant Moon" class="company-logo">
         </header>
         
         <section class="hero-section">
-            <h1 class="hero-name">Obai Sukar</h1>
-            <p class="hero-title">Lead Sound Designer | Audio Director | 25+ Years Sonic Storytelling</p>
-            <div class="hero-contact">
-                <a href="mailto:obai@obaisukar.com">obai@obaisukar.com</a>
-                <a href="tel:+18103998713">+1 (810) 399-8713</a>
-                <span>Michigan, USA</span>
+            <div class="hero-content">
+                <h1 class="hero-name">Obai Sukar</h1>
+                <p class="hero-title">Lead Sound Designer | Audio Director | 25+ Years Sonic Storytelling</p>
+                <div class="hero-contact">
+                    <a href="mailto:obai@obaisukar.com">obai@obaisukar.com</a>
+                    <a href="tel:+18103998713">+1 (810) 399-8713</a>
+                    <span>Michigan, USA</span>
+                </div>
+            </div>
+            <div class="hero-logo">
+                <img src="DM.png" alt="Distant Moon" />
             </div>
         </section>
         
@@ -488,6 +525,13 @@
         </div>
         
         <div class="cover-content">
+            <div class="cover-section">
+                <h3>Purpose-Driven Audio: Our Shared Foundation</h3>
+                <p>My entire career demonstrates purpose-driven work that aligns perfectly with Distant Moon's values: Spacetoon's children's programming that educated while entertaining; Karazah Channel preserving Arabic language and culture for diaspora children; Radio Al-Kul providing truth and hope to civilians in a war zone. Every project serves a greater mission beyond entertainment.</p>
+                
+                <p>This is why Distant Moon's commitment to "foster human flourishing through film" resonates so deeply with my artistic DNA. I understand the power of storytelling with purpose, and I bring that same intentionality to every frequency I craft.</p>
+            </div>
+            
             <div class="cover-section">
                 <h3>Sound Is What I Breathe</h3>
                 <p>I've been crafting sonic landscapes since before most people knew what post-production meant. At Spacetoon/Tiger, I built the audio department that shaped a generation's relationship with sound through iconic animated series. As Audio Director for "الموكب الخالد" (The Eternal Parade), I directed the complete sonic architecture—from foley and atmospheric design to orchestral score mixing and final theatrical delivery.</p>
@@ -551,7 +595,7 @@
                 </div>
                 
                 <h2 class="section-title">Summary</h2>
-                <p>Lead Sound Designer with 25+ years of experience in post-production for film, television, and narrative content. As the credited Audio Director for "The Eternal Parade" animated feature, I directed the complete sonic landscape from sound design and foley to orchestral score mixing and dialogue. Expert in Pro Tools, Steinberg Nuendo, and iZotope RX, with a proven history of building audio departments, training international teams, and architecting scalable workflows that deliver world-class results.</p>
+                <p>Lead Sound Designer with 25+ years of experience in post-production for film, television, and narrative content. My career spans purpose-driven projects from children's edutainment to crisis broadcasting, aligning with Distant Moon's mission-focused approach. As the credited Audio Director for "The Eternal Parade" animated feature, I directed the complete sonic landscape from sound design and foley to orchestral score mixing and dialogue. Expert in Pro Tools, Steinberg Nuendo, and iZotope RX, with a proven history of building audio departments, training international teams, and architecting scalable workflows that deliver world-class results.</p>
                 
                 <h2 class="section-title">Key Post-Production Experience</h2>
                 <div class="job-entry">

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obai Sukar - Lead Sound Designer Application | Distant Moon</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --dm-charcoal: #3A3F47;
+            --dm-dark: #111111;
+            --dm-white: #FFFFFF;
+            --dm-light-gray-bg: #F7F7F7;
+            --dm-border: #EAEAEA;
+            --dm-text: #212121;
+            --dm-muted: #686868;
+            --dm-accent: var(--dm-charcoal);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Roboto', sans-serif; line-height: 1.6; color: var(--dm-text); background: #f0f0f0; margin: 0; padding: 0; }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Poppins', sans-serif; font-weight: 700; color: var(--dm-dark); }
+        a { color: var(--dm-accent); text-decoration: none; transition: opacity 0.3s ease; }
+        a:hover { opacity: 0.8; }
+        .container { 
+            max-width: 8.5in; 
+            margin: 20px auto; /* Reduced top/bottom margin for screen */
+            background: var(--dm-white); 
+            padding: 0.5in; 
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+        }
+        .cover-header { 
+            text-align: center; 
+            padding: 10px 0 15px 0; /* Reduced padding */
+            border-bottom: 1px solid var(--dm-border); 
+            background: var(--dm-white); 
+            margin-bottom: 20px; /* Space before content starts */
+        }
+        .cover-label { 
+            font-family: 'Poppins', sans-serif; 
+            font-size: 12px; 
+            font-weight: 600; 
+            color: var(--dm-muted); 
+            letter-spacing: 1.5px; 
+            text-transform: uppercase; 
+        }
+        
+        /* New style for the interactive link in the header */
+        .interactive-link {
+            font-size: 12px;
+            font-weight: 500;
+            color: var(--dm-muted);
+            margin-top: 8px;
+        }
+        .interactive-link a {
+            font-weight: 600;
+            color: var(--dm-accent);
+        }
+
+        .hero-image {
+            width: 100%; 
+            height: auto; 
+            display: block; 
+            margin-bottom: 25px;
+        }
+
+        .highlight-block { margin: 25px 0; padding: 20px; background: var(--dm-light-gray-bg); border-left: 4px solid var(--dm-accent); border-radius: 6px; }
+        .highlight-block h3 { color: var(--dm-dark); margin-bottom: 12px; font-size: 1.1rem; }
+        .highlight-block p { color: var(--dm-text); font-size: 1rem; line-height: 1.65; }
+        
+        .value-prop-restyle { background: var(--dm-charcoal); color: var(--dm-white); border-left: none; }
+        .value-prop-restyle h3, .value-prop-restyle p { color: var(--dm-white); }
+        
+        .cover-content { padding: 0; }
+        .cover-section { margin: 25px 0; }
+        .cover-section h3 { color: var(--dm-dark); font-size: 1.1rem; margin-bottom: 12px; font-weight: 600; border-left: 3px solid var(--dm-accent); padding-left: 12px; }
+        .cover-section p { font-size: 1rem; line-height: 1.65; margin-bottom: 12px; }
+        
+        .achievements-list { list-style: none; margin: 15px 0; padding-left: 5px; }
+        .achievements-list li { padding: 5px 0; padding-left: 22px; position: relative; font-size: 1rem; line-height: 1.6; }
+        .achievements-list li:before { content: "✔"; position: absolute; left: 0; top: 7px; color: var(--dm-accent); font-size: 14px; }
+        
+        .testimonial-highlight { margin: 25px 0; padding: 20px; background: var(--dm-light-gray-bg); border-radius: 6px; border-left: 4px solid var(--dm-accent); font-style: italic; }
+        .testimonial-text { font-size: 1rem; line-height: 1.65; margin-bottom: 8px; color: var(--dm-dark); }
+        .testimonial-source { font-size: 0.9rem; color: var(--dm-muted); font-weight: 500; font-style: normal; }
+        
+        .closing { margin: 25px 0; padding-top: 20px; border-top: 1px solid var(--dm-border); }
+        .closing p { font-size: 1rem; line-height: 1.6; }
+        .closing a { font-weight: 500; }
+        
+        /* --- PRINT OPTIMIZATION STYLES --- */
+        @media print { 
+            html, body { 
+                background: var(--dm-white); 
+                font-size: 10pt;
+                width: 8.5in;
+                height: 11in;
+            } 
+            .container { 
+                max-width: 100%; 
+                width: 100%;
+                margin: 0; 
+                padding: 0.4in 0.5in;
+                box-shadow: none;
+            } 
+            .cover-header {
+                padding: 0 0 10px 0;
+                margin-bottom: 15px;
+            }
+            .interactive-link {
+                font-size: 9pt;
+            }
+            .highlight-block, .cover-section, .testimonial-highlight, .closing { 
+                margin: 12px 0; 
+                padding: 12px; 
+                page-break-inside: avoid;
+            }
+            .cover-section h3 {
+                font-size: 11pt;
+                margin-bottom: 8px;
+            }
+            p, li {
+                line-height: 1.45;
+            }
+            .achievements-list li {
+                padding: 2px 0 2px 22px;
+            }
+            .achievements-list li:before {
+                top: 4px;
+            }
+            .value-prop-restyle {
+                background: var(--dm-light-gray-bg) !important;
+                border: 1px solid var(--dm-border) !important;
+            }
+            .value-prop-restyle h3, .value-prop-restyle p {
+                color: var(--dm-dark) !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="cover-header">
+            <div class="cover-label">Cover Letter</div>
+            <div class="interactive-link">
+                Digital Resume: <a href="https://www.obaisukar.com/Artistic_Resume.html" target="_blank">www.obaisukar.com/Artistic_Resume.html</a>
+            </div>
+        </header>
+        
+        <img src="header-hero-section.png" alt="Obai Sukar - Lead Sound Designer Application for Distant Moon" class="hero-image">
+        
+        <div class="highlight-block">
+            <h3>Why Distant Moon Resonates With My Vision</h3>
+            <p>Your mission to "foster human flourishing through film" and create stories that "move audiences to think, feel, and act" perfectly aligns with my 25-year journey in sonic storytelling. From the Student Academy Award-winning "Cloud Kumo" to content that's generated 301M+ views, I've dedicated my career to crafting audio that doesn't just support narrative—it elevates the human experience within it.</p>
+        </div>
+        
+        <div class="highlight-block">
+            <h3>Purpose-Driven Audio: Our Shared Foundation</h3>
+            <p>My entire career demonstrates purpose-driven work that aligns perfectly with Distant Moon's values: Spacetoon's children's programming that educated while entertaining; Karazah Channel preserving Arabic language and culture for diaspora children; Radio Al-Kul providing truth and hope to civilians in a war zone. Every project serves a greater mission beyond entertainment. This is why Distant Moon's commitment to "foster human flourishing through film" resonates so deeply with my artistic DNA. I understand the power of storytelling with purpose, and I bring that same intentionality to every frequency I craft.</p>
+        </div>
+        
+        <div class="cover-content">
+            <div class="cover-section">
+                <h3>Sound Is What I Breathe</h3>
+                <p>I've been crafting sonic landscapes since before most people knew what post-production meant. At Spacetoon/Tiger, I built the audio department that shaped a generation's relationship with sound through iconic animated series. As Audio Director for "الموكب الخالد" (The Eternal Parade), I directed the complete sonic architecture—from foley and atmospheric design to orchestral score mixing and final theatrical delivery.</p>
+                <p>What sets me apart isn't just technical mastery in Pro Tools, Steinberg Nuendo, and iZotope RX—it's my ability to hear frequencies where others hear noise, to architect workflows that scale excellence, and to lead teams through the impossible.</p>
+            </div>
+            
+            <div class="cover-section">
+                <h3>Perfect Alignment With Your Lead Sound Designer Role</h3>
+                <ul class="achievements-list">
+                    <li><strong>25+ years post-production experience</strong> — Far exceeding the 5+ years required, with department leadership at Spacetoon and audio direction on award-winning films</li>
+                    <li><strong>Pro Tools, Nuendo & comprehensive DAW mastery</strong> — Expert in Pro Tools, Steinberg Nuendo, Wavelab, plus complete post-production pipeline architecture</li>
+                    <li><strong>Advanced plugin ecosystems</strong> — Extensive experience with Waves, UAD, Plugin Alliance, iZotope RX for professional audio processing</li>
+                    <li><strong>Sound design, foley & dialogue expertise</strong> — From atmospheric soundscapes to foley creation, dialogue editing & sweetening across multilingual productions</li>
+                    <li><strong>Live audio perspective</strong> — Currently touring as FOH engineer for Mohamed Tarek (1.2M+ followers), bringing real-world audio insight to post-production</li>
+                    <li><strong>Workflow architecture</strong> — As IT Director managing 18+ facilities with 99.8% uptime, I architect scalable systems that endure</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="highlight-block value-prop-restyle">
+            <h3>The Unique Value I Bring to Distant Moon</h3>
+            <p>You're not just hiring a Lead Sound Designer—you're gaining someone who has built audio departments, trained international teams, and delivered under impossible conditions. I bring the rare combination of world-class creative skills and systems thinking that lets me not only create exceptional audio but architect the workflows and best practices that will scale Distant Moon's audio excellence across every project.</p>
+        </div>
+        
+        <div class="cover-content">
+             <div class="testimonial-highlight">
+                <p class="testimonial-text">"It is rare to find brilliant sound engineer, with great personality, discipline, talent and honest, stick to the project timeline, and not only meet but exceed all expectations."</p>
+                <p class="testimonial-source">— Fawaz Gheibeh, BEng, PMP, MBA</p>
+            </div>
+            
+            <div class="cover-section">
+                <p>I'm recognized by Sinan Hatahet, PhD — Co-Founder of Workiom CRM — as <strong>"by far one of the best professionals I had the pleasure to partner with."*</strong></p>
+                <p>Distant Moon's commitment to quality storytelling and your unreasonable standards for excellence match my own approach to sonic storytelling. Let's discuss how my proven track record of building audio departments, directing award-winning productions, and scaling creative workflows can contribute to your mission of fostering human flourishing through film.</p>
+            </div>
+        </div>
+
+        <div class="closing">
+            <p>We're a win for each other.</p>
+            <p style="margin-top: 12px;">Obai Sukar<br>
+            <a href="mailto:obai@obaisukar.com">obai@obaisukar.com</a> | <a href="tel:+18103998713">+1 (810) 399-8713</a><br>
+            </p>
+            <p style="margin-top: 15px; font-size: 12px; color: var(--dm-muted);">*Additional verified testimonials can be viewed on my LinkedIn profile: <a href="https://linkedin.com/in/obaisukar">linkedin.com/in/obaisukar</a></p>
+            <p style="margin-top: 15px; font-size: 12px; color: var(--dm-muted);">For an interactive artistic resume with URLs, please visit: <a href="https://www.obaisukar.com/Artistic_Resume.html">www.obaisukar.com/Artistic_Resume.html</a></p>
+        </div>
+    </div>
+</body>
+</html>
+

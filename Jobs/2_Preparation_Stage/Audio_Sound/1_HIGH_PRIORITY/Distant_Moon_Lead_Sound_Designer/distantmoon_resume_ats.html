@@ -3,123 +3,279 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Obai Sukar - Resume for Lead Sound Designer</title>
+    <title>Obai Sukar - Lead Sound Designer Application | Distant Moon</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     <style>
-        body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
-        h1, h2, h3 { color: #2c3e50; }
-        a { color: #2980b9; text-decoration: none; }
-        .section { margin-bottom: 20px; }
-        .job { margin-bottom: 15px; }
-        .header { text-align: center; margin-bottom: 30px; }
-        .header h1 { margin: 0; }
-        .header p { margin: 5px 0; }
-        ul { padding-left: 20px; }
+        :root {
+            --dm-charcoal: #3A3F47;
+            --dm-dark: #111111;
+            --dm-white: #FFFFFF;
+            --dm-border: #EAEAEA;
+            --dm-text: #212121;
+            --dm-muted: #686868;
+            --dm-accent: var(--dm-charcoal);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Roboto', sans-serif; 
+            line-height: 1.55; 
+            color: var(--dm-text); 
+            background: #f0f0f0; 
+            font-size: 11pt;
+        }
+        h1, h2, h3, h4, h5, h6 { 
+            font-family: 'Poppins', sans-serif; 
+            font-weight: 600; 
+            color: var(--dm-dark); 
+        }
+        a { color: var(--dm-accent); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        .container { 
+            max-width: 8.5in; 
+            min-height: 11in;
+            margin: 20px auto; 
+            background: var(--dm-white); 
+            padding: 0.5in; 
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+        }
+
+        .resume-header {
+            text-align: center;
+            border-bottom: 2px solid var(--dm-dark);
+            padding-bottom: 12px;
+            margin-bottom: 20px;
+        }
+        .resume-header h1 {
+            font-size: 24pt;
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-bottom: 4px;
+        }
+        .contact-info {
+            font-size: 10pt;
+            color: var(--dm-muted);
+        }
+        .contact-info span {
+            margin: 0 5px;
+        }
+        .contact-info a {
+            color: var(--dm-accent);
+        }
+
+        .interactive-link-ats {
+            text-align: center;
+            font-size: 10pt;
+            margin-top: 8px;
+            color: var(--dm-muted);
+        }
+        .interactive-link-ats a {
+            color: var(--dm-accent);
+            font-weight: 600;
+        }
+
+        .resume-section {
+            margin-bottom: 18px;
+        }
+        .resume-section h2 {
+            font-size: 13pt;
+            font-weight: 700;
+            color: var(--dm-dark);
+            border-bottom: 1px solid var(--dm-border);
+            padding-bottom: 4px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .summary p {
+            font-size: 11pt;
+        }
+
+        .job {
+            margin-bottom: 15px;
+            padding-left: 10px;
+        }
+        .job-title {
+            font-size: 12pt;
+            font-weight: 600;
+            display: block;
+        }
+        .job-company-location {
+            font-size: 11pt;
+            font-weight: 500;
+            color: var(--dm-muted);
+            margin-bottom: 5px;
+        }
+        .job-company-location span {
+            margin-right: 8px;
+        }
+        .job-description {
+            list-style-position: outside;
+            padding-left: 20px;
+        }
+        .job-description li {
+            margin-bottom: 4px;
+        }
+
+        .skills-list {
+            list-style: none;
+            padding: 0;
+            columns: 2;
+            column-gap: 30px;
+        }
+        .skills-list li {
+            margin-bottom: 4px;
+        }
+        .skills-list strong {
+            font-weight: 600;
+        }
+
+        .education-entry {
+            margin-bottom: 10px;
+        }
+        .education-entry .degree {
+            font-weight: 600;
+        }
+        .education-entry .school-location {
+            color: var(--dm-muted);
+        }
+        
+        .footer-note {
+            text-align: center;
+            margin-top: 20px;
+            padding-top: 15px;
+            border-top: 1px solid var(--dm-border);
+            font-size: 10pt;
+            color: var(--dm-muted);
+        }
+        .footer-note a {
+            color: var(--dm-accent);
+            font-weight: 600;
+        }
+
+        @media print {
+            body { background: var(--dm-white); font-size: 10pt; }
+            .container {
+                margin: 0;
+                padding: 0.4in;
+                box-shadow: none;
+                border: none;
+            }
+            .resume-header h1 { font-size: 22pt; }
+            .resume-section { margin-bottom: 14px; page-break-inside: avoid; }
+            .resume-section h2 { font-size: 12pt; }
+            .job-title { font-size: 11pt; }
+            .job-description { padding-left: 18px; }
+            .interactive-link-ats, .footer-note { font-size: 9pt; }
+        }
     </style>
 </head>
 <body>
+    <div class="container">
+        <header class="resume-header">
+            <h1>Obai Sukar</h1>
+            <div class="contact-info">
+                <span>+1 (810) 399-8713</span> |
+                <span><a href="mailto:obai@obaisukar.com">obai@obaisukar.com</a></span> |
+                <span>Michigan, USA</span> |
+                <span><a href="https://linkedin.com/in/obaisukar">linkedin.com/in/obaisukar</a></span>
+            </div>
+            <div class="interactive-link-ats">
+                Verifiable Artistic Resume: <a href="https://www.obaisukar.com/Artistic_Resume.html" target="_blank">www.obaisukar.com/Artistic_Resume.html</a>
+            </div>
+        </header>
 
-    <div class="header">
-        <h1>Obai Sukar</h1>
-        <p>Michigan, USA | +1 (810) 399-8713 | obai@obaisukar.com | linkedin.com/in/obaisukar</p>
-    </div>
+        <div class="resume-main">
+            <div class="resume-section summary">
+                <h2>Summary</h2>
+                <p>Award-winning sound designer and creative director with over 25 years of experience in audio post-production, broadcast, and children's media. Proven leader in building and managing audio departments, architecting scalable production workflows, and directing international teams across 9+ countries. Expert in Pro Tools and Nuendo with a portfolio including Student Academy Award-winning films and content generating over 301M+ views. Combines world-class creative skills with systems-thinking to deliver exceptional audio that elevates narrative and serves a greater mission.</p>
+            </div>
 
-    <div class="section">
-        <h2>Summary</h2>
-        <p>
-            A creative and meticulous Lead Sound Designer with over 25 years of experience in post-production for film, TV, and narrative content. As the credited Audio Director for the animated feature "The Eternal Parade," I oversaw the entire sonic landscape, from sound design and foley to mixing orchestral scores and dialogue. My expertise in Pro Tools, Steinberg Nuendo, and iZotope RX, combined with a history of managing audio departments and architecting workflows, makes me ideally suited to deliver world-class audio while developing the robust best practices Distant Moon requires.
-        </p>
-    </div>
+            <div class="resume-section experience">
+                <h2>Experience</h2>
+                <div class="job">
+                    <strong class="job-title">Audio Director & Creative Producer</strong>
+                    <div class="job-company-location">
+                        <span class="company">Self-Employed (SS Media Productions)</span> |
+                        <span class="location">Remote / International</span> |
+                        <span class="date">2010 – Present</span>
+                    </div>
+                    <ul class="job-description">
+                        <li>Served as credited Audio Director for the national animated feature "الموكب الخالد" (The Eternal Parade), overseeing the entire audio post-production pipeline and managing international teams for theatrical release.</li>
+                        <li>Founded and managed KARAZAH Channel, an Arabic edutainment platform with 715K+ subscribers and 301M+ views, leading production teams across 9 countries.</li>
+                        <li>Co-founded Radio Al-Kul, a conflict-zone radio station reaching ~500,000 daily listeners, building mobile FM infrastructure and training journalists with zero safety incidents.</li>
+                    </ul>
+                </div>
+                <div class="job">
+                    <strong class="job-title">Live Sound Engineer (FOH)</strong>
+                    <div class="job-company-location">
+                        <span class="company">Freelance</span> |
+                        <span class="location">International Tours</span> |
+                        <span class="date">2018 – Present</span>
+                    </div>
+                    <ul class="job-description">
+                        <li>Touring Front-of-House engineer for artists Mohamed Tarek (1.2M+ followers) and Mostafa Atef (1.5M+ followers) during international concert performances.</li>
+                        <li>Managed all aspects of live sound, including RF coordination, backline setup, show advancing, and mixing for large-scale venues.</li>
+                    </ul>
+                </div>
+                <div class="job">
+                    <strong class="job-title">Audio Department Head & Dubbing Supervisor</strong>
+                    <div class="job-company-location">
+                        <span class="company">Spacetoon / Tiger Productions</span> |
+                        <span class="location">Damascus, Dubai, Kuala Lumpur</span> |
+                        <span class="date">1999 – 2010</span>
+                    </div>
+                    <ul class="job-description">
+                        <li>Led the sound department for all post-production audio, establishing the sonic identity for a generation of animated series.</li>
+                        <li>Supervised Arabic dubbing for major anime including Detective Conan, Beyblade, Samurai Jack, Gundam Wing, and Samurai 7.</li>
+                        <li>Engineered and mixed Arabic theme songs for iconic series such as One Piece, Dragon Ball, Slam Dunk, Animaniacs, and dozens of others.</li>
+                        <li>Designed and built broadcast-grade dubbing and music studios from the ground up in three countries.</li>
+                    </ul>
+                </div>
+            </div>
 
-    <div class="section">
-        <h2>Key Post-Production Experience</h2>
-        <div class="job">
-            <h3>Audio Director - "The Eternal Parade" (Animated Feature)</h3>
-            <ul>
-                <li>Served as the credited Audio Director, responsible for the complete audio post-production pipeline.</li>
-                <li>Oversaw and executed all sound design, including foley and atmospheric soundscapes.</li>
-                <li>Managed and mixed the orchestral score, ensuring a dynamic and emotional impact.</li>
-                <li>Supervised the dialogue edit and mix, ensuring clarity and seamless integration.</li>
-                <li>Completed the final theatrical mix for the entire film, balancing all sonic elements to serve the narrative.</li>
-            </ul>
+            <div class="resume-section skills">
+                <h2>Core Competencies & Skills</h2>
+                <ul class="skills-list">
+                    <li><strong>Sound Design:</strong> Atmospheric, Foley, Creature, Sci-Fi</li>
+                    <li><strong>DAWs:</strong> Pro Tools (Expert), Steinberg Nuendo (Expert)</li>
+                    <li><strong>Audio Processing:</strong> iZotope RX, Waves, UAD, Plugin Alliance</li>
+                    <li><strong>Post-Production:</strong> Dialogue Editing, ADR, Mixing, Mastering</li>
+                    <li><strong>Leadership:</strong> Department Building, Team Management (9+ Countries)</li>
+                    <li><strong>Workflow Architecture:</strong> Scalable Audio Pipelines</li>
+                    <li><strong>Dubbing Supervision:</strong> Multilingual Content Adaptation</li>
+                    <li><strong>Live Sound:</strong> FOH Mixing, RF Coordination, Show Advancing</li>
+                    <li><strong>Studio Design:</strong> Broadcast & Music Studio Construction</li>
+                    <li><strong>Project Management:</strong> International Creative Productions</li>
+                </ul>
+            </div>
+
+            <div class="resume-section awards">
+                <h2>Awards & Recognition</h2>
+                <ul>
+                    <li><strong>Student Academy Awards, Silver Medal (Lead Sound Designer)</strong> – "Cloud Kumo" (2016)</li>
+                    <li><strong>Mohammed Bin Rashid Arabic Language Award (Founder)</strong> – KARAZAH Channel (2019)</li>
+                    <li>Press coverage in The Washington Post, NPR, and Al Jazeera for innovation in media.</li>
+                </ul>
+            </div>
+
+            <div class="resume-section education">
+                <h2>Education</h2>
+                <div class="education-entry">
+                    <strong class="degree">Audio Production & Sound Design Graduate</strong>
+                    <div class="school-location">Los Angeles Recording School (LARS), Los Angeles, CA – 2005</div>
+                </div>
+                <div class="education-entry">
+                    <strong class="degree">Associate Diploma in Printing & Publishing</strong>
+                    <div class="school-location">Damascus, Syria – 1999</div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-note">
+            <p>For a version of this resume with verifiable portfolio items and interactive links, please visit: <a href="https://www.obaisukar.com/Artistic_Resume.html" target="_blank">www.obaisukar.com/Artistic_Resume.html</a></p>
         </div>
     </div>
-
-    <div class="section">
-        <h2>Professional Experience</h2>
-
-        <div class="job">
-            <h3>Sound Department Manager / Senior Sound Designer</h3>
-            <p><strong>Spacetoon / Tiger Media</strong> | 2000–2005, 2006–2010</p>
-            <ul>
-                <li>Led the sound department for all post-production audio on numerous animated series, establishing the sonic identity for a generation of viewers.</li>
-                <li>Managed the complete audio workflow, from initial recording to final delivery, utilizing technologies from analog tape reels to early digital systems like Steinberg Nuendo, Wavelab, and Pro Tools.</li>
-                <li>Directed and supervised multilingual dubbing sessions, ensuring high-quality voice performances and technical standards.</li>
-            </ul>
-        </div>
-
-        <div class="job">
-            <h3>Founder & Executive Producer</h3>
-            <p><strong>SS Media Productions</strong> | 2010–2015</p>
-            <ul>
-                <li>Grew the Karazah YouTube Channel to 715K+ subscribers and 301M+ views through compelling narrative content.</li>
-                <li>Delivered over 100 audio projects spanning post-production, music production, and audio restoration, utilizing a modern toolkit including Pro Tools, Nuendo, Adobe Audition, iZotope RX, and extensive plugins from Waves and UAD.</li>
-            </ul>
-        </div>
-        
-        <div class="job">
-            <h3>Live Sound Engineer</h3>
-            <p><strong>Freelance</strong> | 2018–Present</p>
-            <ul>
-                <li>Toured internationally as the live sound engineer for celebrity Arabic singer Mohamed Tarek (2.1M+ followers).</li>
-                <li>Provided FOH and monitor engineering for multiple renowned Syrian bands during major concert tours.</li>
-            </ul>
-        </div>
-        
-        <div class="job">
-            <h3>IT Director & Systems Architect</h3>
-            <p><strong>Synergy Senior Management</strong> | 2022–Present</p>
-            <ul>
-                <li>Architected and implemented robust, scalable technical workflows across 18+ facilities, demonstrating a deep understanding of systems management and best practices relevant to building a stable post-production environment.</li>
-            </ul>
-        </div>
-
-    </div>
-
-    <div class="section">
-        <h2>Core Competencies & Technical Skills</h2>
-        <ul>
-            <li>**Post-Production Audio:** Sound Design, Foley, Dialogue Editing & Cleaning, Mixing & Mastering (LUFS), Audio Restoration, Sonic Storytelling, Workflow Architecture</li>
-            <li>**DAWs & Software:** Pro Tools (Expert), Steinberg Nuendo (Expert), iZotope RX (Expert), Adobe Audition, Wavelab</li>
-            <li>**Plugins:** Extensive experience with Waves, UAD, and other major plugin suites.</li>
-            <li>**Audio Engineering:** Live Sound (FOH), Studio Recording, Signal Flow, Compression, EQ, Reverb</li>
-        </ul>
-    </div>
-
-    <div class="section">
-        <h2>Awards & Recognition</h2>
-        <ul>
-            <li><strong>Sound Designer for "Cloud Kumo"</strong> - Winner of the 2016 Student Academy Award (Silver)</li>
-            <li><strong>Recipient, Mohammed Bin Rashid Arabic Language Award</strong> - Presented by the Governor of Dubai (2019)</li>
-        </ul>
-    </div>
-
-    <div class="section">
-        <h2>Professional Development</h2>
-        <ul>
-            <li><strong>Advanced Pro Tools Techniques:</strong> HDX systems, advanced mixing workflows, surround sound mixing, Pro Tools | Control surfaces</li>
-            <li><strong>Film Audio Post-Production:</strong> Theatrical mixing standards, LUFS compliance, stems and deliverables, final mix optimization</li>
-            <li><strong>Sound Design Innovation:</strong> Advanced Foley techniques, environmental sound design, atmospheric sound creation, narrative audio enhancement</li>
-            <li><strong>Audio Restoration & Enhancement:</strong> iZotope RX advanced techniques, spectral editing, dialogue restoration, audio forensics</li>
-            <li><strong>Industry Standards & Workflows:</strong> Film industry delivery specifications, post-production pipeline optimization, quality control procedures</li>
-            <li><strong>Collaborative Technologies:</strong> Remote collaboration tools, cloud-based audio workflows, real-time review and approval systems</li>
-        </ul>
-    </div>
-
-    <div class="section">
-        <h2>Education</h2>
-        <p><strong>Associate of Science in Audio Production</strong> | Los Angeles Recording School (2005)</p>
-        <p><em>Specialized coursework in film audio post-production, sound design, and theatrical mixing standards.</em></p>
-    </div>
-
 </body>
 </html>
+
