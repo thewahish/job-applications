@@ -380,6 +380,27 @@ git commit -m "Sync local changes with remote"
 git push origin master
 ```
 
+### EMPTY FOLDER SYNC RULE (CORE MEMORY - PERMANENT):
+**CRITICAL: Git doesn't track empty directories - Auto-detect and fix**
+
+#### AUTOMATIC EMPTY FOLDER DETECTION:
+```bash
+# When user reports missing folders online, ALWAYS run:
+find "D:\Application\job-applications" -type d -empty | grep -v ".git"
+```
+
+#### AUTO-GITKEEP PROTOCOL:
+- **DETECT**: Any empty folders in job application structure
+- **CREATE**: Automatic .gitkeep files with descriptive comments
+- **COMMIT**: Auto-commit with clear message about folder structure
+- **NO MANUAL REQUEST**: Do this proactively when sync issues reported
+
+#### GITKEEP CONTENT TEMPLATE:
+```
+# This file keeps the [FOLDER_NAME] folder visible in git
+# [Description of folder purpose]
+```
+
 ### TRUST PROTOCOL:
 - **NEVER assume sync is correct** without verification
 - **ALWAYS investigate when user questions sync**
@@ -387,6 +408,7 @@ git push origin master
 - **Be thorough, not fast** - accuracy over speed
 - **BIDIRECTIONAL ALWAYS** - Check both local→remote and remote→local
 - **NEWEST VERSION WINS** - Preserve latest changes from both sides
+- **AUTO-FIX EMPTY FOLDERS** - No manual intervention needed
 
 **This bidirectional protocol is now PERMANENT core memory for this project.**
 
