@@ -1,0 +1,7 @@
+# Security: Do not commit credentials or tokens
+credentials.json
+.calendar_token.pickle
+*.pickle
+
+# Logs
+*.log
