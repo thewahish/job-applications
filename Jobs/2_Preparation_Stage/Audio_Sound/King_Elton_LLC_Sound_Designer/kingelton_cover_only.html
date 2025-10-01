@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obai Sukar - Sound Designer - King Elton LLC</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Serif:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.5;
+            color: #1a1a1a;
+            background: #ffffff;
+        }
+
+        .container {
+            max-width: 8.5in;
+            margin: 0 auto;
+            padding: 0.4in 0.6in;
+            background: white;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 24px;
+            padding-bottom: 16px;
+            border-bottom: 2px solid #000000;
+        }
+
+        .header-left h2 {
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            color: #000000;
+            text-transform: uppercase;
+            margin: 0;
+        }
+
+        .header-right {
+            text-align: right;
+        }
+
+        .company-logo {
+            max-height: 50px;
+            width: auto;
+        }
+
+        .name-section {
+            margin-bottom: 20px;
+        }
+
+        .name {
+            font-family: 'IBM Plex Serif', serif;
+            font-size: 38px;
+            font-weight: 700;
+            background: linear-gradient(135deg, #000000 0%, #333333 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 6px;
+            line-height: 1.1;
+        }
+
+        .title {
+            font-size: 15px;
+            font-weight: 500;
+            color: #333333;
+            letter-spacing: 0.3px;
+        }
+
+        .company-focus {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border-left: 4px solid #000000;
+            padding: 14px 18px;
+            margin: 18px 0;
+            border-radius: 0 4px 4px 0;
+        }
+
+        .company-focus h3 {
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #000000;
+            margin-bottom: 8px;
+        }
+
+        .company-focus p {
+            font-size: 11px;
+            line-height: 1.6;
+            color: #2c2c2c;
+        }
+
+        .content {
+            font-size: 11px;
+            line-height: 1.7;
+            color: #1a1a1a;
+        }
+
+        .content p {
+            margin-bottom: 12px;
+        }
+
+        .content strong {
+            font-weight: 600;
+            color: #000000;
+        }
+
+        .achievements-section {
+            margin: 16px 0;
+        }
+
+        .achievements-section h3 {
+            font-size: 12px;
+            font-weight: 700;
+            color: #000000;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+        }
+
+        .achievements-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .achievements-list li {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 8px;
+            line-height: 1.6;
+        }
+
+        .achievements-list li:before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: #000000;
+            font-weight: 700;
+        }
+
+        .value-proposition {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            color: #ffffff;
+            padding: 18px 20px;
+            margin: 18px 0;
+            border-radius: 4px;
+        }
+
+        .value-proposition h3 {
+            font-size: 13px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .value-proposition p {
+            font-size: 11px;
+            line-height: 1.7;
+            margin-bottom: 0;
+        }
+
+        .closing {
+            margin-top: 18px;
+            font-size: 11px;
+        }
+
+        .signature {
+            margin-top: 16px;
+            font-weight: 600;
+        }
+
+        .contact-info {
+            margin-top: 8px;
+            font-size: 10px;
+            line-height: 1.6;
+            color: #444444;
+        }
+
+        .footer {
+            margin-top: 24px;
+            padding-top: 16px;
+            border-top: 1px solid #dddddd;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-logo {
+            max-height: 40px;
+            width: auto;
+            opacity: 0.9;
+        }
+
+        .footer-text {
+            font-size: 9px;
+            color: #666666;
+            text-align: right;
+        }
+
+        .footer-text a {
+            color: #000000;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        @media print {
+            body {
+                print-color-adjust: exact;
+                -webkit-print-color-adjust: exact;
+            }
+
+            .container {
+                padding: 0.3in 0.5in;
+            }
+
+            .header {
+                margin-bottom: 18px;
+                padding-bottom: 12px;
+            }
+
+            .name {
+                font-size: 36px;
+            }
+
+            .content {
+                font-size: 10.5px;
+            }
+
+            .company-focus,
+            .value-proposition {
+                padding: 12px 16px;
+                margin: 14px 0;
+            }
+
+            .achievements-list li {
+                margin-bottom: 6px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="header-left">
+                <h2>Cover Letter</h2>
+            </div>
+            <div class="header-right">
+                <img src="logo.jpeg" alt="King Elton LLC" class="company-logo">
+            </div>
+        </div>
+
+        <div class="name-section">
+            <h1 class="name">Obai Sukar</h1>
+            <p class="title">Award-Winning Sound Designer | Game Audio Specialist | Creature & Fantasy Audio Expert</p>
+        </div>
+
+        <div class="company-focus">
+            <h3>About King Elton & Eleons</h3>
+            <p>King Elton Studios has achieved over 3.2 billion visits across projects including the massively successful Anime Defenders (1M+ likes, 3.3B+ visits). Eleons represents your studio's ambitious creature-capturing RPG on Roblox—a Pokémon-inspired world with unique lore, adorable monsters, and immersive gameplay that demands exceptional audio design to bring each Eleon's personality to life.</p>
+        </div>
+
+        <div class="content">
+            <p>Gaming is in my blood. I've been a gamer since I was a kid, and I understand game logic from the player's soul. When I saw Eleons—your creature-capturing RPG—I immediately envisioned the sonic personality of each creature. The audio cues that make players fall in love with Pyurnace's flame-furred warmth or fear Cerberio's three-headed elemental fury before they even read the stats. That's the power of sound design done right.</p>
+
+            <p>I'm an award-winning sound designer with game audio middleware experience (Wwise, FMOD), 301M+ views on character-driven content, and a lifetime of understanding what makes game audio memorable. I don't just create sounds—I create sonic personalities that players remember long after they close the game.</p>
+
+            <div class="achievements-section">
+                <h3>What I Bring to Eleons:</h3>
+                <ul class="achievements-list">
+                    <li><strong>Game Audio Expertise:</strong> Proficiency in Wwise and FMOD middleware, with experience implementing audio assets in game engines and optimizing for performance without sacrificing quality</li>
+                    <li><strong>Creature Sound Design:</strong> Created character-driven audio for animation projects reaching 301M+ views (Karazah Channel, 715K+ subscribers), understanding how audio conveys personality, emotion, and narrative</li>
+                    <li><strong>Fantasy & Whimsical Content:</strong> Sound Designer for Cloud Kumo (2016 Student Academy Award winner), plus extensive work on children's animation requiring bubbly, engaging, and stylized audio design</li>
+                    <li><strong>Technical Mastery:</strong> Pro Tools and Nuendo expert (industry-standard DAWs), with rapid adaptability to team workflows and tools. Strong understanding of audio optimization, performance constraints, and implementation scripting</li>
+                    <li><strong>Remote Collaboration Excellence:</strong> Led international production teams across 9 countries managing multiple time zones, proving ability to deliver polished deliverables independently while maintaining clear communication</li>
+                    <li><strong>Player Experience Focus:</strong> As a lifelong gamer who now creates game audio, I understand the player's perspective—what makes a creature feel powerful, adorable, or terrifying through sound alone</li>
+                </ul>
+            </div>
+
+            <p>I see frequencies where others hear noise. When you describe environmental ambience for fantasy worlds, I hear layered atmospheres that tell stories—wind that whispers danger, water that bubbles with magic. When you mention UI/UX sounds, I design audio feedback that guides players intuitively without breaking immersion. And when you talk about Eleon creatures, I create sonic identities that make each one unforgettable.</p>
+
+            <div class="value-proposition">
+                <h3>Why We're a Perfect Match</h3>
+                <p>You need a sound designer who can add personality, narrative, and flair to Eleons. I've spent my career doing exactly that—building sonic worlds for characters that audiences love, whether it's through 301M+ views on animation content or award-winning sound design for film. I understand Roblox's technical constraints, middleware implementation, and the balance between stylized creativity and performance optimization. More importantly, I'm a gamer who gets it—I know what makes players care about their creatures, and I know how to deliver that through sound.</p>
+            </div>
+
+            <p>I'm recognized by Michael Shagoury (SVP of Audience Development) as someone where <strong>"when it comes to audio, Obai is a perfectionist and his creativity is unmatched."</strong> That perfectionism combined with gaming passion is what Eleons needs to stand out in the creature-capturing genre.</p>
+
+            <div class="closing">
+                <p>Let's create sonic personalities that make every Eleon unforgettable. I'm ready to bring my award-winning sound design, technical expertise, and gaming passion to your team. This isn't just another sound design gig—this is the chance to shape how millions of players experience your world.</p>
+
+                <p>Looking forward to collaborating on something amazing.</p>
+
+                <div class="signature">
+                    <p>Obai Sukar</p>
+                    <div class="contact-info">
+                        +1 (810) 399-8713<br>
+                        obai@obaisukar.com<br>
+                        Interactive Resume: <a href="https://www.obaisukar.com/resume.html" style="color: #000000; text-decoration: underline;">www.obaisukar.com/resume.html</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div>
+                <img src="../../obai_sukar_logo.png" alt="Obai Sukar" class="footer-logo">
+            </div>
+            <div class="footer-text">
+                Portfolio & Verified Testimonials: <a href="https://www.obaisukar.com/resume.html">obaisukar.com</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

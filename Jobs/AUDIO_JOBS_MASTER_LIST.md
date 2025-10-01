@@ -1,5 +1,7 @@
 # Audio/Sound Jobs Master Tracking List
-*Last Updated: September 09, 2025*
+*Last Updated: October 01, 2025*
+
+**📋 SPECIAL REQUIREMENTS:** See `SPECIAL_REQUIREMENTS_TRACKER.md` for portfolio/form requirements
 
 ## HIGHEST PRIORITY (90%+ Compatibility) - APPLY IMMEDIATELY
 
@@ -136,12 +138,20 @@
 
 ## PORTFOLIO PREPARATION PRIORITIES
 
+**⚠️ SPECIAL REQUIREMENTS ALERT:**
+- **Google Form Application**: King Elton LLC (Roblox game audio)
+- **Portfolio Required**: 9 positions need audio samples/reels
+- **See Details**: `SPECIAL_REQUIREMENTS_TRACKER.md` for complete list
+
 **Essential Samples Needed:**
-1. **Mixing/Mastering Reel**: Spacetoon theme songs, multilingual content
-2. **Sound Design Portfolio**: Cloud Kumo clips, ADR/Foley samples  
-3. **Educational Content**: Karazah Channel production examples
-4. **Game Audio Concepts**: Interactive/immersive audio demonstrations
-5. **Recording Session Management**: Behind-the-scenes workflow documentation
+1. **VR/AR Spatial Audio**: Qatar VR project samples (Horizon Productions)
+2. **Foley Reel**: Spacetoon animation work (Earthsound, 344 Audio)
+3. **Game Audio Portfolio**: Unity/Wwise implementation (King Elton, AstroBeam, Bonfire, Cygames, 1010 Games)
+4. **Technical/Engineering**: Pipeline architecture, audio systems (Cygames, 1010 Games)
+5. **Broadcast/Production**: Karazah Channel work (Apple)
+6. **Mixing/Mastering Reel**: Spacetoon theme songs, multilingual content
+7. **Sound Design Portfolio**: Cloud Kumo clips, ADR/Foley samples
+8. **Educational Content**: Karazah Channel production examples
 
 **Technical Skill Priorities:**
 1. **Wwise Middleware**: Research basics for game audio roles

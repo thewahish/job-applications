@@ -60,13 +60,17 @@ Jobs are now organized by **Category → Priority** for easier navigation:
 
 ## 🎵 AUDIO/SOUND (15 positions)
 
-### 🔴 HIGH PRIORITY (4 positions)
+### 🔴 HIGH PRIORITY (1 position)
 *Apply within 24-48 hours*
 
 1. **University of Michigan - Theatrical Sound Manager** ⭐ Michigan location
-2. **Meta - Interaction UX Sound Designer** ⭐ Prestigious company
-3. **Valve Software - Sound Designer** ⭐ Gaming industry leader
-4. **Distant Moon - Lead Sound Designer** (Has social media resumes)
+
+**APPLIED (Moved to 3_Applied/Audio_Sound/):**
+- ✅ Meta - Interaction UX Sound Designer (Applied)
+- ✅ Distant Moon - Lead Sound Designer (Applied)
+
+**REMOVED:**
+- ❌ Valve Software - Sound Designer (No longer pursuing)
 
 ### 🟡 MEDIUM PRIORITY (4 positions)
 *Apply within 3-5 days*
@@ -142,14 +146,14 @@ Jobs are now organized by **Category → Priority** for easier navigation:
 ---
 
 ## 📊 Summary Statistics
-- **Total Positions**: 37
+- **Total Positions**: 34 (3 applied, 1 removed)
 - **By Category**:
-  - IT/Technology: 19 (51%)
-  - Audio/Sound: 15 (41%)
-  - Creative/Media: 3 (8%)
+  - IT/Technology: 19 (56%)
+  - Audio/Sound: 12 (35%)
+  - Creative/Media: 3 (9%)
 - **By Priority**:
-  - High Priority: 20 (54%)
-  - Medium Priority: 8 (22%)
-  - Low Priority: 9 (24%)
+  - High Priority: 17 (50%)
+  - Medium Priority: 8 (24%)
+  - Low Priority: 9 (26%)
 
 **Recommendation**: Navigate to `IT_Technology/1_HIGH_PRIORITY/` and start with positions that already have premium materials ready for immediate submission.

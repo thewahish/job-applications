@@ -1,10 +1,11 @@
 # 🔗 APPLICATION URLS MASTER TRACKER
-**Last Updated**: September 15, 2025
+**Last Updated**: October 01, 2025
 **Total Positions**: 38+ active positions
 **With URLs**: 26 positions (68%)
 **Missing URLs**: 12 high-priority positions (32%)
 
 **✅ VERIFICATION STATUS**: All provided URLs have been verified as active and functional job postings
+**📋 SPECIAL REQUIREMENTS**: See `SPECIAL_REQUIREMENTS_TRACKER.md` for non-standard applications
 
 ---
 
@@ -153,15 +154,24 @@
 2. ✅ ATS resume created (*_resume_ats.html)
 3. ✅ README tracking file
 4. ⚠️ Application URL confirmed
-5. ⏳ Premium materials (cover letter, combined) - created when logo provided
-6. ⏳ Application submitted
-7. ⏳ Moved to Jobs/2_Preparation_Stage or Jobs/3_Applied
+5. ⚠️ **CHECK SPECIAL REQUIREMENTS** (portfolio, Google Form, samples)
+6. ⏳ Premium materials (cover letter, combined) - created when logo provided
+7. ⏳ Portfolio/samples prepared (if required - see SPECIAL_REQUIREMENTS_TRACKER.md)
+8. ⏳ Application submitted
+9. ⏳ Moved to Jobs/2_Preparation_Stage or Jobs/3_Applied
 
 ### **Next Actions:**
-1. **Find missing URLs** for top 4 priority positions
-2. **Apply immediately** to positions with URLs and 90%+ compatibility
-3. **Request company logos** for premium material creation
-4. **Track application status** in README files
+1. **Check special requirements** in SPECIAL_REQUIREMENTS_TRACKER.md
+2. **Find missing URLs** for top 4 priority positions
+3. **Prepare portfolios** for 9 positions requiring audio samples
+4. **Apply immediately** to positions with URLs and 90%+ compatibility
+5. **Request company logos** for premium material creation
+6. **Track application status** in README files
+
+### **⚠️ NON-STANDARD APPLICATIONS:**
+- **King Elton LLC**: Google Form + Portfolio upload (not standard apply)
+- **Horizon Productions**: Email application with portfolio required
+- **Multiple positions**: Audio portfolio/reel required before applying
 
 ---
 
