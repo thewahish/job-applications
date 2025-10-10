@@ -26,6 +26,14 @@
 - **Mohammed Bin Rashid Award**: 2019
 - **301M+ views**: Belongs to Karazah Channel, NOT personal brand
 
+### CRITICAL ACHIEVEMENT CORRECTIONS (CORE MEMORY - PERMANENT)
+- **Student Academy Award**: Obai was Sound Designer for Cloud Kumo, which won the 2016 Student Academy Award (Silver). The FILM won the award, NOT Obai personally.
+  - **NEVER say**: "Student Academy Award winner" (implies personal win)
+  - **ALWAYS say**: "Sound Designer for Cloud Kumo, winner of 2016 Student Academy Award"
+- **Spacetoon Theme Songs**: Obai recorded and mixed theme songs, NOT supervised dubbing
+  - **NEVER say**: "Supervised dubbing for Detective Conan, Beyblade..." (incorrect role)
+  - **ALWAYS say**: "Recorded and mixed theme songs for Detective Conan, Beyblade, Samurai Jack, Gundam Wing, Samurai 7"
+
 ### Live Sound Engineering (CORRECTED)
 - **NO SUCH THING as "Mohamed Tarek Productions"** - NEVER use this
 - **Position**: Live Sound Engineer (FOH) - Independent/Freelance
