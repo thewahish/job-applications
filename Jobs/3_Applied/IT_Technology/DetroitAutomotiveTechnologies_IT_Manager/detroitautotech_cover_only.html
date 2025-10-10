@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obai Sukar - Cover Letter - Detroit Automotive Technologies</title>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Serif:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        @media print {
+            body { margin: 0.3in 0.4in; font-size: 10pt; }
+            .container { padding: 0; max-width: none; }
+            .header { margin-bottom: 15px; }
+            .section { margin-bottom: 12px; }
+            .value-proposition { padding: 12px; margin: 12px 0; }
+            .footer { margin-top: 15px; }
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'IBM Plex Sans', Arial, sans-serif;
+            line-height: 1.5;
+            color: #2c2c2c;
+            background: #ffffff;
+            padding: 0.4in 0.5in;
+        }
+        
+        .container {
+            max-width: 8.5in;
+            margin: 0 auto;
+            background: white;
+            position: relative;
+        }
+        
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #1f4788;
+            padding-bottom: 15px;
+        }
+        
+        .cover-letter-label {
+            font-size: 16pt;
+            font-weight: 600;
+            color: #1f4788;
+            letter-spacing: 1px;
+        }
+        
+        .company-logo {
+            height: 45px;
+            max-width: 200px;
+            object-fit: contain;
+        }
+        
+        .name-section {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+        
+        .name {
+            font-size: 28pt;
+            font-weight: 700;
+            background: linear-gradient(135deg, #1f4788 0%, #2d5aa0 50%, #1f4788 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 8px;
+            font-family: 'IBM Plex Serif', serif;
+        }
+        
+        .title {
+            font-size: 14pt;
+            color: #1f4788;
+            font-weight: 500;
+            margin-bottom: 4px;
+        }
+        
+        .subtitle {
+            font-size: 12pt;
+            color: #666;
+            font-weight: 400;
+        }
+        
+        .company-focus {
+            background: linear-gradient(135deg, #f8f9fc 0%, #e8ecf4 100%);
+            border-left: 4px solid #1f4788;
+            padding: 15px 20px;
+            margin: 20px 0;
+            border-radius: 0 6px 6px 0;
+        }
+        
+        .company-focus h3 {
+            color: #1f4788;
+            font-size: 12pt;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        
+        .company-focus p {
+            font-size: 10pt;
+            line-height: 1.4;
+            color: #444;
+        }
+        
+        .content {
+            font-size: 11pt;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        
+        .opening {
+            margin-bottom: 18px;
+        }
+        
+        .achievements {
+            margin: 20px 0;
+        }
+        
+        .achievements h3 {
+            color: #1f4788;
+            font-size: 11pt;
+            font-weight: 600;
+            margin-bottom: 10px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 4px;
+        }
+        
+        .achievements ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .achievements li {
+            margin-bottom: 8px;
+            padding-left: 15px;
+            position: relative;
+            font-size: 10pt;
+            line-height: 1.5;
+        }
+        
+        .achievements li:before {
+            content: "▶";
+            color: #1f4788;
+            font-size: 8pt;
+            position: absolute;
+            left: 0;
+            top: 2px;
+        }
+        
+        .value-proposition {
+            background: linear-gradient(135deg, #1f4788 0%, #2d5aa0 100%);
+            color: white;
+            padding: 18px 25px;
+            margin: 25px 0;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(31, 71, 136, 0.2);
+        }
+        
+        .value-proposition h3 {
+            font-size: 12pt;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: white;
+        }
+        
+        .value-proposition p {
+            font-size: 10pt;
+            line-height: 1.5;
+            margin-bottom: 8px;
+        }
+        
+        .testimonial {
+            font-style: italic;
+            margin: 15px 0;
+            padding: 12px 20px;
+            background: #f8f9fc;
+            border-left: 3px solid #1f4788;
+            border-radius: 0 4px 4px 0;
+        }
+        
+        .testimonial-text {
+            font-size: 10pt;
+            color: #333;
+            margin-bottom: 6px;
+        }
+        
+        .testimonial-author {
+            font-size: 9pt;
+            color: #666;
+            font-weight: 500;
+        }
+        
+        .closing {
+            margin-top: 20px;
+            font-size: 11pt;
+        }
+        
+        .footer {
+            margin-top: 30px;
+            padding-top: 15px;
+            border-top: 1px solid #ddd;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .contact-info {
+            font-size: 9pt;
+            color: #666;
+        }
+        
+        .brand-footer {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .personal-logo {
+            height: 35px;
+            opacity: 0.8;
+        }
+        
+        .website-link {
+            font-size: 8pt;
+            color: #1f4788;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .website-link:hover {
+            text-decoration: underline;
+        }
+        
+        strong {
+            font-weight: 600;
+            color: #1f4788;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="cover-letter-label">COVER LETTER</div>
+            <div style="text-align: right; color: #1f4788; font-weight: 500; font-size: 10pt;">
+                Detroit Automotive Technologies
+            </div>
+        </div>
+
+        <div class="name-section">
+            <div class="name">Obai Sukar</div>
+            <div class="title">IT Director | Systems Architect | Infrastructure Transformation Leader</div>
+            <div class="subtitle">Healthcare IT Specialist | Zero Security Incidents | Crisis-to-Scale Excellence</div>
+        </div>
+
+        <div class="company-focus">
+            <h3>Why Detroit Automotive Technologies</h3>
+            <p>DAT's commitment to manufacturing excellence and technological innovation aligns perfectly with my expertise in building resilient IT infrastructure. Your focus on IATF 16949 compliance, cybersecurity standards, and Industry 4.0 initiatives mirrors my proven track record in regulated environments and process automation.</p>
+        </div>
+
+        <div class="content">
+            <div class="opening">
+                <p>Everybody has a story. Life throws unexpected paths. After building my IT and media career, I found myself in a conflict-zone building resilient broadcasting systems in 2012, and today I'm seeking a company that matches my ambition and brilliance forged through diverse challenges.</p>
+                
+                <p><strong>Technology is my DNA.</strong> I assembled my first computer in 8th grade, was the kid running BASIC programming on MS-DOS with floppy disks, and I've never stopped progressing with IT as my greatest source of fun and discovery. When I see your IT Manager role at Detroit Automotive Technologies, I see the perfect intersection of my 20+ years of enterprise infrastructure expertise and your manufacturing excellence mission.</p>
+            </div>
+
+            <div class="achievements">
+                <h3>Why I'm THE candidate for Detroit Automotive Technologies:</h3>
+                <ul>
+                    <li><strong>99.8% uptime achievement</strong> across 18+ assisted-living facilities with zero security incidents throughout my IT leadership tenure</li>
+                    <li><strong>HIPAA compliance expertise</strong> directly transferable to IATF 16949, ISO 14001, and EMS standards you require</li>
+                    <li><strong>Multi-phase technology rollouts</strong> leading implementation teams through complex enterprise transformations</li>
+                    <li><strong>Cybersecurity mastery</strong> including vulnerability assessments, endpoint protection, and comprehensive security audits</li>
+                    <li><strong>Microsoft 365 and Azure architecture</strong> with cloud migration strategies and automation implementation</li>
+                    <li><strong>Crisis leadership experience</strong> building resilient systems under extreme conditions, ensuring 24/7 operations</li>
+                    <li><strong>Cross-functional team management</strong> training technical staff and coordinating vendor relationships</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="value-proposition">
+            <h3>The Value I Bring to Detroit Automotive Technologies</h3>
+            <p>You need someone who doesn't just manage IT infrastructure—you need someone who transforms it. My unique combination of healthcare compliance expertise, manufacturing-ready mindset, and crisis-forged resilience means I'll deliver the secure, efficient IT foundation your manufacturing operations demand.</p>
+            <p>I don't just implement systems—I architect solutions that scale, secure operations that never fail, and lead teams that exceed expectations. This isn't just another IT role for me; it's the perfect match between my proven excellence and your manufacturing innovation.</p>
+        </div>
+
+        <div class="testimonial">
+            <div class="testimonial-text">
+                <strong>"By far one of the best professionals I had the pleasure to partner with."</strong>
+            </div>
+            <div class="testimonial-author">
+                — Sinan Hatahet, PhD, Co-Founder, Workiom CRM
+            </div>
+        </div>
+
+        <div class="content">
+            <p>Additional verified testimonials can be viewed directly on my LinkedIn profile: linkedin.com/in/obaisukar</p>
+        </div>
+
+        <div class="closing">
+            <p>Detroit Automotive Technologies represents exactly what I've been building toward—a company where manufacturing excellence meets technological innovation. I'm ready to architect the IT infrastructure that drives your continued success.</p>
+            
+            <p>We're a win for each other. Let's discuss how my proven track record can accelerate Detroit Automotive Technologies' technological leadership.</p>
+            
+            <p>Best regards,<br>
+            <strong>Obai Sukar</strong><br>
+            +1 (810) 399-8713 | obai@obaisukar.com</p>
+        </div>
+
+        <div class="footer">
+            <div class="contact-info">
+                Interactive Resume: www.obaisukar.com/resume.html
+            </div>
+            <div class="brand-footer">
+                <a href="https://obaisukar.com" class="website-link">obaisukar.com</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

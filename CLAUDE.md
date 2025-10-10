@@ -42,6 +42,24 @@
 - **Consistency**: Use established naming, URLs, and formatting from master file
 - **Timeline Accuracy**: CRITICAL - Maintain chronological accuracy to preserve credibility
 
+## DIGITAL RESUME VERIFICATION REQUIREMENT (MANDATORY)
+**CRITICAL: ALL resumes MUST include digital resume verification messaging**
+
+### Required Digital Resume Links:
+- **Standard/IT/Corporate Jobs**: www.obaisukar.com/resume.html
+- **Creative/Artistic/Media Jobs**: https://obaisukar.com/Artistic_Resume.html
+
+### Mandatory Verification Statement (ALWAYS INCLUDE):
+**In resume contact section or footer:** 
+"All achievements, awards, and experience details are fully verifiable with supporting documentation, URLs, and references available in my interactive digital resume: [appropriate link above]"
+
+### Implementation Rules:
+- **ALWAYS mention** that achievements are verifiable, not fabricated
+- **ALWAYS reference** supporting documentation and URLs availability  
+- **CHOOSE appropriate link** based on job type (standard vs artistic)
+- **POSITION prominently** - either in contact section or dedicated verification section
+- **EMPHASIZE credibility** - distinguish from fabricated resumes
+
 ## TIMELINE ACCURACY REQUIREMENTS
 **NEVER use phrases that distort career chronology:**
 - ❌ "I started in a conflict-zone" - Falsely implies career began there (2012 was mid-career)
@@ -412,8 +430,142 @@ find "D:\Application\job-applications" -type d -empty | grep -v ".git"
 
 **This bidirectional protocol is now PERMANENT core memory for this project.**
 
+## MASTER PROMPT - FACT-LOCKED RESUME RULES (PERMANENT)
+**CRITICAL: Zero fabrication policy for all job application materials**
+
+### HARD RULES (NON-NEGOTIABLE)
+1. **Use ONLY verified facts from master knowledge base** - No external assumptions
+2. **No fabricated metrics** - If numbers don't exist in verified data, use qualitative descriptions  
+3. **No invented technologies** - Only list tools/platforms actually used
+4. **No estimated budgets** - Omit financial figures unless explicitly verified
+5. **No guessed team sizes** - Use "team" or "staff" without specific numbers
+6. **ATS compliance mandatory** - No emojis, graphics, or complex formatting in ATS files
+7. **Verification statements required** - Must be prominent and visible
+
+### ATS FORMATTING REQUIREMENTS (MANDATORY)
+- **NO EMOJIS** - ATS systems cannot parse emojis correctly
+- **NO GRAPHICS** - Text-only formatting for parsing
+- **NO TABLES** - Use simple lists and standard sections
+- **STANDARD FONTS** - Arial, Times New Roman, system fonts only
+- **SINGLE COLUMN** - Linear layout for ATS scanning
+
+### VERIFICATION STATEMENT REQUIREMENTS (ALWAYS INCLUDE)
+**Standard Text:** "VERIFICATION NOTICE: All achievements, awards, and experience details are fully verifiable with supporting documentation, URLs, and references available in my interactive digital resume: www.obaisukar.com/resume.html"
+
+**Placement Rules:**
+- **Top placement** - Red bordered box after header for immediate visibility
+- **Bottom placement** - Red bordered box before footer for reinforcement  
+- **Bold styling** - Red text (#e74c3c) with borders for maximum visibility
+- **NO EMOJIS** - Text only for ATS compatibility
+
+### FACT VERIFICATION PROCESS (MANDATORY)
+Before including ANY claim:
+1. **Check master knowledge base** (ULTIMATE_RESUME_HELPER_MASTER_v2.md)
+2. **Verify in OBAI_SUKAR_MASTER_PROFILE_2025.md** 
+3. **Cross-reference CLAUDE.md corrections**
+4. **When in doubt, omit** - Never guess or estimate
+
+### PROHIBITED FABRICATIONS (NEVER USE)
+- Specific team sizes (unless verified)
+- Budget amounts (unless documented)
+- Percentage improvements (unless measured)
+- Technology lists (unless actually used)
+- Certification names (unless earned)
+- Award details (unless verified)
+
+### RADIO AL-KUL PHRASING REQUIREMENTS (PERMANENT)
+**CRITICAL: Radio Al-Kul was life-saving work in active conflict zone, not just "high-stress"**
+
+**ALWAYS USE:** "Managed critical IT infrastructure and broadcast systems in active conflict zone, maintaining 24/7 operations under life-threatening conditions while providing vital communication services"
+
+**NEVER USE:** 
+- "High-stress environment" (minimizes actual danger)
+- "Challenging conditions" (understates life-threatening reality) 
+- Generic operational language (ignores humanitarian impact)
+
+**CONTEXT:** This was revolutionary, innovative, and brave work featured in NPR, Al Jazeera, AFP, and Washington Post. The operations were responsible for saving lives through vital communication services in wartime.
+
+**This fact-locked protocol is now PERMANENT for all resume/cover letter generation.**
+
+## CRITICAL CORRECTIONS FROM 2025-10-07 SESSION (PERMANENTLY LOCKED)
+
+### KARAZAH CHANNEL / SS MEDIA PRODUCTIONS (CORRECTED UNDERSTANDING)
+**CRITICAL: Never use "enterprise" language for SS Media - it was Karazah Channel content production**
+
+**ALWAYS USE:** "Built and scaled Karazah Channel achieving 715K+ subscribers and 301M+ views through international production coordination across 9 countries"
+
+**NEVER USE:**
+- "Enterprise media infrastructure" (fabricated complexity)
+- "Content distribution platforms" (vague, unverified)
+- "Audience engagement platforms" (made-up terminology)
+- "301M+ views" without mentioning Karazah Channel (missing context)
+
+**VERIFIED FACTS ONLY:**
+- SS Media Productions founded 2010–Present
+- Karazah Channel: 715K+ subscribers, 301M+ views
+- International production teams across 9 countries
+- Children's educational content creation
+- Mohammed Bin Rashid Arabic Language Award winner
+
+### ATS COMPLIANCE VIOLATIONS FIXED (PERMANENT)
+**CRITICAL: Red rectangles and complex styling break ATS parsing**
+
+**VERIFICATION STATEMENTS - ATS SAFE FORMAT:**
+```
+VERIFICATION NOTICE: All achievements, awards, and experience details are fully verifiable with supporting documentation, URLs, and references available in my interactive digital resume: www.obaisukar.com/resume.html
+```
+
+**STYLING RULES:**
+- NO colored backgrounds (#fff5f5)
+- NO borders (border: 2px solid #e74c3c)
+- NO border-radius styling
+- NO complex padding/margins
+- ONLY bold text and basic alignment for ATS compatibility
+
+### BACHELOR'S DEGREE ADDITION (VERIFIED)
+**EDUCATION UPDATE:** Bachelor of Information Technology, Damascus University, Syria (2004)
+- Position as PRIMARY degree in education section
+- Include in ALL IT-focused resumes going forward
+
+### SYNERGY SENIOR MANAGEMENT SCOPE CORRECTION (PERMANENT)
+**CRITICAL: Synergy is smaller company, not enterprise level - be honest about scope**
+
+**CORRECT LANGUAGE:** "Direct all IT operations across 18+ facilities, overseeing network infrastructure, connectivity, and high-availability systems"
+
+**NEVER USE:** "Enterprise IT operations" for Synergy (only 3 years, smaller company)
+
+**CONTEXT:** Focus enterprise language on international consulting work which was more substantial and longer-term success
+
+### MANDATORY PRE-WORK VERIFICATION PROTOCOL (PERMANENT)
+**BEFORE creating ANY resume content:**
+
+1. **READ MASTER FILES FIRST:**
+   - ULTIMATE_RESUME_HELPER_MASTER_v2.md (complete facts)
+   - OBAI_SUKAR_MASTER_PROFILE_2025.md (verified achievements)
+   - CLAUDE.md (corrections and rules)
+
+2. **FACT-CHECK EVERY CLAIM:**
+   - Is this metric verified in knowledge base?
+   - Is this technology explicitly mentioned?
+   - Is this team size documented?
+   - Is this timeline accurate?
+
+3. **WHEN IN DOUBT:**
+   - ASK instead of assuming
+   - OMIT instead of fabricating
+   - USE qualitative descriptions instead of fake numbers
+
+4. **VERIFICATION QUESTIONS:**
+   - Does this sound like something I would make up?
+   - Is this consistent with verified facts?
+   - Would this claim require proof I don't have?
+
+**This fact-locked protocol is now PERMANENT for all resume/cover letter generation.**
+
 ## SESSION CONFIRMATION REQUIRED
-Confirm you've read the master knowledge base before starting any resume/job application work.
+**MANDATORY: Confirm you've read the master knowledge base before starting any resume/job application work.**
+
+**VERIFICATION STATEMENT:** "I have read ULTIMATE_RESUME_HELPER_MASTER_v2.md, OBAI_SUKAR_MASTER_PROFILE_2025.md, and CLAUDE.md corrections. I will use ONLY verified facts from these sources."
 
 ---
 *This file ensures consistent, accurate assistance based on verified data only.*
