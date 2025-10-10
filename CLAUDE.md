@@ -51,22 +51,39 @@
 - **Timeline Accuracy**: CRITICAL - Maintain chronological accuracy to preserve credibility
 
 ## DIGITAL RESUME VERIFICATION REQUIREMENT (MANDATORY)
-**CRITICAL: ALL resumes MUST include digital resume verification messaging**
+**CRITICAL: ALL resumes MUST include digital resume verification messaging AND all verified URLs**
 
 ### Required Digital Resume Links:
 - **Standard/IT/Corporate Jobs**: www.obaisukar.com/resume.html
 - **Creative/Artistic/Media Jobs**: https://obaisukar.com/Artistic_Resume.html
 
 ### Mandatory Verification Statement (ALWAYS INCLUDE):
-**In resume contact section or footer:** 
-"All achievements, awards, and experience details are fully verifiable with supporting documentation, URLs, and references available in my interactive digital resume: [appropriate link above]"
+**Prominently at top after header:** 
+"VERIFICATION NOTICE: All achievements, awards, and experience details are fully verifiable with supporting documentation, URLs, and references available in my interactive digital resume: https://obaisukar.com/Artistic_Resume.html"
+
+### MANDATORY VERIFIED URLs (ALWAYS INCLUDE):
+**Media Coverage:**
+- NPR: https://www.npr.org/2014/03/16/290615013/radio-pirates-risk-dangers-of-war-to-reach-syrian-people
+- Al Jazeera: https://www.aljazeera.com/features/2014/4/7/syrias-opposition-radio-makes-waves
+- Washington Post: https://www.washingtonpost.com/world/middle_east/syria-diaspora-clubhouse-middle-east/2021/03/09/90a2a55e-7c28-11eb-8c5e-32e47b42b51b_story.html
+- Medium/War is Boring: https://medium.com/war-is-boring/radio-kul-broadcasts-for-a-free-syria-14ee9292b1ae
+- MLive: https://www.mlive.com/galleries/7L54EBJSWFHTJAEPAMSY3ZOVIA/
+
+**Awards & Recognition:**
+- Mohammed Bin Rashid Award: https://www.arabicaward.ae/p/award-winners/2019
+- IMDB Profile: https://www.imdb.com/name/nm8455296/
+
+**Portfolio & Media:**
+- Karazah Channel: https://www.youtube.com/c/karazahchannel
+- Eternal Parade: https://www.youtube.com/watch?v=7o7TOSM9R-k
+- Syria TV Documentary: https://www.youtube.com/watch?v=xbHSJqgyKkc
 
 ### Implementation Rules:
-- **ALWAYS mention** that achievements are verifiable, not fabricated
-- **ALWAYS reference** supporting documentation and URLs availability  
-- **CHOOSE appropriate link** based on job type (standard vs artistic)
-- **POSITION prominently** - either in contact section or dedicated verification section
+- **ALWAYS include verification statement** prominently at top
+- **ALWAYS include all verified URLs** in relevant sections
+- **NEVER fabricate** - only use verified URLs from this list
 - **EMPHASIZE credibility** - distinguish from fabricated resumes
+- **ATS friendly** - all URLs as clickable links with descriptive text
 
 ## TIMELINE ACCURACY REQUIREMENTS
 **NEVER use phrases that distort career chronology:**
