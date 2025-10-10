@@ -335,6 +335,10 @@ Meta_Creative_Audio_AI_Lead/
 - **Leadership/Management**: Khalid Saleh (CEO Invesp), Ghiath Osman (CEO) + Sinan (CRM)
 - **Technical/Engineering**: Hutheyfa Tabbah (Dana Inc.), Lamis Beirkdar (Statista) + Sinan (CRM)
 
+**Media/Production Testimonials:**
+- **Kamel Weiss — GM @ SpacetoonGo, Spacetoon Group**: "Obai was one of the strong sound engineers we had. His creativity and adaptation to new trends were well received."
+- **Michael Shagoury — SVP of Audience Development**: "When it comes to audio, Obai is a perfectionist and his creativity is unmatched."
+
 ### Verified Awards & Recognition:
 - 🎬 Sound Designer for Cloud Kumo, winner of the 2016 Student Academy Award (Silver) — Film won prestigious Oscar alternative category award
 - 🏅 Recipient of a prestigious award by the Governor of Dubai — the Mohammed Bin Rashid Arabic Language Award (2019) — Cultural innovation recognition
